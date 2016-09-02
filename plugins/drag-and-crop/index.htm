@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Drag'n'crop Plugin Examples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="jquery.drag-n-crop.css" rel="stylesheet" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="imagesloaded.js"></script>
+    <script src="scale.fix.js"></script>
+    <script src="jquery.drag-n-crop.js"></script>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="jquery-script-menu">
+    <div class="jquery-script-center">
+        <ul>
+            <li>
+                <a href="http://www.jqueryscript.net/other/Facebook-Style-Image-Cropping-Plugin-For-jQuery-Drag-n-crop.html">Download
+                    This Plugin</a></li>
+            <li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+        </ul>
+        <div class="jquery-script-ads">
+            <script type="text/javascript"><!--
+            google_ad_client = "ca-pub-2783044520727903";
+            /* jQuery_demo */
+            google_ad_slot = "2780937993";
+            google_ad_width = 728;
+            google_ad_height = 90;
+            //-->
+            </script>
+            <script type="text/javascript"
+                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+        </div>
+        <div class="jquery-script-clear"></div>
+    </div>
+</div>
+<h1 style="margin-top:150px" align="center">jQuery Drag'n'crop Plugin Examples</h1>
+<div class="wrapper" style="width:960px; margin:0 auto;">
+    <h2>Basic Example</h2>
+    <p>
+    <div style="width: 200px; height:200px"><img src="images/1.jpg" id="demo1"/></div>
+    </p>
+    <script type="text/javascript">
+        $('#demo1').dragncrop();
+    </script>
+    <h2>With overlay and overflow options.</h2>
+    <p>
+    <div style="width: 200px; height:200px"><img src="images/1.jpg" id="demo2"/></div>
+    </p>
+    <script type="text/javascript">
+        $('#demo2').dragncrop({overlay: true, overflow: true});
+    </script>
+    <h2>initial position</h2>
+    <p>
+    <div style="width: 200px; height:200px"><img src="images/1.jpg" id="demo3"/></div>
+    </p>
+    <script type="text/javascript">
+        $('#demo3').dragncrop({position: {offset: [0.75, 0]}});
+    </script>
+    <h2>vertical photo with instruction</h2>
+    <p>
+    <div style="width: 200px; height:200px"><img src="images/3.jpg" id="demo4"/></div>
+    </p>
+    <script type="text/javascript">
+        $('#demo4').dragncrop({instruction: true});
+    </script>
+    <h2>event listeners</h2>
+    <p>
+    <div style="width: 200px; height:200px"><img src="images/3.jpg" id="demo5"/></div>
+    <div id="photo5-log">Drag to see events</div>
+    </p>
+    <script type="text/javascript">
+        $('#demo5').dragncrop({instruction: true});
+        $('#demo5').dragncrop({
+            start: function () {
+                $('#photo5-log').css('background', '#ccc')
+            },
+            drag: function (event, position) {
+                $('#photo5-log').html('Event: dragging. Postion (offset): ' + position.offset)
+            },
+            stop: function (e) {
+                $('#photo5-log').css('background', '#fff')
+            }
+        });</script>
+    <h2>chaining</h2>
+    <p>
+    <div style="width: 100px; height:100px">
+        <img src="images/2.jpg" id="photo6-small"/>
+    </div>
+    </p>
+
+    <p>
+    <div style="width: 300px; height:300px">
+        <img src="images/2.jpg" id="photo6-large"/>
+    </div>
+    </p>
+
+    <script type="text/javascript">
+        $('#photo6-small').dragncrop({
+            drag: function (event, position) {
+                $('#photo6-large').dragncrop('move', position);
+            }
+        });
+        $('#photo6-large').dragncrop({
+            drag: function (event, position) {
+                $('#photo6-small').dragncrop('move', position);
+            }
+        });
+    </script>
+</div>
+<!--[if !IE]>
+<script>fixScale(document);</script><![endif]-->
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+</body>
+</html>

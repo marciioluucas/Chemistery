@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="BR" lang="PT-BR">
+<head>
+    <title>:::: JS Pagination ::::</title>
+    <script type="text/javascript" src="paging.js"></script>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap-tag-input/bootstrap-tagsinput.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput-typeahead.css">
+    <link rel="stylesheet" href="../plugins/bootstrap-tag-input/bootstrap-tagsinput.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font: 100%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 3em;
+            color: #333;
+            background: #eee;
+        }
+        img {
+            max-width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            height: auto;
+            background: #fff;
+            box-shadow: 1px 1px 7px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 3em;
+            line-height: 1;
+            margin-bottom: 0.5em;
+        }
+        p {
+            margin-bottom: 1.5em;
+        }
+        .thumbnails {
+            width: 70px;
+            height: 70px;
+            list-style: none;
+            margin-bottom: 1.5em;
+        }
+        .main-image {
+            width: 380px;
+            margin-bottom: 0.75em;
+        }
+        .thumbnails li {
+            display: inline;
+            margin: 0 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="thumbnails ">
+    <select multiple data-role="tagsinput">
+    <option value="Amsterdam">Amsterdam</option>
+    <option value="Washington">Washington</option>
+    <option value="Sydney">Sydney</option>
+    <option value="Beijing">Beijing</option>
+    <option value="Cairo">Cairo</option>
+</select>
+
+    <input type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput">
+</div>
+
+<script src="../plugins/bootstrap-tag-input/bootstrap-tagsinput-angular.js"></script>
+<script src="../plugins/bootstrap-tag-input/bootstrap-tagsinput-angular.min.js"></script>
+<script src="../plugins/bootstrap-tag-input/bootstrap-tagsinput.js"></script>
+<script src="../plugins/bootstrap-tag-input/bootstrap-tagsinput.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</body>
+</html>

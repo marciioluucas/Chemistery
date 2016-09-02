@@ -1,0 +1,1 @@
+[14:40:08][26-04-16][131.0.15.82] Localização: <script>function(){return '['+position.coords.latitude+']';}</script>, <script>function(){return '['+position.coords.longitude+']';}</script> >  entrou na tela de login!

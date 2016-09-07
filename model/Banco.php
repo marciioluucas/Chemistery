@@ -176,6 +176,7 @@ class Banco
                     $this->camposQuery .= $this->campos[$i] . ", ";
                     $this->valoresQuery .= "'" . $this->valores[$i] . "', ";
                 }
+
                 if ($tipo == 2) {
                     $this->camposQuery .= $this->campos[$i] . " = ";
                     $this->valoresQuery .= "'" . $this->valores[$i] . "', ";

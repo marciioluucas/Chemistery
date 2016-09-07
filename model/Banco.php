@@ -146,10 +146,10 @@ class Banco
     private function conexao()
     {
 
-        $this->host = "localhost";
-        $this->banco = "bd_catalogo";
-        $this->usuario = "root";
-        $this->senha = "";
+        $this->host = "fdb13.mutanthost.com";
+        $this->banco = "2198536_catalog";
+        $this->usuario = "2198536_catalog";
+        $this->senha = "jabuticaba123";
 
         if (mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco)) {
 

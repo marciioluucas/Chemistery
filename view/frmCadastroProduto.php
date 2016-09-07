@@ -794,6 +794,8 @@ if ($_SESSION["tempo"] < time()) {
     })
 
 
+    
+
 </script>
 
 </body>

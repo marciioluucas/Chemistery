@@ -290,7 +290,7 @@ class Usuario extends Banco
 
     function retornaAlgoUsuario($campo_sql, $id_usuario)
     {
-        $sql = "select * from usuario where ativado = 1 and id = $id_usuario";
+        $sql = "select $campo_sql from usuario where ativado = 1 and id = $id_usuario";
         $query = $this->query($sql);
         $r = mysqli_fetch_array($query, MYSQLI_ASSOC);
         return $r[$campo_sql];

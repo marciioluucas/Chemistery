@@ -75,7 +75,7 @@ class UsuarioController
         $this->usuario->setImagem($this->imagem->upload());
         echo ($this->usuario->cadastrarUsuario())? "<script>alert('Cadastro de usuario efetuado com sucesso!')</script> "
             : "<script>alert('Cadastro de usuario não efetuado!')</script>";
-        echo "<script>window.location.replace('../view/frmCadastroUsuario.php');</script>";
+//        echo "<script>window.location.replace('../view/frmCadastroUsuario.php');</script>";
     }
 
     private function alterar()

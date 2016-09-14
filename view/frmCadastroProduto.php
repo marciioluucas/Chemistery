@@ -14,6 +14,17 @@ $categoriaController = new CategoriaController();
 $secaoController = new SecaoController();
 $produtoController = new ProdutoController();
 
+
+if ($secaoController->retornaNumDeSecoes() == 0 and $categoriaController->retornaNumeroDeCategoriasCadastradas() == 0) {
+    echo "<script> window.location.href = '../erros/semCategoriasESecoesCadastradas.php'</script>";
+}
+if ($categoriaController->retornaNumeroDeCategoriasCadastradas() == 0) {
+    echo "<script> window.location.href = '../erros/semCategoriasCadastradas.php'</script>";
+}
+if ($secaoController->retornaNumDeSecoes() == 0) {
+    echo "<script> window.location.href = '../erros/semSecoesCadastradas.php'</script>";
+}
+
 if ($_SESSION["tempo"] < time()) {
     echo "<script>window.location.replace('lockscreen.php')</script>";
 } else {

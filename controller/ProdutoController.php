@@ -80,10 +80,12 @@ class ProdutoController
 
     private function cadastrar()
     {
-        if (isset($_POST['produtoNome']) || $_POST['produtoNome'] != "") $this->produto->setNome($_POST['produtoNome']);
-        if (isset($_POST['produtoDescricao'])) $this->produto->setDescricao($_POST['produtoDescricao']);
-        if (isset($_POST['produtoPreco'])) $this->produto->setPreco($_POST['produtoPreco']);
-        $this->produto->setCategoria($_POST['produtoCategoria']);
+
+        $this->produto->setNome($_POST['produtoNome']);
+        $this->produto->setDescricao($_POST['produtoDescricao']);
+        $this->produto->setPreco($_POST['produtoPreco']);
+        $this->produto->setUsuarioLogadoId($_POST['idUsuarioLogado']);
+        $this->produto->setCategoria($_POST['produtoCategoria2']);
         $this->produto->setSecao($_POST['produtoSecao']);
         if (isset($_POST['produtoPrecoOnOff'])) {
             $this->produto->setMostraPreco(1);
@@ -91,58 +93,29 @@ class ProdutoController
             $this->produto->setMostraPreco(0);
         }
         $setImg = "";
-
-//          Imagens secundárias sem upload
-
-
-        for ($i = 0; $i < 9; $i++) {
-            if (($_FILES['produtoImagem']['name'][$i] == "") && $_POST['angImg'][$i] != 0) {
-                $this->imagem->setCaminho($this->retornaImagensDoProduto($i));
-                $this->imagem->setAnguloDeRotacao($_POST['angImg'][$i]);
-                echo $_POST['angImg'][$i];
-                $this->imagem->rotacaoImagemSemUpload();
+        $qntImagens = count($_FILES['produtoImagem']['name']);
+        for ($i = 0; $i < $qntImagens; $i++) {
+            $this->imagem->setArquivoNome($_FILES['produtoImagem']['name'][$i]);
+            $this->imagem->setArquivoErro($_FILES['produtoImagem']['error'][$i]);
+            $this->imagem->setArquivoTemporarioNome($_FILES['produtoImagem']['tmp_name'][$i]);
+            $this->imagem->setArquivoExtensao($_FILES['produtoImagem']['type'][$i]);
+            if ($i < $qntImagens - 1) {
+                $setImg .= $this->imagem->uploadMultiplo() . "-";
+            } else {
+                $setImg .= $this->imagem->uploadMultiplo();
             }
         }
+        $this->produto->setImagem($setImg);
 
-// Imagens secundárias
-        $qntImagens = 0;
-        for ($l = 0; $l < 9; $l++) {
-            if ($_FILES['produtoImagem']['name'][$l] != "") {
-//                echo $_FILES['produtoImagem1']['name'][$l] . " ";
-                $qntImagens++;
-            }
-        }
+        $this->imagem->setArquivoNome($_FILES['produtoImagemPrincipal']['name']);
+        $this->imagem->setArquivoErro($_FILES['produtoImagemPrincipal']['error']);
+        $this->imagem->setArquivoTemporarioNome($_FILES['produtoImagemPrincipal']['tmp_name']);
+        $this->imagem->setArquivoExtensao($_FILES['produtoImagemPrincipal']['type']);
+        if (isset($_FILES['produtoImagemPrincipal']['name'])) {
 
-        for ($i = 0; $i < 9; $i++) {
-            if ($_FILES['produtoImagem']['name'][$i] != "") {
-                $this->imagem->setArquivoNome($_FILES['produtoImagem']['name'][$i]);
-                $this->imagem->setArquivoErro($_FILES['produtoImagem']['error'][$i]);
-                $this->imagem->setArquivoTemporarioNome($_FILES['produtoImagem']['tmp_name'][$i]);
-                $this->imagem->setArquivoExtensao($_FILES['produtoImagem']['type'][$i]);
-                $this->imagem->setAnguloDeRotacao($_POST['angImg'][$i]);
-                $this->produto->cadastrarImagemNoProdutoJaCadastrado($this->imagem->upload(), $i, $_POST['id1']);
-            }
-
-        }
-
-
-//        Imagem principal
-
-        if (!isset($_FILES['produtoImagemPrincipal']['name']) || $_POST['angImgPrincipal'] != 0) {
-
-            $imagemCadastrada = $this->retornaAlgoDoProdutoQueEuQueira("imagemprincipal", $_POST['id1']);
-            $this->imagem->setCaminho($imagemCadastrada);
-            $this->imagem->setAnguloDeRotacao($_POST['angImgPrincipal']);
-            $this->imagem->rotacaoImagemSemUpload();
-        }
-
-        if ($_FILES['produtoImagemPrincipal']['name'] != "") {
-            $this->imagem->setArquivoNome($_FILES['produtoImagemPrincipal']['name']);
-            $this->imagem->setArquivoErro($_FILES['produtoImagemPrincipal']['error']);
-            $this->imagem->setArquivoTemporarioNome($_FILES['produtoImagemPrincipal']['tmp_name']);
-            $this->imagem->setArquivoExtensao($_FILES['produtoImagemPrincipal']['type']);
-            $this->imagem->setAnguloDeRotacao($_POST['angImgPrincipal']);
             $this->produto->setImagemPrincipal($this->imagem->upload());
+        } else {
+            $this->produto->setImagemPrincipal(null);
         }
 
 
@@ -153,61 +126,6 @@ class ProdutoController
 //        $stringValorProdutos = implode(", ", $_POST['produtoAtributos']);
 //        echo $_POST['produtoCategoria2'];
         $this->produto->inserirValorDosAtributos($ultimoProdutoCadastrado, $_POST['produtoCategoria2'], $_POST['produtoAtributos']);
-
-        $setImg = "";
-
-//          Imagens secundárias sem upload
-
-
-        for ($i = 0; $i < 9; $i++) {
-            if (($_FILES['produtoImagem']['name'][$i] == "") && $_POST['angImg'][$i] != 0) {
-                $this->imagem->setCaminho($this->retornaImagensDoProduto($i));
-                $this->imagem->setAnguloDeRotacao($_POST['angImg'][$i]);
-                echo $_POST['angImg'][$i];
-                $this->imagem->rotacaoImagemSemUpload();
-            }
-        }
-
-// Imagens secundárias
-        $qntImagens = 0;
-        for ($l = 0; $l < 9; $l++) {
-            if ($_FILES['produtoImagem']['name'][$l] != "") {
-//                echo $_FILES['produtoImagem1']['name'][$l] . " ";
-                $qntImagens++;
-            }
-        }
-
-        for ($i = 0; $i < 9; $i++) {
-            if ($_FILES['produtoImagem']['name'][$i] != "") {
-                $this->imagem->setArquivoNome($_FILES['produtoImagem']['name'][$i]);
-                $this->imagem->setArquivoErro($_FILES['produtoImagem']['error'][$i]);
-                $this->imagem->setArquivoTemporarioNome($_FILES['produtoImagem']['tmp_name'][$i]);
-                $this->imagem->setArquivoExtensao($_FILES['produtoImagem']['type'][$i]);
-                $this->imagem->setAnguloDeRotacao($_POST['angImg'][$i]);
-                $this->produto->cadastrarImagemNoProdutoJaCadastrado($this->imagem->upload(), $i, $_POST['id1']);
-            }
-
-        }
-
-
-//        Imagem principal
-
-        if (!isset($_FILES['produtoImagemPrincipal']['name']) || $_POST['angImgPrincipal'] != 0) {
-
-            $imagemCadastrada = $this->retornaAlgoDoProdutoQueEuQueira("imagemprincipal", $_POST['id1']);
-            $this->imagem->setCaminho($imagemCadastrada);
-            $this->imagem->setAnguloDeRotacao($_POST['angImgPrincipal']);
-            $this->imagem->rotacaoImagemSemUpload();
-        }
-
-        if ($_FILES['produtoImagemPrincipal']['name'] != "") {
-            $this->imagem->setArquivoNome($_FILES['produtoImagemPrincipal']['name']);
-            $this->imagem->setArquivoErro($_FILES['produtoImagemPrincipal']['error']);
-            $this->imagem->setArquivoTemporarioNome($_FILES['produtoImagemPrincipal']['tmp_name']);
-            $this->imagem->setArquivoExtensao($_FILES['produtoImagemPrincipal']['type']);
-            $this->imagem->setAnguloDeRotacao($_POST['angImgPrincipal']);
-            $this->produto->setImagemPrincipal($this->imagem->upload());
-        }
 
         echo "<script>window.location.replace('../view/frmCadastroProduto.php');</script>";
     }

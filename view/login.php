@@ -167,6 +167,9 @@ if(isset($_GET['tela']) == "UsuarioNaoLogado") {
 <!-- iCheck -->
 <script src="../plugins/iCheck/icheck.min.js"></script>
 <script>
+    $(window).resize(function(){
+        $("body").setHeight($(window).height());
+    });
     
     $(document).ready(function(){
        $("#usuarioLogin").focus();

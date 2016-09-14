@@ -12,14 +12,14 @@ $menuController = new MenuController();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>CataLOG v1.<?php
-//        $ponteiro = fopen("\\xampp\\htdocs\\CataLOG\\catalogv10\\versao", "r");
-//
-//        feof($ponteiro);
-//
-//        $linha = fgets($ponteiro, 4096);
-//        echo $linha;
-//
-//        fclose($ponteiro)
+        $ponteiro = fopen("\\xampp\\htdocs\\CataLOG\\catalogv10\\versao", "r");
+
+        feof($ponteiro);
+
+        $linha = fgets($ponteiro, 4096);
+        echo $linha;
+
+        fclose($ponteiro)
 
         ?> | Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
@@ -91,10 +91,6 @@ $menuController = new MenuController();
             .main-footer {
                 width: 100% !important;
             }
-
-            .versaoRodape {
-                display: none;
-            }
         }
     </style>
 </head>
@@ -109,15 +105,15 @@ $menuController = new MenuController();
             <span class="logo-mini">C<b>LOG</b></span>
             <!-- logo for regular state and mobile devices -->
             <span class="logo-lg">Cata<b>LOG</b><small> v.1.<?php
-//                    $ponteiro = fopen("\\xampp\\htdocs\\CataLOG\\catalogv10\\versao", "r");
-//
-//                    feof($ponteiro);
-//
-//                    $linha = fgets($ponteiro, 4096);
-//                    echo $linha;
-//
-//
-//                    fclose($ponteiro)
+                    $ponteiro = fopen("\\xampp\\htdocs\\CataLOG\\catalogv10\\versao", "r");
+
+                    feof($ponteiro);
+
+                    $linha = fgets($ponteiro, 4096);
+                    echo $linha;
+
+
+                    fclose($ponteiro)
 
                     ?></small></span>
         </a>
@@ -235,15 +231,15 @@ $menuController = new MenuController();
                     of Salatiel Group</a>.</strong> All rights reserved.
 <span class="pull-right">
 
-                <b class="versaoRodape">Versão 1.0.0.<?php
-//                    $ponteiro = fopen("\\xampp\\htdocs\\CataLOG\\catalogv10\\versao", "r");
-//
-//                    feof($ponteiro);
-//
-//                    $linha = fgets($ponteiro, 4096);
-//                    echo $linha . "</b>";
-//
-//                    fclose($ponteiro)
+                <b>Versão 1.0.0.<?php
+                    $ponteiro = fopen("\\xampp\\htdocs\\CataLOG\\catalogv10\\versao", "r");
+
+                    feof($ponteiro);
+
+                    $linha = fgets($ponteiro, 4096);
+                    echo $linha . "</b>";
+
+                    fclose($ponteiro)
 
                     ?>
 </span>
@@ -264,7 +260,7 @@ $menuController = new MenuController();
 </script>
 <!-- Bootstrap 3.3.5 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
-<!--<!-- Morris.js charts -->
+<!--<!-- Morris.js charts -->-->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>-->
 <!--<script src="../plugins/morris/morris.min.js"></script>-->
 <!-- Sparkline -->

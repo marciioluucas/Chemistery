@@ -34,7 +34,6 @@ class ProdutoController
         $this->produto = new Produto();
         $this->imagem = new Imagem();
         $this->categoria = new Categoria();
-        $this->toxidade = new Toxidade();
         $this->secao = new Secao();
         if (isset($_POST['b']) == 'cadastrar') {
             $this->cadastrar();

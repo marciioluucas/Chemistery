@@ -32,6 +32,7 @@ class MenuController
 
 
     public function listarMenu($permissao){
+     //   echo "<script>alert('".$permissao."')</script>";
         echo $this->menu->listarMenu($permissao);
     }
 }

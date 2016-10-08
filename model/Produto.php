@@ -15,11 +15,12 @@ class Produto extends Banco
     private $nome;
     private $descricao;
     private $imagem;
+    private $preco;
     private $usuarioLogadoId;
     private $imagemPrincipal;
+    private $mostraPreco;
     private $secao;
     private $categoria;
-    private $toxidade = [1,2,3,4,5];
 
     /**
      * Produto constructor.
@@ -27,7 +28,15 @@ class Produto extends Banco
      */
 
 
+    function getPreco()
+    {
+        return $this->preco;
+    }
 
+    function setPreco($preco)
+    {
+        $this->preco = $preco;
+    }
 
     /**
      * @return mixed
@@ -129,7 +138,18 @@ class Produto extends Banco
     /**
      * @return mixed
      */
+    public function getMostraPreco()
+    {
+        return $this->mostraPreco;
+    }
 
+    /**
+     * @param mixed $mostraPreco
+     */
+    public function setMostraPreco($mostraPreco)
+    {
+        $this->mostraPreco = $mostraPreco;
+    }
 
     /**
      * @return Secao
@@ -163,31 +183,15 @@ class Produto extends Banco
         $this->categoria = $categoria;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getToxidade()
-    {
-        return $this->toxidade;
-    }
-
-    /**
-     * @param mixed $toxidade
-     */
-    public function setToxidade($toxidade)
-    {
-        $this->toxidade = $toxidade;
-    }
-
-
 
     function cadastrarProduto()
     {
         try {
             $this->tabela = "produto";
-            $this->campos = array("nome", "descricao", "imagem", "usuario_id", "imagemprincipal", "categoria_id", "secao_id", "datacriacao", "toxidade");
-            $this->valores = array($this->getNome(), $this->getDescricao(), $this->getImagem(), $this->getToxidade(),
-                $this->usuarioLogadoId, $this->imagemPrincipal,  $this->categoria, $this->secao, date("Y-m-d"));
+            $this->campos = array("nome", "descricao", "preco", "imagem", "usuario_id", "imagemprincipal",
+                "mostrapreco", "categoria_id", "secao_id", "datacriacao");
+            $this->valores = array($this->getNome(), $this->getDescricao(), $this->getPreco(), $this->getImagem(),
+                $this->usuarioLogadoId, $this->imagemPrincipal, $this->mostraPreco, $this->categoria, $this->secao, date("Y-m-d"));
             return $this->cadastrar();
         } catch (Exception $e) {
             echo "Exceção capturada: " . $e->getMessage();
@@ -200,13 +204,14 @@ class Produto extends Banco
     {
         $campos_eq_valores = "nome = '$this->nome', ";
         $campos_eq_valores .= "descricao = '$this->descricao', ";
-        $campos_eq_valores .= "toxidade = '$this->toxidade', ";
+        $campos_eq_valores .= "preco = '$this->preco', ";
         if ($this->imagem != "") {
 
         }
         if ($this->imagemPrincipal != "") {
             $campos_eq_valores .= "imagemprincipal = '$this->imagemPrincipal', ";
         }
+        $campos_eq_valores .= "mostrapreco = '$this->mostraPreco', ";
         $campos_eq_valores .= "secao_id = '$this->secao', categoria_id = '$this->categoria', dataultimaalteracao = '" . date("Y-m-d") . "'";
 
         try {
@@ -230,7 +235,7 @@ class Produto extends Banco
     function listarProduto()
     {
         $this->tabela = "produto";
-        $this->campos = array("id", "nome",  "imagem", "descricao", "categoria_id", "secao_id", "toxidade");
+        $this->campos = array("id", "nome", "preco", "mostrapreco", "imagem", "descricao", "categoria_id", "secao_id");
         $this->condicao = "ativado = 1 ";
         $this->subQntColunasConsulTabela = 5;
         $this->listar();
@@ -782,17 +787,22 @@ class Produto extends Banco
 
     function consultarNumeroImagensNoProduto($idProduto)
     {
+    
         $sql = "SELECT * FROM IMAGEM WHERE produto_id=" . $idProduto;
+        
         $query = $this->query($sql);
+        
         return mysqli_num_rows($query);
+        
     }
 
     function listarImagensProduto($idProduto, $qntImagens)
     {
         $sql = "SELECT * FROM IMAGEM WHERE produto_id=" . $idProduto;
+        
         $query = $this->query($sql);
         $i = 0;
-        $retorno = "";
+        $retorno = "a";
         while ($r = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
 
             if ($i != $qntImagens - 1) {

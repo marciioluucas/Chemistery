@@ -121,7 +121,7 @@ class Menu
         $stringRetornoHTML = "";
         $classe = "class=\"fa fa-angle-left pull-right\"";
         foreach ($filhoDoJ->menus as $item1) {
-            if ($item1->permissao <= $permissao) {
+            if ($permissao >= $item1->permissao) {
                 $stringRetornoHTML .= "<li class=\"treeview\">
                         <a href=\"#\">
                             <i class=\"fa " . $item1->icone . "\"></i> <span>" . $item1->descricao . "</span> <i

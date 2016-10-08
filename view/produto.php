@@ -5,7 +5,8 @@ $confSistemaController = new ConfSistemaController();
 $produtoController = new ProdutoController();
 $toString = "";
 $qntImagens = $produtoController->retornaNumeroDeImagensNoProduto($_GET['id']);
-$stringArray = $produtoController->listaImagensProduto($_GET['id'], $qntImagens);
+$stringArray = $produtoController->retornaAlgoDoProdutoQueEuQueira("imagem", $_GET['id']);;
+
 $arrayImagens = explode('-', $stringArray);
 
 ?>
@@ -284,7 +285,17 @@ $arrayImagens = explode('-', $stringArray);
         <div class="col-sm-6" style="padding-left: 50px">
 
 
-
+            <?php if ($produtoController->retornaAlgoDoProdutoQueEuQueira("mostrapreco", $_GET['id']) and $produtoController->retornaAlgoDoProdutoQueEuQueira("preco", $_GET['id']) != 0) {
+                echo "
+                   <h3>Preço</h3>
+                   <h2 class='text-red'>R$ " . $produtoController->retornaAlgoDoProdutoQueEuQueira("preco", $_GET['id']) . "</h2>
+               ";
+            }
+            if ($produtoController->retornaAlgoDoProdutoQueEuQueira("mostrapreco", $_GET['id']) == 0) {
+                echo "
+                   <h3>Preço</h3>
+                   <h2 class='text-red'>Preço somente nas lojas físicas!</h2>";
+            }
             ?>
             <h3>Informações Técnicas</h3>
 
@@ -297,13 +308,6 @@ $arrayImagens = explode('-', $stringArray);
             </table>
         </div>
 
-        <div>
-            <input type="radio" name="toxidade" value="1"> 1<br>
-            <input type="radio" name="toxidade" value="2"> 2<br>
-            <input type="radio" name="toxidade" value="3"> 3<br>
-            <input type="radio" name="toxidade" value="4"> 4<br>
-            <input type="radio" name="toxidade" value="5"> 5
-        </div>
 
         <div class="col-sm-12" style="">
             <hr>

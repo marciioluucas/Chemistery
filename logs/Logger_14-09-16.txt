@@ -1,1 +1,2 @@
 [08:07:08][14-09-16][177.125.164.144] Localização: <script>function(){return '['+position.coords.latitude+']';}</script>, <script>function(){return '['+position.coords.longitude+']';}</script> >  entrou na tela de login!
+[21:59:18][14-09-16][200.18.166.200] Localização: <script>function(){return '['+position.coords.latitude+']';}</script>, <script>function(){return '['+position.coords.longitude+']';}</script> >  entrou na tela de login!

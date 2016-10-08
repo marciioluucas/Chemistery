@@ -1,191 +1,191 @@
 {
-   "menus":[
-      {
-         "codigo":"1",
-         "descricao":"Produtos",
-         "icone":"fa-shopping-cart",
-         "imagemIcone":"",
-         "permissao":"1",
-         "menuList":[
+  "menus":[
+    {
+      "codigo":"1",
+      "descricao":"Produtos",
+      "icone":"fa-shopping-cart",
+      "imagemIcone":"",
+      "permissao":"1",
+      "menuList":[
+        {
+          "codigo":"3",
+          "descricao":"Cadastro de produtos",
+          "icone":"fa-cart-plus",
+          "url":"frmCadastroProduto.php",
+          "permissao":"1"
+        },
+        {
+          "codigo":"3",
+          "descricao":"Lista de produtos",
+          "icone":"fa-list-alt",
+          "url":"../controller/ProdutoController.php?q=listar",
+          "permissao":"1"
+        },
+        {
+          "codigo":"4",
+          "descricao":"Categorias",
+          "icone":"fa-bars",
+          "imagemIcone":"",
+          "url":"#",
+          "permissao":"1",
+          "menuList":[
             {
-               "codigo":"2",
-               "descricao":"Cadastro de produtos",
-               "icone":"fa-cart-plus",
-               "url":"frmCadastroProduto.php",
-               "permissao":"1"
+              "codigo":"5",
+              "descricao":"Cadastro de categorias",
+              "icone":"fa-plus-circle",
+              "url":"frmCadastroCategoria.php",
+              "permissao":"1"
             },
             {
-               "codigo":"3",
-               "descricao":"Lista de produtos",
-               "icone":"fa-list-alt",
-               "url":"../controller/ProdutoController.php?q=listar",
-               "permissao":"1"
-            },
-            {
-               "codigo":"4",
-               "descricao":"Categorias",
-               "icone":"fa-bars",
-               "imagemIcone":"",
-               "url":"#",
-               "permissao":"1",
-               "menuList":[
-                  {
-                     "codigo":"5",
-                     "descricao":"Cadastro de categorias",
-                     "icone":"fa-plus-circle",
-                     "url":"frmCadastroCategoria.php",
-                     "permissao":"1"
-                  },
-                  {
-                     "codigo":"6",
-                     "descricao":"Lista de categorias",
-                     "icone":"fa-list-alt",
-                     "url":"../controller/CategoriaController.php?q=listar",
-                     "permissao":"1"
-                  }
-               ]
-            },
-            {
-               "codigo":"7",
-               "descricao":"Seção",
-               "icone":"fa-bars",
-               "imagemIcone":"",
-               "url":"#",
-               "permissao":"1",
-               "menuList":[
-                  {
-                     "codigo":"8",
-                     "descricao":"Cadastro de seção",
-                     "icone":"fa-plus-circle",
-                     "url":"frmCadastroSecao.php",
-                     "permissao":"1"
-                  },
-                  {
-                     "codigo":"9",
-                     "descricao":"Lista de seções",
-                     "icone":"fa-list-alt",
-                     "url":"../controller/SecaoController.php?q=listar",
-                     "permissao":"1"
-                  }
-               ]
+              "codigo":"6",
+              "descricao":"Lista de categorias",
+              "icone":"fa-list-alt",
+              "url":"../controller/CategoriaController.php?q=listar",
+              "permissao":"1"
             }
-         ]
-      },
-      {
-         "codigo":"10",
-         "descricao":"Usuários",
-         "icone":"fa-users",
-         "imagemIcone":"",
-         "permissao":"2",
-         "menuList":[
+          ]
+        },
+        {
+          "codigo":"7",
+          "descricao":"Seção",
+          "icone":"fa-bars",
+          "imagemIcone":"",
+          "url":"#",
+          "permissao":"1",
+          "menuList":[
             {
-               "codigo":"11",
-               "descricao":"Cadastro de usuários",
-               "icone":"fa-user-plus",
-               "url":"frmCadastroUsuario.php",
-               "permissao":"2"
+              "codigo":"8",
+              "descricao":"Cadastro de seção",
+              "icone":"fa-plus-circle",
+              "url":"frmCadastroSecao.php",
+              "permissao":"1"
             },
             {
-               "codigo":"12",
-               "descricao":"Lista de usuários",
-               "icone":"fa-list-alt",
-               "url":"../controller/UsuarioController.php?q=listar",
-               "permissao":"2"
+              "codigo":"9",
+              "descricao":"Lista de seções",
+              "icone":"fa-list-alt",
+              "url":"../controller/SecaoController.php?q=listar",
+              "permissao":"1"
             }
-         ]
-      },
-      {
-         "codigo":"13",
-         "descricao":"Empresas MASTER",
-         "icone":"",
-         "imagemIcone":"",
-         "permissao":"6",
-         "menuList":[
-            {
-               "codigo":"14",
-               "descricao":"Cadastro de empresa",
-               "icone":"",
-               "url":"",
-               "permissao":"3"
-            },
-            {
-               "codigo":"15",
-               "descricao":"Listar empresas",
-               "icone":"",
-               "url":"",
-               "permissao":"3"
-            }
-         ]
-      },
+          ]
+        }
+      ]
+    },
+    {
+      "codigo":"10",
+      "descricao":"Usuários",
+      "icone":"fa-users",
+      "imagemIcone":"",
+      "permissao":"3",
+      "menuList":[
+        {
+          "codigo":"11",
+          "descricao":"Cadastro de usuários",
+          "icone":"fa-user-plus",
+          "url":"frmCadastroUsuario.php",
+          "permissao":"3"
+        },
+        {
+          "codigo":"13",
+          "descricao":"Lista de usuários",
+          "icone":"fa-list-alt",
+          "url":"../controller/UsuarioController.php?q=listar",
+          "permissao":"3"
+        }
+      ]
+    },
+    {
+      "codigo":"13",
+      "descricao":"Empresas MASTER",
+      "icone":"",
+      "imagemIcone":"",
+      "permissao":"6",
+      "menuList":[
+        {
+          "codigo":"14",
+          "descricao":"Cadastro de empresa",
+          "icone":"",
+          "url":"",
+          "permissao":"3"
+        },
+        {
+          "codigo":"15",
+          "descricao":"Listar empresas",
+          "icone":"",
+          "url":"",
+          "permissao":"3"
+        }
+      ]
+    },
 
-      {
-         "codigo":"18",
-         "descricao":"Empresa",
-         "icone":"",
-         "imagemIcone":"",
-         "permissao":"2",
-         "menuList":[
-            {
-               "codigo":"19",
-               "descricao":"Cadastro de empresa",
-               "icone":"",
-               "url":"frmCadastroCliente.php",
-               "permissao":"2"
-            },
-            {
-               "codigo":"20",
-               "descricao":"Lista de empresas",
-               "icone":"",
-               "url":"../controller/ClienteController.php?q=listar",
-               "permissao":"2"
-            }
-         ]
-      },
-       {
-               "codigo":"21",
-               "descricao":"Arquivos",
-               "icone":"",
-               "imagemIcone":"",
-               "permissao":"2",
-               "menuList":[
-                  {
-                     "codigo":"22",
-                     "descricao":"Upload de arquivos",
-                     "icone":"",
-                     "url":"frmCadastroArquivo.php",
-                     "permissao":"2"
-                  },
-                  {
-                     "codigo":"23",
-                     "descricao":"Lista de arquivos enviados",
-                     "icone":"",
-                     "url":"../controller/ArquivoController.php?q=listar",
-                     "permissao":"2"
-                  }
-               ]
-            },
-      {
-         "codigo":"13",
-         "descricao":"Sistema",
-         "icone":"fa-gear",
-         "imagemIcone":"",
-         "permissao":"2",
-         "menuList":[
-            {
-               "codigo":"14",
-               "descricao":"Imagem padrão de produto",
-               "icone":"fa-image",
-               "url":"frmAlterarImagemPadrao.php",
-               "permissao":"2"
-            },
-            {
-               "codigo":"15",
-               "descricao":"Cor padrão",
-               "icone":"fa-eye",
-               "url":"frmAlterarCorPadrao.php",
-               "permissao":"2"
-            }
-         ]
-      }
-   ]
+    {
+      "codigo":"18",
+      "descricao":"Empresa",
+      "icone":"",
+      "imagemIcone":"",
+      "permissao":"3",
+      "menuList":[
+        {
+          "codigo":"19",
+          "descricao":"Cadastro de empresa",
+          "icone":"",
+          "url":"frmCadastroCliente.php",
+          "permissao":"3"
+        },
+        {
+          "codigo":"30",
+          "descricao":"Lista de empresas",
+          "icone":"",
+          "url":"../controller/ClienteController.php?q=listar",
+          "permissao":"3"
+        }
+      ]
+    },
+    {
+      "codigo":"31",
+      "descricao":"Arquivos",
+      "icone":"",
+      "imagemIcone":"",
+      "permissao":"3",
+      "menuList":[
+        {
+          "codigo":"33",
+          "descricao":"Upload de arquivos",
+          "icone":"",
+          "url":"frmCadastroArquivo.php",
+          "permissao":"3"
+        },
+        {
+          "codigo":"33",
+          "descricao":"Lista de arquivos enviados",
+          "icone":"",
+          "url":"../controller/ArquivoController.php?q=listar",
+          "permissao":"3"
+        }
+      ]
+    },
+    {
+      "codigo":"13",
+      "descricao":"Sistema",
+      "icone":"fa-gear",
+      "imagemIcone":"",
+      "permissao":"3",
+      "menuList":[
+        {
+          "codigo":"14",
+          "descricao":"Imagem padrão de produto",
+          "icone":"fa-image",
+          "url":"frmAlterarImagemPadrao.php",
+          "permissao":"3"
+        },
+        {
+          "codigo":"15",
+          "descricao":"Cor padrão",
+          "icone":"fa-eye",
+          "url":"frmAlterarCorPadrao.php",
+          "permissao":"3"
+        }
+      ]
+    }
+  ]
 }

@@ -17,7 +17,6 @@ class ProdutoController
     private $produto;
     private $imagem;
     private $categoria;
-    private $toxidade;
     private $secao;
     public $row;
 
@@ -84,11 +83,15 @@ class ProdutoController
 
         $this->produto->setNome($_POST['produtoNome']);
         $this->produto->setDescricao($_POST['produtoDescricao']);
+        $this->produto->setPreco($_POST['produtoPreco']);
         $this->produto->setUsuarioLogadoId($_POST['idUsuarioLogado']);
         $this->produto->setCategoria($_POST['produtoCategoria2']);
         $this->produto->setSecao($_POST['produtoSecao']);
-        $this->produto->setToxidade($_POST['toxidade']);
-
+        if (isset($_POST['produtoPrecoOnOff'])) {
+            $this->produto->setMostraPreco(1);
+        } else {
+            $this->produto->setMostraPreco(0);
+        }
         $setImg = "";
         $qntImagens = count($_FILES['produtoImagem']['name']);
         for ($i = 0; $i < $qntImagens; $i++) {
@@ -132,10 +135,14 @@ class ProdutoController
         if (isset($_POST['id1'])) $this->produto->setId($_POST['id1']);
         if (isset($_POST['produtoNome1']) || $_POST['produtoNome1'] != "") $this->produto->setNome($_POST['produtoNome1']);
         if (isset($_POST['produtoDescricao1'])) $this->produto->setDescricao($_POST['produtoDescricao1']);
-        if (isset($_POST['toxidade'])) $this->produto->setToxidade($_POST['toxidade']);
+        if (isset($_POST['produtoPreco1'])) $this->produto->setPreco($_POST['produtoPreco1']);
         $this->produto->setCategoria($_POST['produtoCategoria1']);
         $this->produto->setSecao($_POST['produtoSecao1']);
-
+        if (isset($_POST['produtoPrecoOnOff1'])) {
+            $this->produto->setMostraPreco(1);
+        } else {
+            $this->produto->setMostraPreco(0);
+        }
         $setImg = "";
 
 //          Imagens secundárias sem upload

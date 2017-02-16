@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e68c0b9-9fc4-4492-a1cd-a12fdb199f40" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/imgs/comburente.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/imgs/corrosivo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/imgs/explosivo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/imgs/inflamavel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/imgs/nocivo-irritante.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/imgs/toxico.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/ProdutoController.php" afterPath="$PROJECT_DIR$/controller/ProdutoController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Produto.php" afterPath="$PROJECT_DIR$/model/Produto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/dashboard.php" afterPath="$PROJECT_DIR$/view/dashboard.php" />
     </list>
     <ignored path="CataLOG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,8 +51,8 @@
       <file leaf-file-name="ProdutoController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/ProdutoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2570">
-              <caret line="203" column="5" lean-forward="false" selection-start-line="203" selection-start-column="5" selection-end-line="203" selection-end-column="5" />
+            <state relative-caret-position="154">
+              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -236,8 +240,8 @@
         <option value="$PROJECT_DIR$/view/lockscreen.php" />
         <option value="$PROJECT_DIR$/view/frmCadastroProduto.php" />
         <option value="$PROJECT_DIR$/model/Produto.php" />
-        <option value="$PROJECT_DIR$/controller/ProdutoController.php" />
         <option value="$PROJECT_DIR$/view/dashboard.php" />
+        <option value="$PROJECT_DIR$/controller/ProdutoController.php" />
       </list>
     </option>
   </component>
@@ -308,7 +312,25 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="sources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chemistery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chemistery" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imgs" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -523,7 +545,7 @@
       <workItem from="1474598256651" duration="1290000" />
       <workItem from="1474638189187" duration="2214000" />
       <workItem from="1474761046970" duration="52000" />
-      <workItem from="1487250263947" duration="9868000" />
+      <workItem from="1487250263947" duration="10597000" />
     </task>
     <task id="LOCAL-00001" summary="Retirar da Classe produto:&#10;&#10;Preco&#10;Mostrapreco&#10;&#10;Adicionar:&#10;&#10;Toxidade&#10;&#10;&#10;">
       <created>1474599472635</created>
@@ -595,11 +617,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487261404178</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Tirando as parada do secao no frmCadastroProduto">
+      <created>1487261832294</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1487261832294</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13535000" />
+    <option name="totallyTimeSpent" value="14264000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -612,10 +641,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20121029" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1429,8 +1458,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/ProdutoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2570">
-          <caret line="203" column="5" lean-forward="false" selection-start-line="203" selection-start-column="5" selection-end-line="203" selection-end-column="5" />
+        <state relative-caret-position="154">
+          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding />
         </state>
       </provider>

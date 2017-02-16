@@ -55,7 +55,6 @@ class ProdutoController
             } else {
                 $this->excluirImgPrincipal($_GET['produtoId']);
             }
-
         }
 
 

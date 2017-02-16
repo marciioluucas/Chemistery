@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e68c0b9-9fc4-4492-a1cd-a12fdb199f40" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/frmAlterarProduto.backup.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controller/SecaoController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model/Secao.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/dashboard.php" afterPath="$PROJECT_DIR$/view/dashboard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/ProdutoController.php" afterPath="$PROJECT_DIR$/controller/ProdutoController.php" />
     </list>
     <ignored path="CataLOG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +43,35 @@
     <favorites_list name="CataLOG" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ProdutoController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/ProdutoController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-896">
+              <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/Menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="147" column="30" lean-forward="true" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="30" />
+              <folding>
+                <marker date="1487250015000" expanded="true" signature="2202:2354" ph="..." />
+                <marker date="1487250015000" expanded="true" signature="2241:2354" ph="..." />
+                <marker date="1487250015000" expanded="true" signature="2782:2971" ph="..." />
+                <marker date="1487250015000" expanded="true" signature="2858:2971" ph="..." />
+                <marker date="1487250015000" expanded="true" signature="3551:3730" ph="..." />
+                <marker date="1487250015000" expanded="true" signature="3665:3701" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -65,7 +94,6 @@
         <option value="$PROJECT_DIR$/404.html" />
         <option value="$PROJECT_DIR$/model/Produto.php" />
         <option value="$PROJECT_DIR$/view/produto.php" />
-        <option value="$PROJECT_DIR$/controller/ProdutoController.php" />
         <option value="$PROJECT_DIR$/view/login.php" />
         <option value="$PROJECT_DIR$/bd_catalogo.sql" />
         <option value="dbtable:/b07271c7/609bb86b-8aee-4c3e-ab8e-fa2a5ab716d7/bd_chemistery.usuario" />
@@ -77,6 +105,7 @@
         <option value="$PROJECT_DIR$/view/lockscreen.php" />
         <option value="$PROJECT_DIR$/view/frmCadastroProduto.php" />
         <option value="$PROJECT_DIR$/view/dashboard.php" />
+        <option value="$PROJECT_DIR$/controller/ProdutoController.php" />
       </list>
     </option>
   </component>
@@ -251,7 +280,7 @@
       <workItem from="1474598256651" duration="1290000" />
       <workItem from="1474638189187" duration="2214000" />
       <workItem from="1474761046970" duration="52000" />
-      <workItem from="1487250263947" duration="8189000" />
+      <workItem from="1487250263947" duration="9032000" />
     </task>
     <task id="LOCAL-00001" summary="Retirar da Classe produto:&#10;&#10;Preco&#10;Mostrapreco&#10;&#10;Adicionar:&#10;&#10;Toxidade&#10;&#10;&#10;">
       <created>1474599472635</created>
@@ -302,11 +331,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487259615339</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Mudando dashboard">
+      <created>1487260155457</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1487260155457</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11856000" />
+    <option name="totallyTimeSpent" value="12699000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -319,10 +355,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20121029" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -361,7 +397,8 @@
     <MESSAGE value="Arrumando a SQL do Banco" />
     <MESSAGE value="Mudando as paradinha" />
     <MESSAGE value="Mudando lockscreen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mudando lockscreen" />
+    <MESSAGE value="Mudando dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mudando dashboard" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -978,14 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/ProdutoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-608">
-          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/609bb86b-8aee-4c3e-ab8e-fa2a5ab716d7/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -1068,14 +1097,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/frmCadastroProduto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3777">
-          <caret line="376" column="10" lean-forward="true" selection-start-line="376" selection-start-column="10" selection-end-line="376" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/lockscreen.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -1112,6 +1133,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="212" column="75" lean-forward="true" selection-start-line="211" selection-start-column="12" selection-end-line="212" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/SecaoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-480">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Secao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1056">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/frmCadastroProduto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="147" column="30" lean-forward="true" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="30" />
+          <folding>
+            <marker date="1487250015000" expanded="true" signature="2202:2354" ph="..." />
+            <marker date="1487250015000" expanded="true" signature="2241:2354" ph="..." />
+            <marker date="1487250015000" expanded="true" signature="2782:2971" ph="..." />
+            <marker date="1487250015000" expanded="true" signature="2858:2971" ph="..." />
+            <marker date="1487250015000" expanded="true" signature="3551:3730" ph="..." />
+            <marker date="1487250015000" expanded="true" signature="3665:3701" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/ProdutoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-896">
+          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
           <folding />
         </state>
       </provider>

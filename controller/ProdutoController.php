@@ -3,7 +3,6 @@
 require_once("../model/Produto.php");
 require_once("../model/Imagem.php");
 require_once("../model/Categoria.php");
-require_once("../model/Secao.php");
 
 /**
  * Created by PhpStorm.
@@ -17,7 +16,6 @@ class ProdutoController
     private $produto;
     private $imagem;
     private $categoria;
-    private $secao;
     public $row;
 
     /**
@@ -86,33 +84,11 @@ class ProdutoController
         $this->produto->setPreco($_POST['produtoPreco']);
         $this->produto->setUsuarioLogadoId($_POST['idUsuarioLogado']);
         $this->produto->setCategoria($_POST['produtoCategoria2']);
-        $this->produto->setSecao($_POST['produtoSecao']);
-        if (isset($_POST['produtoPrecoOnOff'])) {
-            $this->produto->setMostraPreco(1);
-        } else {
-            $this->produto->setMostraPreco(0);
-        }
-        $setImg = "";
-        $qntImagens = count($_FILES['produtoImagem']['name']);
-        for ($i = 0; $i < $qntImagens; $i++) {
-            $this->imagem->setArquivoNome($_FILES['produtoImagem']['name'][$i]);
-            $this->imagem->setArquivoErro($_FILES['produtoImagem']['error'][$i]);
-            $this->imagem->setArquivoTemporarioNome($_FILES['produtoImagem']['tmp_name'][$i]);
-            $this->imagem->setArquivoExtensao($_FILES['produtoImagem']['type'][$i]);
-            if ($i < $qntImagens - 1) {
-                $setImg .= $this->imagem->uploadMultiplo() . "-";
-            } else {
-                $setImg .= $this->imagem->uploadMultiplo();
-            }
-        }
-        $this->produto->setImagem($setImg);
-
         $this->imagem->setArquivoNome($_FILES['produtoImagemPrincipal']['name']);
         $this->imagem->setArquivoErro($_FILES['produtoImagemPrincipal']['error']);
         $this->imagem->setArquivoTemporarioNome($_FILES['produtoImagemPrincipal']['tmp_name']);
         $this->imagem->setArquivoExtensao($_FILES['produtoImagemPrincipal']['type']);
         if (isset($_FILES['produtoImagemPrincipal']['name'])) {
-
             $this->produto->setImagemPrincipal($this->imagem->upload());
         } else {
             $this->produto->setImagemPrincipal(null);
@@ -143,40 +119,6 @@ class ProdutoController
         } else {
             $this->produto->setMostraPreco(0);
         }
-        $setImg = "";
-
-//          Imagens secundárias sem upload
-
-
-        for ($i = 0; $i < 9; $i++) {
-            if (($_FILES['produtoImagem1']['name'][$i] == "") && $_POST['angImg'][$i] != 0) {
-                $this->imagem->setCaminho($this->retornaImagensDoProduto($i));
-                $this->imagem->setAnguloDeRotacao($_POST['angImg'][$i]);
-                echo $_POST['angImg'][$i];
-                $this->imagem->rotacaoImagemSemUpload();
-            }
-        }
-
-// Imagens secundárias
-        $qntImagens = 0;
-        for ($l = 0; $l < 9; $l++) {
-            if ($_FILES['produtoImagem1']['name'][$l] != "") {
-//                echo $_FILES['produtoImagem1']['name'][$l] . " ";
-                $qntImagens++;
-            }
-        }
-
-        for ($i = 0; $i < 9; $i++) {
-            if ($_FILES['produtoImagem1']['name'][$i] != "") {
-                $this->imagem->setArquivoNome($_FILES['produtoImagem1']['name'][$i]);
-                $this->imagem->setArquivoErro($_FILES['produtoImagem1']['error'][$i]);
-                $this->imagem->setArquivoTemporarioNome($_FILES['produtoImagem1']['tmp_name'][$i]);
-                $this->imagem->setArquivoExtensao($_FILES['produtoImagem1']['type'][$i]);
-                $this->imagem->setAnguloDeRotacao($_POST['angImg'][$i]);
-                $this->produto->cadastrarImagemNoProdutoJaCadastrado($this->imagem->upload(), $i, $_POST['id1']);
-            }
-
-        }
 
 
 //        Imagem principal
@@ -201,8 +143,8 @@ class ProdutoController
 
 
         if (isset($_POST['produtoAtributos'])) $this->produto->alterarValorDosAtributos($_POST['id1'], $_POST['produtoCategoria1'], $_POST['produtoAtributos']);
-//        echo ($this->produto->alterarProduto()) ? "<script>alert('Alteração do produto efetuada com sucesso!'); window.location.replace('ProdutoController.php?q=listar');</script>"
-//            : "<script>alert('Erro na alteração do produto!'); window.location.replace('ProdutoController.php?q=listar');</script>";
+        echo ($this->produto->alterarProduto()) ? "<script>alert('Alteração do produto efetuada com sucesso!'); window.location.replace('ProdutoController.php?q=listar');</script>"
+            : "<script>alert('Erro na alteração do produto!'); window.location.replace('ProdutoController.php?q=listar');</script>";
 
     }
 

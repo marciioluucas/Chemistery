@@ -7,7 +7,7 @@ require_once 'protecaoPaginas.php'
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CataLOG | Sessão expirada</title>
+    <title>Chemistery | Sessão expirada</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -53,7 +53,7 @@ require_once 'protecaoPaginas.php'
 <!-- Automatic element centering -->
 <div class="lockscreen-wrapper">
     <div class="lockscreen-logo">
-        <a href="login.php"><b>Cata</b>LOG</a>
+        <a href="login.php"><b>Che</b>mistery</a>
     </div>
     <!-- User name -->
     <div class="lockscreen-name"><?php echo $_COOKIE['cookieNome'] ?></div>
@@ -89,8 +89,8 @@ require_once 'protecaoPaginas.php'
         <a href="javascript:myPopup();">Ou entre com uma conta diferente</a>
     </div>
     <div class="lockscreen-footer text-center">
-        Copyright &copy; 2013-2016 <b><a href="http://www.gruposalatiel.com" class="text-black">Grupo
-                Salatiel</a></b><br>
+        <strong><b id="dataRodape"></b> Copyright &copy; <a href="http://www.lukeidea.com">Made by Márcio Lucas e Juanes Adriano
+                - PIVIC PROJECT 2017</a>.</strong><br>
         All rights reserved
     </div>
 </div><!-- /.center -->
@@ -100,18 +100,7 @@ require_once 'protecaoPaginas.php'
 <!-- Bootstrap 3.3.5 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 </body>
-<style>
-    .novaAba {
-        target-new: tab ! important
-    }
-</style>
 <script>
-    $(window).resize(function(){
-        $("body").setHeight($(window).height());
-    });
-    function myPopup() {
-        window.open("login.php")
-    }
 
 </script>
 </html>

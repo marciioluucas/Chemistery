@@ -31,7 +31,6 @@ class ProdutoController
         $this->produto = new Produto();
         $this->imagem = new Imagem();
         $this->categoria = new Categoria();
-        $this->secao = new Secao();
         if (isset($_POST['b']) == 'cadastrar') {
             $this->cadastrar();
         }
@@ -202,11 +201,6 @@ class ProdutoController
     public function retornaUltimosCategoriasCadastradasParaOGraficoDashboard()
     {
         return $this->produto->dadosGraficoCategoriasCadastradasUltimos30Dias();
-    }
-
-    public function retornaUltimosSecoesCadastradasParaOGraficoDashboard()
-    {
-        return $this->produto->dadosGraficoSecoesCadastradasUltimos30Dias();
     }
 
     public function alterarStringArrayImagens($string, $posicao)

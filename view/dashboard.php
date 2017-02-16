@@ -2,11 +2,9 @@
 include_once "../controller/ProdutoController.php";
 include_once "../controller/UsuarioController.php";
 include_once "../controller/CategoriaController.php";
-include_once "../controller/SecaoController.php";
 $produtoController = new ProdutoController();
 $usuarioController = new UsuarioController();
 $categoriaController = new CategoriaController();
-$secaoController = new SecaoController();
 
 require_once "protecaoPaginas.php";
 if ($_SESSION["tempo"] < time()) {
@@ -79,21 +77,7 @@ if ($_SESSION["tempo"] < time()) {
                     </div>
                 </div><!-- ./col -->
 
-                <div class="col-lg-3 col-xs-6">
-                    <!-- small box -->
-                    <div class="small-box bg-green">
-                        <div class="inner">
-                            <h3><?php echo $secaoController->retornaNumDeSecoes(); ?></h3>
-                            <p>Seções cadastradas</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-stats-bars"></i>
-                        </div>
-                        <a href="../controller/SecaoController.php?q=listar" class="small-box-footer">Mais informações
-                            <i
-                                class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div><!-- ./col -->
+
                 <div class="col-lg-3 col-xs-6">
                     <!-- small box -->
                     <div class="small-box bg-yellow">
@@ -127,7 +111,7 @@ if ($_SESSION["tempo"] < time()) {
                 </div><!-- ./col -->
             </div><!-- /.row -->
             <!-- Main row -->
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <!-- LINE CHART -->
                 <div class="box box-info">
                     <div class="box-header with-border">
@@ -142,22 +126,7 @@ if ($_SESSION["tempo"] < time()) {
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <!-- LINE CHART -->
-                <div class="box box-success">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Seções cadastradas nos ultimos 30 dias</h3>
-                        <div class="box-tools pull-right">
-                            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                            <!--                        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button> -->
-                        </div>
-                    </div>
-                    <div class="box-body chart-responsive">
-                        <div class="chart" id="line-chart2" style="height: 300px;"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <!-- LINE CHART -->
                 <div class="box box-danger">
                     <div class="box-header with-border">
@@ -256,20 +225,6 @@ if ($_SESSION["tempo"] < time()) {
         ykeys: ['valor'],
         labels: ['Produtos cadastrados'],
         lineColors: ['#3c8dbc'],
-        hideHover: 'auto',
-        parseTime: false
-    });
-
-    var line2 = new Morris.Line({
-        element: 'line-chart2',
-        resize: true,
-        data: [
-            <?php echo $produtoController->retornaUltimosSecoesCadastradasParaOGraficoDashboard(); ?>
-        ],
-        xkey: 'day',
-        ykeys: ['valor'],
-        labels: ['Seções cadastradas'],
-        lineColors: ['#00a65a'],
         hideHover: 'auto',
         parseTime: false
     });

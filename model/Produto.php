@@ -1,6 +1,5 @@
 <?php
 require_once("Banco.php");
-require_once("Secao.php");
 require_once("Categoria.php");
 
 /**
@@ -152,22 +151,6 @@ class Produto extends Banco
     }
 
     /**
-     * @return Secao
-     */
-    public function getSecao()
-    {
-        return $this->secao;
-    }
-
-    /**
-     * @param Secao $secao
-     */
-    public function setSecao($secao)
-    {
-        $this->secao = $secao;
-    }
-
-    /**
      * @return Categoria
      */
     public function getCategoria()
@@ -189,9 +172,9 @@ class Produto extends Banco
         try {
             $this->tabela = "produto";
             $this->campos = array("nome", "descricao", "preco", "imagem", "usuario_id", "imagemprincipal",
-                "mostrapreco", "categoria_id", "secao_id", "datacriacao");
+                "mostrapreco", "categoria_id", "datacriacao");
             $this->valores = array($this->getNome(), $this->getDescricao(), $this->getPreco(), $this->getImagem(),
-                $this->usuarioLogadoId, $this->imagemPrincipal, $this->mostraPreco, $this->categoria, $this->secao, date("Y-m-d"));
+                $this->usuarioLogadoId, $this->imagemPrincipal, $this->mostraPreco, $this->categoria, date("Y-m-d"));
             return $this->cadastrar();
         } catch (Exception $e) {
             echo "Exceção capturada: " . $e->getMessage();
@@ -212,7 +195,7 @@ class Produto extends Banco
             $campos_eq_valores .= "imagemprincipal = '$this->imagemPrincipal', ";
         }
         $campos_eq_valores .= "mostrapreco = '$this->mostraPreco', ";
-        $campos_eq_valores .= "secao_id = '$this->secao', categoria_id = '$this->categoria', dataultimaalteracao = '" . date("Y-m-d") . "'";
+        $campos_eq_valores .= "categoria_id = '$this->categoria', dataultimaalteracao = '" . date("Y-m-d") . "'";
 
         try {
             return $this->alterar("produto", $campos_eq_valores, $this->id);
@@ -235,7 +218,7 @@ class Produto extends Banco
     function listarProduto()
     {
         $this->tabela = "produto";
-        $this->campos = array("id", "nome", "preco", "mostrapreco", "imagem", "descricao", "categoria_id", "secao_id");
+        $this->campos = array("id", "nome", "preco", "mostrapreco", "imagem", "descricao", "categoria_id");
         $this->condicao = "ativado = 1 ";
         $this->subQntColunasConsulTabela = 5;
         $this->listar();
@@ -732,19 +715,6 @@ class Produto extends Banco
         }
     }
 
-    function dadosGraficoSecoesCadastradasUltimos30Dias()
-    {
-        $sql = "SELECT DAY(datacriacao) AS dia FROM secao WHERE ativado=1 AND datacriacao >= CURDATE() - INTERVAL 30 DAY AND CURDATE();";
-        $query = $this->query($sql);
-        if ($this->retornaNumRegistrosDigitandoSQL($sql) == 0) {
-            echo "{day: '0', valor: 0},";
-        }
-        while ($r = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
-            $sql2 = "SELECT DAY(datacriacao) AS dia FROM secao WHERE ativado=1 AND datacriacao >= CURDATE() - INTERVAL 30 DAY AND CURDATE() AND DAY(datacriacao) = " . $r['dia'] . ";";
-            $valor = $this->retornaNumRegistrosDigitandoSQL($sql2);
-            echo "{day: 'Dia " . $r['dia'] . "', valor: $valor},";
-        }
-    }
 
     function alterarStringArray($separador, $string, $posicao)
     {

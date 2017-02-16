@@ -146,10 +146,10 @@ class Banco
     private function conexao()
     {
 
-        $this->host = "ip.vitoriaadesivos.com.br";
-        $this->banco = "admin_marcio";
-        $this->usuario = "admin_marcio";
-        $this->senha = "kIvTyhKhCG";
+        $this->host = "localhost";
+        $this->banco = "bd_chemistery";
+        $this->usuario = "root";
+        $this->senha = "";
 
         if (mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco)) {
 

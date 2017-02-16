@@ -15,7 +15,7 @@ if(isset($_GET['tela']) == "UsuarioNaoLogado") {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CataLOG v1.0 | Log in</title>
+    <title>Chemistery v1.0 | Log in</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="theme-color" content="#605ca8">
@@ -90,7 +90,7 @@ if(isset($_GET['tela']) == "UsuarioNaoLogado") {
 
     <div class="login-box-body">
         <div class="login-logo">
-            <a href="#">Cata<b>LOG</b></a>
+            <a href="#">Che<b>mistery</b></a>
         </div><!-- /.login-logo -->
         <p class="login-box-msg">Logue-se para começar a usar</p>
         <form action="../controller/UsuarioController.php" method="post">
@@ -133,7 +133,7 @@ if(isset($_GET['tela']) == "UsuarioNaoLogado") {
 
         <div class="login-box-body" >
             <div class="login-logo" style="margin-bottom: 74px">
-                <a href="#">Cata<b>LOG</b></a>
+                <a href="#">Che<b>mistery</b></a>
             </div><!-- /.login-logo -->
             <p class="login-box-msg">Enviaremos sua senha para o email cadastrado</p>
             <form action="../controller/UsuarioController.php" method="post">
@@ -146,6 +146,7 @@ if(isset($_GET['tela']) == "UsuarioNaoLogado") {
                 <div class="row">
                     <div class="col-xs-12 text-right" style="margin-top: 70px; margin-bottom: 10px">
                         <input type="submit" value="Restaurar!" class="btn btn-primary btn-block btn-flat bg-purple" style="border: #464382;" name="restaurar">
+                        <a href="#" id="linkVoltar" class="btn btn-primary btn-block btn-flat" style="" name="restaurar">Voltar</a>
                     </div><!-- /.col -->
                 </div>
             </form>
@@ -187,6 +188,11 @@ if(isset($_GET['tela']) == "UsuarioNaoLogado") {
         $("#login").hide();
         $("#esqueciSenha").fadeIn('fast');
         $("#usuarioEmailRestauracao").focus();
+    })
+
+    $("#linkVoltar").click(function(){
+        $("#esqueciSenha").hide();
+        $("#login").fadeIn('fast');
     })
 
 </script>

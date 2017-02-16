@@ -44,30 +44,6 @@
               "permissao":"1"
             }
           ]
-        },
-        {
-          "codigo":"7",
-          "descricao":"Seção",
-          "icone":"fa-bars",
-          "imagemIcone":"",
-          "url":"#",
-          "permissao":"1",
-          "menuList":[
-            {
-              "codigo":"8",
-              "descricao":"Cadastro de seção",
-              "icone":"fa-plus-circle",
-              "url":"frmCadastroSecao.php",
-              "permissao":"1"
-            },
-            {
-              "codigo":"9",
-              "descricao":"Lista de seções",
-              "icone":"fa-list-alt",
-              "url":"../controller/SecaoController.php?q=listar",
-              "permissao":"1"
-            }
-          ]
         }
       ]
     },
@@ -113,53 +89,6 @@
           "descricao":"Listar empresas",
           "icone":"",
           "url":"",
-          "permissao":"3"
-        }
-      ]
-    },
-
-    {
-      "codigo":"18",
-      "descricao":"Empresa",
-      "icone":"",
-      "imagemIcone":"",
-      "permissao":"3",
-      "menuList":[
-        {
-          "codigo":"19",
-          "descricao":"Cadastro de empresa",
-          "icone":"",
-          "url":"frmCadastroCliente.php",
-          "permissao":"3"
-        },
-        {
-          "codigo":"30",
-          "descricao":"Lista de empresas",
-          "icone":"",
-          "url":"../controller/ClienteController.php?q=listar",
-          "permissao":"3"
-        }
-      ]
-    },
-    {
-      "codigo":"31",
-      "descricao":"Arquivos",
-      "icone":"",
-      "imagemIcone":"",
-      "permissao":"3",
-      "menuList":[
-        {
-          "codigo":"33",
-          "descricao":"Upload de arquivos",
-          "icone":"",
-          "url":"frmCadastroArquivo.php",
-          "permissao":"3"
-        },
-        {
-          "codigo":"33",
-          "descricao":"Lista de arquivos enviados",
-          "icone":"",
-          "url":"../controller/ArquivoController.php?q=listar",
           "permissao":"3"
         }
       ]

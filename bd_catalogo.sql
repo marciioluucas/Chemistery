@@ -52,17 +52,17 @@ CREATE TABLE `categoria` (
   `dataultimaalteracao` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE `cliente` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(180) DEFAULT NULL,
-  `descricao` text,
-  `tipo` varchar(20) NOT NULL,
-  `cpf_ou_cnpj` varchar(30) DEFAULT NULL,
-  `datacriacao` date DEFAULT NULL,
-  `dataultimaalteracao` date DEFAULT NULL,
-  `dataexclusao` date DEFAULT NULL,
-  `ativado` tinyint(1) DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+# CREATE TABLE `cliente` (
+#   `id` int(11) NOT NULL,
+#   `nome` varchar(180) DEFAULT NULL,
+#   `descricao` text,
+#   `tipo` varchar(20) NOT NULL,
+#   `cpf_ou_cnpj` varchar(30) DEFAULT NULL,
+#   `datacriacao` date DEFAULT NULL,
+#   `dataultimaalteracao` date DEFAULT NULL,
+#   `dataexclusao` date DEFAULT NULL,
+#   `ativado` tinyint(1) DEFAULT '1'
+# ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `cor` (
   `id` int(11) NOT NULL,
@@ -96,6 +96,7 @@ CREATE TABLE `produto` (
   `descricao` text NOT NULL,
   `imagem` text NOT NULL,
   `preco` float(10,2) NOT NULL DEFAULT '0.00',
+  `toxidade` int(11) NOT NULL DEFAULT '0',
   `ativado` tinyint(1) NOT NULL DEFAULT '1',
   `imagemprincipal` varchar(100) DEFAULT '../imagens/noimg.png',
   `mostrapreco` tinyint(1) NOT NULL DEFAULT '0',
@@ -137,8 +138,7 @@ CREATE TABLE `uploads` (
   `id` int(11) NOT NULL,
   `identificador` varchar(20) DEFAULT NULL,
   `arquivo_id` int(11) NOT NULL,
-  `ativado` tinyint(1) DEFAULT '1',
-  `cliente_id` int(11) NOT NULL
+  `ativado` tinyint(1) DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -157,13 +157,14 @@ CREATE TABLE `usuario` (
   `imagem` text,
   `datacriacao` varchar(50) DEFAULT NULL,
   `dataexclusao` varchar(50) DEFAULT NULL,
-  `dataultimaalteracao` varchar(50) DEFAULT NULL,
-  `cliente_id` int(11) NOT NULL
+  `dataultimaalteracao` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
+insert into usuario (id,nome, email, login,senha,nivel,ativado,imagem,datacriacao)
+VALUES (1,'Admin','admin@chemistery.com','admin','admin',5,1,'../imagens/default-user-img.jpg','2017-02-16') ;
 
 -- --------------------------------------------------------
 
@@ -206,11 +207,7 @@ ALTER TABLE `atributo`
 ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `cliente`
---
-ALTER TABLE `cliente`
-  ADD PRIMARY KEY (`id`);
+
 
 --
 -- Indexes for table `cor`
@@ -244,16 +241,14 @@ ALTER TABLE `secao`
 -- Indexes for table `uploads`
 --
 ALTER TABLE `uploads`
-  ADD PRIMARY KEY (`id`,`arquivo_id`,`cliente_id`),
-  ADD KEY `fk_boletim_arquivo1_idx` (`arquivo_id`),
-  ADD KEY `fk_uploads_cliente1_idx` (`cliente_id`);
+  ADD PRIMARY KEY (`id`,`arquivo_id`),
+  ADD KEY `fk_boletim_arquivo1_idx` (`arquivo_id`);
 
 --
 -- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id`,`cliente_id`),
-  ADD KEY `fk_usuario_cliente1_idx` (`cliente_id`);
+  ADD PRIMARY KEY (`id`),
 
 --
 -- Indexes for table `valor_atributo`
@@ -282,11 +277,7 @@ ALTER TABLE `atributo`
 --
 ALTER TABLE `categoria`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
---
--- AUTO_INCREMENT for table `cliente`
---
-ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `cor`
 --
@@ -348,14 +339,7 @@ ALTER TABLE `produto`
 -- Limitadores para a tabela `uploads`
 --
 ALTER TABLE `uploads`
-  ADD CONSTRAINT `fk_boletim_arquivo1` FOREIGN KEY (`arquivo_id`) REFERENCES `arquivo` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_uploads_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Limitadores para a tabela `usuario`
---
-ALTER TABLE `usuario`
-  ADD CONSTRAINT `fk_usuario_cliente1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_boletim_arquivo1` FOREIGN KEY (`arquivo_id`) REFERENCES `arquivo` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

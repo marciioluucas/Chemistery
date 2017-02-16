@@ -11,17 +11,7 @@ $menuController = new MenuController();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CataLOG v1.<?php
-        $ponteiro = fopen("\\xampp\\htdocs\\CataLOG\\catalogv10\\versao", "r");
-
-        feof($ponteiro);
-
-        $linha = fgets($ponteiro, 4096);
-        echo $linha;
-
-        fclose($ponteiro)
-
-        ?> | Dashboard</title>
+    <title>CataLOG v1.0 | Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="theme-color" content="#78ae22">
@@ -102,9 +92,9 @@ $menuController = new MenuController();
         <!-- Logo -->
         <a href="dashboard.php" target="iframePrincipal" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini">C<b>LOG</b></span>
+            <span class="logo-mini">C<b>hemistery</b></span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg">Cata<b>LOG</b><small> v.1.<?php
+            <span class="logo-lg">Che<b>mistery</b><small> v.1.<?php
                     $ponteiro = fopen("\\xampp\\htdocs\\CataLOG\\catalogv10\\versao", "r");
 
                     feof($ponteiro);
@@ -117,7 +107,7 @@ $menuController = new MenuController();
 
                     ?></small></span>
         </a>
-        <!-- Header Navbar: style can be found in header.less -->
+
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
             <a href="#" class="sidebar-toggle" id="botaoNav" data-toggle="offcanvas" role="button"
@@ -126,19 +116,13 @@ $menuController = new MenuController();
             </a>
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                    <!-- Messages: style can be found in dropdown.less-->
 
-                    <!-- Notifications: style can be found in dropdown.less -->
-
-                    <!-- Tasks: style can be found in dropdown.less -->
-
-                    <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="<?php echo $usuarioController->retornaAlgoUsuario("imagem", $idUser); ?>"
                                  class="user-image" alt="User Image">
                             <span
-                                class="hidden-xs"><?php echo $usuarioController->retornaAlgoUsuario("nome", $idUser); ?></span>
+                                    class="hidden-xs"><?php echo $usuarioController->retornaAlgoUsuario("nome", $idUser); ?></span>
                         </a>
 
                         <ul class="dropdown-menu">
@@ -209,7 +193,7 @@ $menuController = new MenuController();
                 <ul class="sidebar-menu">
                     <li class="header text-center">MENU PRINCIPAL</li>
                     <?php $menuController->listarMenu($usuarioController->retornaAlgoUsuario("nivel", $idUser)); ?>
-                    
+
                 </ul>
             </div>
 
@@ -225,23 +209,10 @@ $menuController = new MenuController();
         <footer class="main-footer" style="bottom: 0; position: fixed; width: 88%;
     ">
 
-            <strong><b id="dataRodape"></b> Copyright &copy; <a href="http://www.gruposalatiel.com">Made by Márcio Lucas
-                    - A
-                    member
-                    of Salatiel Group</a>.</strong> All rights reserved.
-<span class="pull-right">
-
-                <b>Versão 1.0.0.<?php
-                    $ponteiro = fopen("\\xampp\\htdocs\\CataLOG\\catalogv10\\versao", "r");
-
-                    feof($ponteiro);
-
-                    $linha = fgets($ponteiro, 4096);
-                    echo $linha . "</b>";
-
-                    fclose($ponteiro)
-
-                    ?>
+            <strong><b id="dataRodape"></b> Copyright &copy; <a href="http://www.lukeidea.com">Made by Márcio Lucas e Juanes Adriano
+                    - PIVIC PROJECT 2017</a>.</strong> All rights reserved.
+            <span class="pull-right">
+    <b>Versão 1.0</b>
 </span>
         </footer>
     </div>
@@ -304,10 +275,8 @@ $menuController = new MenuController();
     });
     function data() {
         var ano = new Date();
-        document.getElementById("dataRodape").innerHTML = "2013 - " + ano.getFullYear();
+        document.getElementById("dataRodape").innerHTML = ""+ ano.getFullYear();
     }
-
-    
 
 
 </script>

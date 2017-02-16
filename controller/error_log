@@ -1,3 +1,0 @@
-[19-Aug-2016 23:13:59 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 15360 bytes) in /home/gruposalatiel/public_html/agripecas.net/catalogo/model/Imagem.php on line 272
-[30-Sep-2016 19:03:18 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 15360 bytes) in /home/gruposalatiel/public_html/agripecas.net/catalogo/model/Imagem.php on line 272
-[30-Sep-2016 19:06:11 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 24580 bytes) in /home/gruposalatiel/public_html/agripecas.net/catalogo/model/Imagem.php on line 268

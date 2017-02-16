@@ -8,7 +8,6 @@
 
 require_once "protecaoPaginas.php";
 require_once "../controller/CategoriaController.php";
-require_once "../controller/SecaoController.php";
 require_once "../controller/ProdutoController.php";
 
 $secaoController = new SecaoController();
@@ -217,34 +216,9 @@ if ($_SESSION["tempo"] < time()) {
                                       style="resize: none; height: 280px;;"></textarea>
                 </div>
 
-                <div class="form-group">
-                    <label for="produtoPrecoOnOff">Mostrar Preço?</label>
-                    <div class="onoffswitch">
-                        <input type="checkbox" name="produtoPrecoOnOff" class="onoffswitch-checkbox"
-                               id="produtoPrecoOnOff" onclick="habilitarCheckBox()">
-                        <label class="onoffswitch-label" for="produtoPrecoOnOff"></label>
-                    </div>
-                </div>
-                <div class="form-group" id="produtoPrecoDiv" style="display: none;">
-                    <label for="produtoPreco">Preço</label>
-                    <input type="text" class="form-control" id="produtoPreco" name="produtoPreco">
-                </div>
 
-                <div class="form-group">
-                    <label for="produtoSecao">Seção</label>
-                    <div class="input-group" style="margin-top: -3px !important;">
-                            <span class="input-group-addon" id="Lupa" style="height: 34px !important;"><i
-                                    class="fa fa-search"
-                                    aria-hidden="true"></i></span>
-                        <select class="form-control select2"
-                                style="width: 100%; border-radius: 0 !important; display: none"
-                                id="produtoSecao" aria-describedby="Lupa" name="produtoSecao">
 
-                            <option selected="selected" value="0">Nenhuma</option>
-                            <?php $secaoController->consultaSecaos() ?>
-                        </select>
-                    </div>
-                </div><!-- /.form-group -->
+
 
                 <div class="form-group">
                     <label for="produtoCategoria2">Categoria</label>
@@ -276,35 +250,7 @@ if ($_SESSION["tempo"] < time()) {
                              style="width: auto !important; height: auto !important; max-height: 190px !important;"
                              class="img"></div>
                 </div>
-                <div class="form-group">
-                    <label for="produtoImagem">Imagem Secundárias</label>
-                    <input type="file" class="form-control" id="produtoimagem" name="produtoImagem[]" multiple
-                           accept="image/png, image/jpg, image/jpeg">
-                    <p class="help-block">Para melhor vizualização recomendamos imagens 256 x 256 ou maior e do
-                        formato .jpg
-                        ou .png</p>
 
-                    <div class="col-sm-2 divcontainer"><img src="../imagens/noimg.png" id="preview-da-imagem8"
-                                                            class="img"></div>
-                    <div class="col-sm-2 divcontainer"><img src="../imagens/noimg.png" id="preview-da-imagem7"
-                                                            class="img"></div>
-                    <div class="col-sm-2 divcontainer"><img src="../imagens/noimg.png" id="preview-da-imagem6"
-                                                            class="img"></div>
-                    <div class="col-sm-2 divcontainer"><img src="../imagens/noimg.png" id="preview-da-imagem5"
-                                                            class="img"></div>
-                    <div class="col-sm-2 divcontainer"><img src="../imagens/noimg.png" id="preview-da-imagem4"
-                                                            class="img"></div>
-                    <div class="col-sm-2 divcontainer"><img src="../imagens/noimg.png" id="preview-da-imagem3"
-                                                            class="img"></div>
-                    <div class="col-sm-2 divcontainer"><img src="../imagens/noimg.png" id="preview-da-imagem2"
-                                                            class="img"></div>
-                    <div class="col-sm-2 divcontainer"><img src="../imagens/noimg.png" id="preview-da-imagem1"
-                                                            class="img"></div>
-                    <div class="col-sm-2 divcontainer"><img src="../imagens/noimg.png" id="preview-da-imagem"
-                                                            class="img"></div>
-
-
-                </div>
                 <div id="parametrosAdicionais">
 
                 </div>
@@ -361,56 +307,7 @@ if ($_SESSION["tempo"] < time()) {
         $("body").setHeight($(window).height());
     });
     
-    function readURL(input) {
 
-        var reader1 = new FileReader();
-        reader1.onload = function (e) {
-            $('#preview-da-imagem').attr('src', e.target.result);
-        };
-        var reader2 = new FileReader();
-        reader2.onload = function (c) {
-            $('#preview-da-imagem1').attr('src', c.target.result);
-        };
-        var reader3 = new FileReader();
-        reader3.onload = function (d) {
-            $('#preview-da-imagem2').attr('src', d.target.result);
-        };
-        var reader4 = new FileReader();
-        reader4.onload = function (e) {
-            $('#preview-da-imagem3').attr('src', e.target.result);
-        };
-        var reader5 = new FileReader();
-        reader5.onload = function (c) {
-            $('#preview-da-imagem4').attr('src', c.target.result);
-        };
-        var reader6 = new FileReader();
-        reader6.onload = function (d) {
-            $('#preview-da-imagem5').attr('src', d.target.result);
-        };
-        var reader7 = new FileReader();
-        reader7.onload = function (e) {
-            $('#preview-da-imagem6').attr('src', e.target.result);
-        };
-        var reader8 = new FileReader();
-        reader8.onload = function (c) {
-            $('#preview-da-imagem7').attr('src', c.target.result);
-        };
-        var reader9 = new FileReader();
-        reader9.onload = function (d) {
-            $('#preview-da-imagem8').attr('src', d.target.result);
-        };
-
-        reader1.readAsDataURL(input.files[8]);
-        reader2.readAsDataURL(input.files[7]);
-        reader3.readAsDataURL(input.files[6]);
-        reader4.readAsDataURL(input.files[5]);
-        reader5.readAsDataURL(input.files[4]);
-        reader6.readAsDataURL(input.files[3]);
-        reader7.readAsDataURL(input.files[2]);
-        reader8.readAsDataURL(input.files[1]);
-        reader9.readAsDataURL(input.files[0]);
-
-    }
 
     $("#produtoimagem").change(function () {
         readURL(this);
@@ -432,15 +329,7 @@ if ($_SESSION["tempo"] < time()) {
     });
 
 
-    function habilitarCheckBox() {
-        if (document.getElementById("produtoPrecoDiv").style.display == "none") {
-            $("#produtoPrecoDiv").fadeIn();
-//                    document.getElementById("produtoPrecoDiv").style.display = "block";
-        } else {
-            $("#produtoPrecoDiv").fadeOut();
-//                    document.getElementById("produtoPrecoDiv").style.display = "none";
-        }
-    }
+
 
     function limparcampos() {
         $('#frmCadastroProdutos').each(function () {

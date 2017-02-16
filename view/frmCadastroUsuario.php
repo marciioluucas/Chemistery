@@ -13,8 +13,6 @@ if ($_SESSION["tempo"] < time()) {
     $_SESSION["tempo"] = time() + 600;
 }
 
-require_once "../controller/ClienteController.php";
-$clienteController = new ClienteController();
 ?>
 <html>
 <head>
@@ -166,25 +164,7 @@ $clienteController = new ClienteController();
                         <div class="col-lg-12 text-left"><img src="../imagens/noimg.png" id="preview-da-imagem"
                                                               width="190"
                                                               height="190" class="img-circle"></div>
-
-
                     </div>
-
-                    <div class="form-group">
-                        <label for="usuarioEmpresa">Empresa</label>
-                        <div class="input-group" style="margin-top: -3px !important;">
-                            <span class="input-group-addon" id="Lupa" style="height: 34px !important;"><i
-                                    class="fa fa-search"
-                                    aria-hidden="true"></i></span>
-                            <select class="form-control select2"
-                                    style="width: 100%; border-radius: 0 !important; display: none"
-                                    id="produtoSecao" aria-describedby="Lupa" name="usuarioEmpresa">
-
-                                <option selected="selected" value="0">Nenhuma</option>
-                                <?php $clienteController->consultaClientes() ?>
-                            </select>
-                        </div>
-                    </div><!-- /.form-group -->
                 </div>
 
                 <!-- /.box-body -->

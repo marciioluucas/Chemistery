@@ -14,11 +14,8 @@ class Produto extends Banco
     private $nome;
     private $descricao;
     private $imagem;
-    private $preco;
     private $usuarioLogadoId;
     private $imagemPrincipal;
-    private $mostraPreco;
-    private $secao;
     private $categoria;
 
     /**
@@ -27,15 +24,6 @@ class Produto extends Banco
      */
 
 
-    function getPreco()
-    {
-        return $this->preco;
-    }
-
-    function setPreco($preco)
-    {
-        $this->preco = $preco;
-    }
 
     /**
      * @return mixed
@@ -134,21 +122,7 @@ class Produto extends Banco
         $this->imagemPrincipal = $imagemPrincipal;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getMostraPreco()
-    {
-        return $this->mostraPreco;
-    }
 
-    /**
-     * @param mixed $mostraPreco
-     */
-    public function setMostraPreco($mostraPreco)
-    {
-        $this->mostraPreco = $mostraPreco;
-    }
 
     /**
      * @return Categoria
@@ -171,10 +145,10 @@ class Produto extends Banco
     {
         try {
             $this->tabela = "produto";
-            $this->campos = array("nome", "descricao", "preco", "imagem", "usuario_id", "imagemprincipal",
-                "mostrapreco", "categoria_id", "datacriacao");
-            $this->valores = array($this->getNome(), $this->getDescricao(), $this->getPreco(), $this->getImagem(),
-                $this->usuarioLogadoId, $this->imagemPrincipal, $this->mostraPreco, $this->categoria, date("Y-m-d"));
+            $this->campos = array("nome", "descricao", "usuario_id", "imagemprincipal",
+                "categoria_id", "datacriacao");
+            $this->valores = array($this->getNome(), $this->getDescricao(), $this->getImagem(),
+                $this->usuarioLogadoId, $this->imagemPrincipal, $this->categoria, date("Y-m-d"));
             return $this->cadastrar();
         } catch (Exception $e) {
             echo "Exceção capturada: " . $e->getMessage();
@@ -187,14 +161,12 @@ class Produto extends Banco
     {
         $campos_eq_valores = "nome = '$this->nome', ";
         $campos_eq_valores .= "descricao = '$this->descricao', ";
-        $campos_eq_valores .= "preco = '$this->preco', ";
         if ($this->imagem != "") {
 
         }
         if ($this->imagemPrincipal != "") {
             $campos_eq_valores .= "imagemprincipal = '$this->imagemPrincipal', ";
         }
-        $campos_eq_valores .= "mostrapreco = '$this->mostraPreco', ";
         $campos_eq_valores .= "categoria_id = '$this->categoria', dataultimaalteracao = '" . date("Y-m-d") . "'";
 
         try {
@@ -218,7 +190,7 @@ class Produto extends Banco
     function listarProduto()
     {
         $this->tabela = "produto";
-        $this->campos = array("id", "nome", "preco", "mostrapreco", "imagem", "descricao", "categoria_id");
+        $this->campos = array("id", "nome", "descricao", "categoria_id");
         $this->condicao = "ativado = 1 ";
         $this->subQntColunasConsulTabela = 5;
         $this->listar();

@@ -5,7 +5,7 @@ require_once("../model/Imagem.php");
 
 /**
  * Created by PhpStorm.
- * User: Carlos Eduardo
+ * User: Márcio Lucas
  * Date: 10/03/2016
  * Time: 08:28
  */
@@ -67,7 +67,6 @@ class UsuarioController
         $this->usuario->setEmail($_POST['usuarioEmail']);
         $this->usuario->setLogin($_POST['usuarioLogin']);
         $this->usuario->setSenha($_POST['usuarioSenha']);
-        $this->usuario->setEmpresa($_POST['usuarioEmpresa']);
         $this->imagem->setArquivoNome($_FILES['usuarioImagem']['name']);
         $this->imagem->setArquivoErro($_FILES['usuarioImagem']['error']);
         $this->imagem->setArquivoTemporarioNome($_FILES['usuarioImagem']['tmp_name']);

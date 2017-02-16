@@ -17,7 +17,6 @@ class Usuario extends Banco
     private $nivel;
     private $ativade;
     private $imagem;
-    private $empresa;
 
     /**
      * @return mixed
@@ -146,22 +145,6 @@ class Usuario extends Banco
     {
         $this->imagem = $imagem;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getEmpresa()
-    {
-        return $this->empresa;
-    }
-
-    /**
-     * @param mixed $empresa
-     */
-    public function setEmpresa($empresa)
-    {
-        $this->empresa = $empresa;
-    }
     
     
 
@@ -185,7 +168,6 @@ class Usuario extends Banco
                 $_SESSION['imagemUsuario'] = $resultado['imagem'];
                 $_SESSION['senhaUsuario'] = $resultado['senha'];
                 $_SESSION['nivelUsuario'] = $resultado['nivel'];
-                $_SESSION['empresaUsuario'] = $resultado['cliente_id'];
                 $_SESSION['ativadoUsuario'] = $resultado['ativado'];
                 $_SESSION['dataCriacaoUsuario'] = $resultado['datacriacao'];
                 $_SESSION['dataExclusaoUsuario'] = $resultado['dataexclusao'];
@@ -232,8 +214,8 @@ class Usuario extends Banco
     {
         try {
             $this->tabela = "usuario";
-            $this->campos = array("nome", "email", "login", "senha","cliente_id", "imagem");
-            $this->valores = array($this->getNome(), $this->getEmail(), $this->getLogin(), $this->getSenha(), $this->getEmpresa(), $this->getImagem());
+            $this->campos = array("nome", "email", "login", "senha", "imagem");
+            $this->valores = array($this->getNome(), $this->getEmail(), $this->getLogin(), $this->getSenha(), $this->getImagem());
 
             return $this->cadastrar();
         } catch (Exception $e) {
@@ -246,7 +228,7 @@ class Usuario extends Banco
     function alterarUsuario()
     {
         if ($this->imagem != null or $this->imagem != "") {
-            $campos_eq_valores = "nome = '$this->nome', email = '$this->email', login = '$this->login', senha = '$this->senha', cliente_id='$this->empresa', imagem = '$this->imagem'";
+            $campos_eq_valores = "nome = '$this->nome', email = '$this->email', login = '$this->login', senha = '$this->senha', imagem = '$this->imagem'";
         } else {
             $campos_eq_valores = "nome = '$this->nome', email = '$this->email', login = '$this->login', senha = '$this->senha'";
         }
@@ -277,7 +259,7 @@ class Usuario extends Banco
     function listarUsuario()
     {
         $this->tabela = "usuario";
-        $this->campos = array("id", "nome", "email", "login", "senha", "nivel", "cliente_id", "imagem");
+        $this->campos = array("id", "nome", "email", "login", "senha", "nivel", "imagem");
         $this->condicao = "ativado = 1";
         $this->subQntColunasConsulTabela = 1;
         $this->listar();

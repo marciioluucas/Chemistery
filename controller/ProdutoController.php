@@ -79,7 +79,6 @@ class ProdutoController
 
         $this->produto->setNome($_POST['produtoNome']);
         $this->produto->setDescricao($_POST['produtoDescricao']);
-        $this->produto->setPreco($_POST['produtoPreco']);
         $this->produto->setUsuarioLogadoId($_POST['idUsuarioLogado']);
         $this->produto->setCategoria($_POST['produtoCategoria2']);
         $this->imagem->setArquivoNome($_FILES['produtoImagemPrincipal']['name']);
@@ -101,7 +100,7 @@ class ProdutoController
 //        echo $_POST['produtoCategoria2'];
         $this->produto->inserirValorDosAtributos($ultimoProdutoCadastrado, $_POST['produtoCategoria2'], $_POST['produtoAtributos']);
 
-        echo "<script>window.location.replace('../view/frmCadastroProduto.php');</script>";
+//        echo "<script>window.location.replace('../view/frmCadastroProduto.php');</script>";
     }
 
     private function alterar()
@@ -109,14 +108,7 @@ class ProdutoController
         if (isset($_POST['id1'])) $this->produto->setId($_POST['id1']);
         if (isset($_POST['produtoNome1']) || $_POST['produtoNome1'] != "") $this->produto->setNome($_POST['produtoNome1']);
         if (isset($_POST['produtoDescricao1'])) $this->produto->setDescricao($_POST['produtoDescricao1']);
-        if (isset($_POST['produtoPreco1'])) $this->produto->setPreco($_POST['produtoPreco1']);
         $this->produto->setCategoria($_POST['produtoCategoria1']);
-        $this->produto->setSecao($_POST['produtoSecao1']);
-        if (isset($_POST['produtoPrecoOnOff1'])) {
-            $this->produto->setMostraPreco(1);
-        } else {
-            $this->produto->setMostraPreco(0);
-        }
 
 
 //        Imagem principal

@@ -248,7 +248,7 @@ ALTER TABLE `uploads`
 -- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `valor_atributo`

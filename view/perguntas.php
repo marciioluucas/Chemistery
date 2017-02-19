@@ -1,5 +1,4 @@
 <?php
-require_once '../controller/ArquivoController.php';
 /**
  * Created by PhpStorm.
  * User: Márcio Lucas
@@ -8,9 +7,9 @@ require_once '../controller/ArquivoController.php';
  * Time: 15:53
  */
 
-require_once "protecaoPaginas.php";
-$arquivoController = new ArquivoController();
-
+require_once "../view/protecaoPaginas.php";
+require_once "../controller/UsuarioController.php";
+$usuarioController = new UsuarioController();
 ?>
 
     <style>
@@ -54,41 +53,36 @@ $arquivoController = new ArquivoController();
                 white-space: nowrap;
 
             }
-
-            /*
-            Label the data
-            */
             #no-more-tables td:before { content: attr(data-title); }
         }
     </style>
-
-    <!-- Bootstrap 3.3.5 -->
-
 
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <h1 class="text-center">
-Seus arquivos
+Listando perguntas!
 </h1>
             <h3 class="text-center">
-              <?php echo $_SESSION['nomeUsuario'] . ", aqui estão seus arquivos."; ?>
+              <?php echo $_SESSION['nomeUsuario'] . ", aqui estão listadas suas perguntas."; ?>
 </h3>
+            <div class="callout callout-white">
+                <h4>Dica</h4>
+                <p>Você pode ver se sua pegunta está respondida na coluna de Status </p>
+            </div>
 </div>
 <div id="no-more-tables">
     <table class="col-md-12 table-bordered table-striped table-condensed cf">
         <thead class="cf">
         <tr>
             <th style="width: 30px">#</th>
-            <th>Nome do arquivo</th>
-            <th style="width: 100px">Extensão</th>
-            <th style="width: 50px">Baixar</th>
+            <th>Produto</th>
+            <th style="width: 100px">Pergunta</th>
+            <th style="width: 50px">Status</th>
             <th style="width: 50px">Visualizar</th>
-
         </tr>
         </thead>
         <tbody>
-        <?php $arquivoController->listagem(); ?>
         </tbody>
     </table>
 </div>

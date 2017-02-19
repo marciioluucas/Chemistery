@@ -7,15 +7,11 @@
  */
 include_once("../controller/ProdutoController.php");
 require_once "../controller/CategoriaController.php";
-require_once "../controller/SecaoController.php";
 require_once "protecaoPaginas.php";
 
 $categoriaController = new CategoriaController();
-$secaoController = new SecaoController();
 $produtoController = new ProdutoController();
 
-$stringImagens = strtolower($produtoController->retornaAlgoDoProdutoQueEuQueira("imagem", $_GET['id']));
-$arrayImagens = explode('-', $stringImagens);
 
 
 if ($_SESSION["tempo"] < time()) {
@@ -200,39 +196,6 @@ if ($_SESSION["tempo"] < time()) {
                                   style="resize: none; height: 280px;"><?php echo $_GET['descricao'] ?></textarea>
                     </div>
 
-
-                    <div class="form-group">
-                        <label for="produtoPrecoOnOff">Mostrar Preço?</label>
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="produtoPrecoOnOff1"
-                                   class="onoffswitch-checkbox" <?php echo $checked = ($_GET['mostrapreco'] == 1) ? "checked='true'" : ""; ?>
-                                   id="produtoPrecoOnOff1" onclick="habilitarCheckBox()">
-                            <label class="onoffswitch-label" for="produtoPrecoOnOff1"></label>
-                        </div>
-                    </div>
-                    <div class="form-group" id="produtoPrecoDiv"
-                         style="display: <?php echo $display = ($_GET['mostrapreco'] == 1) ? "block'" : "none"; ?>">
-                        <label for="produtoPreco">Preço</label>
-                        <input type="text" class="form-control" id="produtoPreco" name="produtoPreco1"
-                               value="<?php echo $_GET['preco'] ?>">
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="produtoSecao">Seção</label>
-                        <div class="input-group" style="margin-top: -3px !important;">
-                            <span class="input-group-addon" id="Lupa" style="height: 34px !important;"><i
-                                    class="fa fa-search"
-                                    aria-hidden="true"></i></span>
-                            <select class="form-control select2"
-                                    style="width: 100%; border-radius: 0 !important; display: none"
-                                    id="produtoSecao" aria-describedby="Lupa" name="produtoSecao1">
-                                <?php echo $secaoController->puxarSecaoJaCadastrada($_GET['secao_id']) ?>
-                                <?php $secaoController->consultaSecaos() ?>
-                            </select>
-                        </div>
-                    </div><!-- /.form-group -->
                     <div class="form-group">
                         <label for="categoriaProduto">Categoria</label>
                         <div class="input-group" style="margin-top: -3px !important;">
@@ -269,137 +232,7 @@ if ($_SESSION["tempo"] < time()) {
                         </div>
                     </div>
                     <br><br>
-                    <div class="form-group col-lg-12">
-                        <label for="produtoImagem">Imagem Secundárias</label>
 
-                        <p class="help-block">Para melhor vizualização recomendamos imagens 512 x 512 ou maior e do
-                            formato .jpg
-                            ou .png</p>
-                        <div class="col-sm-2">
-                            <div class="divcontainer"><img
-                                    src="<?php echo $produtoController->retornaImagensDoProduto(0) ?>"
-                                    id="preview-da-imagem"
-                                    class="img">
-                                <input type="file" class="form-control" id="produtoimagem0" name="produtoImagem1[0]"
-                                       hidden
-                                       accept="image/png, image/jpg, image/jpeg">
-                                <input hidden="hidden" name="angImg[]" value="0" id="angImg0">
-                            </div>
-                            <i class="fa fa-repeat controlesImagem" aria-hidden="true" id="rodar1"></i> - <i
-                                class="fa fa-times" aria-hidden="true" id="excluir1"></i>
-                        </div>
-                        <div class="col-sm-2">
-                            <div class="divcontainer"><img
-                                    src="<?php echo $produtoController->retornaImagensDoProduto(1) ?>"
-                                    id="preview-da-imagem1"
-                                    class="img">
-                                <input type="file" class="form-control" id="produtoimagem1" name="produtoImagem1[1]"
-                                       hidden
-                                       accept="image/png, image/jpg, image/jpeg">
-                                <input hidden="hidden" name="angImg[]" value="0" id="angImg1">
-                            </div>
-                            <i class="fa fa-repeat controlesImagem" aria-hidden="true" id="rodar2"></i> - <i
-                                class="fa fa-times" aria-hidden="true" id="excluir2"></i>
-                        </div>
-                        <div class="col-sm-2">
-                            <div class="divcontainer"><img
-                                    src="<?php echo $produtoController->retornaImagensDoProduto(2) ?>"
-                                    id="preview-da-imagem2"
-                                    class="img">
-                                <input type="file" class="form-control" id="produtoimagem2" name="produtoImagem1[2]"
-                                       hidden
-                                       accept="image/png, image/jpg, image/jpeg">
-                                <input hidden="hidden" name="angImg[]" value="0" id="angImg2">
-                            </div>
-                            <i class="fa fa-repeat controlesImagem" aria-hidden="true" id="rodar3"></i> - <i
-                                class="fa fa-times" aria-hidden="true" id="excluir3"></i>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <div class="divcontainer"><img
-                                    src="<?php echo $produtoController->retornaImagensDoProduto(3) ?>"
-                                    id="preview-da-imagem3"
-                                    class="img">
-                                <input type="file" class="form-control" id="produtoimagem3" name="produtoImagem1[3]"
-                                       hidden
-                                       accept="image/png, image/jpg, image/jpeg">
-                                <input hidden="hidden" name="angImg[]" value="0" id="angImg3">
-                            </div>
-                            <i class="fa fa-repeat controlesImagem" aria-hidden="true" id="rodar4"></i> - <i
-                                class="fa fa-times" aria-hidden="true" id="excluir4"></i>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <div class="divcontainer"><img
-                                    src="<?php echo $produtoController->retornaImagensDoProduto(4) ?>"
-                                    id="preview-da-imagem4"
-                                    class="img">
-                                <input type="file" class="form-control" id="produtoimagem4" name="produtoImagem1[4]"
-                                       hidden
-                                       accept="image/png, image/jpg, image/jpeg">
-                                <input hidden="hidden" name="angImg[]" value="0" id="angImg4">
-                            </div>
-                            <i class="fa fa-repeat controlesImagem" aria-hidden="true" id="rodar5"></i> - <i
-                                class="fa fa-times" aria-hidden="true" id="excluir5"></i>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <div class="divcontainer"><img
-                                    src="<?php echo $produtoController->retornaImagensDoProduto(5) ?>"
-                                    id="preview-da-imagem5"
-                                    class="img">
-                                <input type="file" class="form-control" id="produtoimagem5" name="produtoImagem1[5]"
-                                       hidden
-                                       accept="image/png, image/jpg, image/jpeg">
-                                <input hidden="hidden" name="angImg[]" value="0" id="angImg5">
-                            </div>
-                            <i class="fa fa-repeat controlesImagem" aria-hidden="true" id="rodar6"></i> - <i
-                                class="fa fa-times" aria-hidden="true" id="excluir6"></i>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <div class="divcontainer"><img
-                                    src="<?php echo $produtoController->retornaImagensDoProduto(6) ?>"
-                                    id="preview-da-imagem6"
-                                    class="img">
-                                <input type="file" class="form-control" id="produtoimagem6" name="produtoImagem1[6]"
-                                       hidden
-                                       accept="image/png, image/jpg, image/jpeg">
-                                <input hidden="hidden" name="angImg[]" value="0" id="angImg6">
-                            </div>
-                            <i class="fa fa-repeat controlesImagem" aria-hidden="true" id="rodar7"></i> - <i
-                                class="fa fa-times" aria-hidden="true" id="excluir7"></i>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <div class="divcontainer"><img
-                                    src="<?php echo $produtoController->retornaImagensDoProduto(7) ?>"
-                                    id="preview-da-imagem7"
-                                    class="img">
-                                <input type="file" class="form-control" id="produtoimagem7" name="produtoImagem1[7]"
-                                       hidden
-                                       accept="image/png, image/jpg, image/jpeg">
-                                <input hidden="hidden" name="angImg[]" value="0" id="angImg7">
-                            </div>
-                            <i class="fa fa-repeat controlesImagem" aria-hidden="true" id="rodar8"></i> - <i
-                                class="fa fa-times" aria-hidden="true" id="excluir8"></i>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <div class="divcontainer"><img
-                                    src="<?php echo $produtoController->retornaImagensDoProduto(8) ?>"
-                                    id="preview-da-imagem8"
-                                    class="img">
-                                <input type="file" class="form-control" id="produtoimagem8" name="produtoImagem1[8]"
-                                       accept="image/png, image/jpg, image/jpeg">
-                                <input hidden="hidden" name="angImg[]" value="0" id="angImg8">
-                            </div>
-                            <i class="fa fa-repeat controlesImagem" aria-hidden="true" id="rodar9"></i> - <i
-                                class="fa fa-times" aria-hidden="true" id="excluir9"></i>
-                        </div>
-
-
-                    </div>
 
                     <div id="parametrosAdicionais">
 
@@ -454,114 +287,7 @@ if ($_SESSION["tempo"] < time()) {
         }
     });
 
-    $("#produtoimagem0").change(function () {
-        if (this.files && this.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('#preview-da-imagem').attr('src', e.target.result);
-            };
-            reader.readAsDataURL(this.files[0]);
 
-        }
-    });
-
-    $("#produtoimagem1").change(function () {
-        if (this.files && this.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('#preview-da-imagem1').attr('src', e.target.result);
-            };
-            reader.readAsDataURL(this.files[0]);
-
-        }
-    });
-
-    $("#produtoimagem2").change(function () {
-        if (this.files && this.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('#preview-da-imagem2').attr('src', e.target.result);
-            };
-            reader.readAsDataURL(this.files[0]);
-
-        }
-    });
-
-    $("#produtoimagem3").change(function () {
-        if (this.files && this.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('#preview-da-imagem3').attr('src', e.target.result);
-            };
-            reader.readAsDataURL(this.files[0]);
-
-        }
-    });
-
-    $("#produtoimagem4").change(function () {
-        if (this.files && this.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('#preview-da-imagem4').attr('src', e.target.result);
-            };
-            reader.readAsDataURL(this.files[0]);
-
-        }
-    });
-
-    $("#produtoimagem5").change(function () {
-        if (this.files && this.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('#preview-da-imagem5').attr('src', e.target.result);
-            };
-            reader.readAsDataURL(this.files[0]);
-
-        }
-    });
-
-    $("#produtoimagem6").change(function () {
-        if (this.files && this.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('#preview-da-imagem6').attr('src', e.target.result);
-            };
-            reader.readAsDataURL(this.files[0]);
-
-        }
-    });
-
-    $("#produtoimagem7").change(function () {
-        if (this.files && this.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('#preview-da-imagem7').attr('src', e.target.result);
-            };
-            reader.readAsDataURL(this.files[0]);
-
-        }
-    });
-
-    $("#produtoimagem8").change(function () {
-        if (this.files && this.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('#preview-da-imagem8').attr('src', e.target.result);
-            };
-            reader.readAsDataURL(this.files[0]);
-
-        }
-    });
-
-    function habilitarCheckBox() {
-        if (document.getElementById("produtoPrecoDiv").style.display == "none") {
-            $("#produtoPrecoDiv").fadeIn();
-//                    document.getElementById("produtoPrecoDiv").style.display = "block";
-        } else {
-            $("#produtoPrecoDiv").fadeOut();
-//                    document.getElementById("produtoPrecoDiv").style.display = "none";
-        }
-    }
 
     function limparcampos() {
         $('#frmAlterarProduto').each(function () {
@@ -573,15 +299,6 @@ if ($_SESSION["tempo"] < time()) {
         //Initialize Select2 Elements
         $(".select2").select2();
         var i = 1;
-        var j = 1;
-        var k = 1;
-        var l = 1;
-        var m = 1;
-        var n = 1;
-        var o = 1;
-        var p = 1;
-        var q = 1;
-        var r = 1;
 
         $("#rodarPrincipal").click(function () {
             var ang = 90;
@@ -590,68 +307,6 @@ if ($_SESSION["tempo"] < time()) {
             i++;
         });
 
-        $("#rodar1").click(function () {
-            var ang = 90;
-            $("#preview-da-imagem").rotate(ang * j);
-            $('#angImg0').val($('#preview-da-imagem').getRotateAngle());
-            j++;
-        });
-
-        $("#rodar2").click(function () {
-            var ang = 90;
-            $("#preview-da-imagem1").rotate(ang * k);
-            $("#angImg1").val($('#preview-da-imagem1').getRotateAngle());
-            k++;
-        });
-
-        $("#rodar3").click(function () {
-            var ang = 90;
-            $("#preview-da-imagem2").rotate(ang * l);
-            $("#angImg2").val($('#preview-da-imagem2').getRotateAngle());
-            l++;
-        });
-
-        $("#rodar4").click(function () {
-            var ang = 90;
-            $("#preview-da-imagem3").rotate(ang * m);
-            $("#angImg3").val($('#preview-da-imagem3').getRotateAngle());
-            m++;
-        });
-
-        $("#rodar5").click(function () {
-            var ang = 90;
-            $("#preview-da-imagem4").rotate(ang * n);
-            $("#angImg4").val($('#preview-da-imagem4').getRotateAngle());
-            n++;
-        });
-
-        $("#rodar6").click(function () {
-            var ang = 90;
-            $("#preview-da-imagem5").rotate(ang * o);
-            $("#angImg5").val($('#preview-da-imagem5').getRotateAngle());
-            o++;
-        });
-
-        $("#rodar7").click(function () {
-            var ang = 90;
-            $("#preview-da-imagem6").rotate(ang * p);
-            $("#angImg6").val($('#preview-da-imagem6').getRotateAngle());
-            p++;
-        });
-
-        $("#rodar8").click(function () {
-            var ang = 90;
-            $("#preview-da-imagem7").rotate(ang * q);
-            $("#angImg7").val($('#preview-da-imagem7').getRotateAngle());
-            q++;
-        });
-
-        $("#rodar9").click(function () {
-            var ang = 90;
-            $("#preview-da-imagem8").rotate(ang * r);
-            $("#angImg8").val($('#preview-da-imagem8').getRotateAngle());
-            r++;
-        });
 
 
     });
@@ -672,201 +327,12 @@ if ($_SESSION["tempo"] < time()) {
             $("#preview-da-imagem").attr('src', "../imagens/noimg.png");
         }});
 
-    $("#excluir1").click(function () {
-        var conf = confirm("Você tem certeza que quer excluir essa imagem?");
-        if (conf) {
-            $.ajax({
-                type: 'get',
-                data: 'ac=excluirImg&posicao=0&produtoId=<?php echo $id = (isset($_GET['id'])) ? $_GET['id'] : 'nenhum';?>',
-                url: '../controller/ProdutoController.php',
-                success: function () {
-                    console.log('Sucesso 1!')
-                }
 
-
-            });
-            $("#preview-da-imagem").attr('src', "../imagens/noimg.png");
-        }
-
-
-    });
-
-    $("#excluir2").click(function () {
-        var conf = confirm("Você tem certeza que quer excluir essa imagem?");
-        if (conf) {
-            $.ajax({
-                type: 'get',
-                data: 'ac=excluirImg&posicao=1&produtoId=<?php echo $id = (isset($_GET['id'])) ? $_GET['id'] : 'nenhum'; ?>',
-                url: '../controller/ProdutoController.php',
-                success: function () {
-                    console.log('Sucesso 2!')
-                }
-
-
-            });
-            $("#preview-da-imagem1").attr('src', "../imagens/noimg.png");
-        }
-    });
-
-    $("#excluir3").click(function () {
-        var conf = confirm("Você tem certeza que quer excluir essa imagem?");
-        if (conf) {
-            $.ajax({
-                type: 'get',
-                data: 'ac=excluirImg&posicao=2&produtoId=<?php echo $id = (isset($_GET['id'])) ? $_GET['id'] : 'nenhum'; ?>',
-                url: '../controller/ProdutoController.php',
-                success: function () {
-                    console.log('Sucesso 3!')
-                }
-
-
-            });
-            $("#preview-da-imagem2").attr('src', "../imagens/noimg.png");
-        }
-    });
-
-    $("#excluir4").click(function () {
-        var conf = confirm("Você tem certeza que quer excluir essa imagem?");
-        if (conf) {
-            $.ajax({
-                type: 'get',
-                data: 'ac=excluirImg&posicao=3&produtoId=<?php echo $id = (isset($_GET['id'])) ? $_GET['id'] : 'nenhum'; ?>',
-                url: '../controller/ProdutoController.php',
-                success: function () {
-                    console.log('Sucesso 4!')
-                }
-
-
-            });
-            $("#preview-da-imagem3").attr('src', "../imagens/noimg.png");
-        }
-    });
-
-    $("#excluir5").click(function () {
-        var conf = confirm("Você tem certeza que quer excluir essa imagem?");
-        if (conf) {
-            $.ajax({
-                type: 'get',
-                data: 'ac=excluirImg&posicao=4&produtoId=<?php echo $id = (isset($_GET['id'])) ? $_GET['id'] : 'nenhum'; ?>',
-                url: '../controller/ProdutoController.php',
-                success: function () {
-                    console.log('Sucesso 5!')
-                }
-
-
-            });
-            $("#preview-da-imagem4").attr('src', "../imagens/noimg.png");
-
-        }
-    });
-
-    $("#excluir6").click(function () {
-        var conf = confirm("Você tem certeza que quer excluir essa imagem?");
-        if (conf) {
-            $.ajax({
-                type: 'get',
-                data: 'ac=excluirImg&posicao=5&produtoId=<?php echo $id = (isset($_GET['id'])) ? $_GET['id'] : 'nenhum'; ?>',
-                url: '../controller/ProdutoController.php',
-                success: function () {
-                    console.log('Sucesso 6!')
-                }
-
-
-            });
-            $("#preview-da-imagem5").attr('src', "../imagens/noimg.png");
-        }
-    });
-
-    $("#excluir7").click(function () {
-        var conf = confirm("Você tem certeza que quer excluir essa imagem?");
-        if (conf) {
-            $.ajax({
-                type: 'get',
-                data: 'ac=excluirImg&posicao=6&produtoId=<?php echo $id = (isset($_GET['id'])) ? $_GET['id'] : 'nenhum'; ?>',
-                url: '../controller/ProdutoController.php',
-                success: function () {
-                    console.log('Sucesso 7!')
-                }
-
-
-            });
-            $("#preview-da-imagem6").attr('src', "../imagens/noimg.png");
-        }
-    });
-
-    $("#excluir8").click(function () {
-        var conf = confirm("Você tem certeza que quer excluir essa imagem?");
-        if (conf) {
-            $.ajax({
-                type: 'get',
-                data: 'ac=excluirImg&posicao=7&produtoId=<?php echo $id = (isset($_GET['id'])) ? $_GET['id'] : 'nenhum'; ?>',
-                url: '../controller/ProdutoController.php',
-                success: function () {
-                    console.log('Sucesso 8!')
-                }
-
-
-            });
-            $("#preview-da-imagem7").attr('src', "../imagens/noimg.png");
-        }
-    });
-
-    $("#excluir9").click(function () {
-        var conf = confirm("Você tem certeza que quer excluir essa imagem?");
-        if (conf) {
-            $.ajax({
-                type: 'get',
-                data: 'ac=excluirImg&posicao=8&produtoId=<?php echo $id = (isset($_GET['id'])) ? $_GET['id'] : 'nenhum'; ?>',
-                url: '../controller/ProdutoController.php',
-                success: function () {
-                    console.log('Sucesso 9!')
-                }
-
-
-            });
-            $("#preview-da-imagem8").attr('src', "../imagens/noimg.png");
-        }
-    });
 
     $("#preview-da-imagemPrincipal").click(function () {
         $("#produtoImagemPrincipal").click();
     });
 
-    $("#preview-da-imagem").click(function () {
-        $("#produtoimagem0").click();
-    });
-
-    $("#preview-da-imagem1").click(function () {
-        $("#produtoimagem1").click();
-    });
-
-    $("#preview-da-imagem2").click(function () {
-        $("#produtoimagem2").click();
-    });
-
-    $("#preview-da-imagem3").click(function () {
-        $("#produtoimagem3").click();
-    });
-
-    $("#preview-da-imagem4").click(function () {
-        $("#produtoimagem4").click();
-    });
-
-    $("#preview-da-imagem5").click(function () {
-        $("#produtoimagem5").click();
-    });
-
-    $("#preview-da-imagem6").click(function () {
-        $("#produtoimagem6").click();
-    });
-
-    $("#preview-da-imagem7").click(function () {
-        $("#produtoimagem7").click();
-    });
-
-    $("#preview-da-imagem8").click(function () {
-        $("#produtoimagem8").click();
-    });
 
 
     $(document).ready(function () {

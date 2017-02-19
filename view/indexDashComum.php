@@ -39,7 +39,7 @@ $usuarioController = new UsuarioController();
         <nav class="navbar navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a href="#" class="navbar-brand">Cata<b>LOG</b></a>
+                    <a href="#" class="navbar-brand">Che<b>mistery</b></a>
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target="#navbar-collapse">
                         <i class="fa fa-bars"></i>
@@ -50,7 +50,7 @@ $usuarioController = new UsuarioController();
                 <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="#" id="home">Home <span class="sr-only"></span></a></li>
-                        <li><a href="#" id="arquivos">Arquivos</a></li>
+                        <li><a href="#" id="perguntas">Perguntas</a></li>
 
                     </ul>
 
@@ -135,7 +135,7 @@ $usuarioController = new UsuarioController();
             <div class="pull-right hidden-xs">
 <!--                <b>Version</b> 2.3.0-->
             </div>
-            <strong>CataLOG é uma marca de Grupo Salatiel &copy; 2013-2016 <a href="http://gruposalatiel.com">Grupo Salatiel</a>.</strong> All
+            <strong>Chemistery faz parte de um projeto open source do PIVIC do IFGoiano - Campus Morrinhos &copy; 2017 <a href="http://ifgoiano.edu.br/morrinhos">IFGoiano</a>.</strong> All
             rights reserved.
         </div><!-- /.container -->
     </footer>
@@ -155,8 +155,8 @@ $usuarioController = new UsuarioController();
 <script src="../dist/js/demo.js"></script>
 
 <script>
-    $('#arquivos').click(function(){
-        $('#body').load("arquivos.php")
+    $('#perguntas').click(function(){
+        $('#body').load("perguntas.php")
     });
     
     $('#home').click(function(){

@@ -149,6 +149,12 @@ if ($_SESSION["tempo"] < time()) {
             margin-left: 50%;
             margin-bottom: 10px;
         }
+        .check
+        {
+            opacity:0.5;
+            color:violet;
+
+        }
 
         input[type=file] {
             display: none;
@@ -211,6 +217,14 @@ if ($_SESSION["tempo"] < time()) {
                             </select>
                         </div>
                     </div><!-- /.form-group -->
+                    <div class="form-group">
+                        <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/comburente.png" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk1" id="item4" value="val1" class="hidden" autocomplete="off"></label></div>
+                        <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/corrosivo.jpg" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk2" id="item4" value="val2" class="hidden" autocomplete="off"></label></div>
+                        <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/explosivo.png" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk3" id="item4" value="val3" class="hidden" autocomplete="off"></label></div>
+                        <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/inflamavel.png" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk4" id="item4" value="val4" class="hidden" autocomplete="off"></label></div>
+                        <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/nocivo-irritante.png" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk5" id="item4" value="val5" class="hidden" autocomplete="off"></label></div>
+                        <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/toxico.png" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk6" id="item4" value="val6" class="hidden" autocomplete="off"></label></div>
+                    </div>
                 </div>
                 <div class="col-lg-6" style="margin-top: 3px;">
                     <div class="form-group">
@@ -287,6 +301,11 @@ if ($_SESSION["tempo"] < time()) {
         }
     });
 
+    $(document).ready(function(e){
+        $(".img-check").click(function(){
+            $(this).toggleClass("check");
+        });
+    });
 
 
     function limparcampos() {

@@ -1,98 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e68c0b9-9fc4-4492-a1cd-a12fdb199f40" name="Default" comment="Alterando as coisas">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/Pergunta.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/Resposta.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/alerts.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/background-variant.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/border-radius.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/buttons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/center-block.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/clearfix.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/forms.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/gradients.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/grid-framework.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/hide-text.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/image.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/labels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/list-group.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/nav-divider.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/nav-vertical-align.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/opacity.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/panels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/progress-bar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/reset-filter.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/resize.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/responsive-visibility.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/size.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/tab-focus.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/table-row.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/text-emphasis.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/text-overflow.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/mixins/vendor-prefixes.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bootstrap-less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/.csslintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/404_500_errors.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/AdminLTE.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/alerts.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/bootstrap-social.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/boxes.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/buttons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/callout.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/carousel.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/control-sidebar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/core.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/direct-chat.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/dropdown.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/forms.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/fullcalendar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/header.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/info-box.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/invoice.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/labels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/lockscreen.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/login_and_register.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/mailbox.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/miscellaneous.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/modal.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/navs.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/print.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/products.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/profile.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/progress-bars.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/select2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/sidebar-mini.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/sidebar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/skins/_all-skins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/skins/skin-black-light.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/skins/skin-black.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/skins/skin-blue-light.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/skins/skin-blue.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/skins/skin-green-light.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/skins/skin-green.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/skins/skin-purple-light.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/skins/skin-purple.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/skins/skin-red-light.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/skins/skin-red.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/skins/skin-yellow-light.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/skins/skin-yellow.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/small-box.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/social-widgets.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/table.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/timeline.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/users-list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nbproject/private/config.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nbproject/private/private.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nbproject/private/private.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nbproject/project.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nbproject/project.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CataLOG.iml" afterPath="$PROJECT_DIR$/.idea/CataLOG.iml" />
+    <list default="true" id="2e68c0b9-9fc4-4492-a1cd-a12fdb199f40" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/PerguntaController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/RespostaController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CataLOG.iws" />
@@ -132,11 +43,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Resposta.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Resposta.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Resposta.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="80" column="7" lean-forward="true" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+            <state relative-caret-position="286">
+              <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RespostaController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/RespostaController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PerguntaController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/PerguntaController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -259,20 +190,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Chemistery" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chemistery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chemistery" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -502,7 +419,7 @@
       <workItem from="1487343047000" duration="3651000" />
       <workItem from="1487458828114" duration="3756000" />
       <workItem from="1487594058702" duration="1357000" />
-      <workItem from="1487944522178" duration="1451000" />
+      <workItem from="1487944522178" duration="1686000" />
     </task>
     <task id="LOCAL-00001" summary="Retirar da Classe produto:&#10;&#10;Preco&#10;Mostrapreco&#10;&#10;Adicionar:&#10;&#10;Toxidade&#10;&#10;&#10;">
       <created>1474599472635</created>
@@ -595,11 +512,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487462870178</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Colocando as classes Pergunta e Resposta">
+      <created>1487945990048</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1487945990048</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25742000" />
+    <option name="totallyTimeSpent" value="25977000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -612,9 +536,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26403642" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26403642" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20045386" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -659,27 +583,14 @@
     <MESSAGE value="Tirando as parada do secao no frmCadastroProduto" />
     <MESSAGE value="Colocando imgs toxidade" />
     <MESSAGE value="Alterando as coisas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alterando as coisas" />
+    <MESSAGE value="Colocando as classes Pergunta e Resposta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Colocando as classes Pergunta e Resposta" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/versao">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/produto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="286" column="0" lean-forward="false" selection-start-line="286" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/609bb86b-8aee-4c3e-ab8e-fa2a5ab716d7/console.sql" />
     <entry file="dbDummy://dbtable:/b07271c7/609bb86b-8aee-4c3e-ab8e-fa2a5ab716d7/bd_chemistery.usuario">
       <provider editor-type-id="text-editor">
@@ -758,6 +669,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1921">
           <caret line="113" column="32" lean-forward="false" selection-start-line="113" selection-start-column="32" selection-end-line="113" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -869,6 +781,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -911,6 +824,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="383" column="13" lean-forward="true" selection-start-line="383" selection-start-column="13" selection-end-line="383" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -918,6 +832,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="8" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -972,8 +887,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/Resposta.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="80" column="7" lean-forward="true" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+        <state relative-caret-position="286">
+          <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/RespostaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/PerguntaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

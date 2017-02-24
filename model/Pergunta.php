@@ -10,23 +10,24 @@ class Pergunta
 {
     private $usuario;
     private $data;
-    private $pergunta;
+    private $descricao; //string
     private $produto;
     private $status;
+    private $respostaList;
 
     /**
      * Pergunta constructor.
      * @param $usuario
      * @param $data
-     * @param $pergunta
+     * @param $descricao
      * @param $produto
      * @param $status
      */
-    public function __construct($usuario, $data, $pergunta, $produto, $status)
+    public function __construct($usuario, $data, $descricao, $produto, $status)
     {
         $this->usuario = $usuario;
         $this->data = $data;
-        $this->pergunta = $pergunta;
+        $this->descricao = $descricao;
         $this->produto = $produto;
         $this->status = $status;
     }
@@ -67,17 +68,17 @@ class Pergunta
     /**
      * @return mixed
      */
-    public function getPergunta()
+    public function getDescricao()
     {
-        return $this->pergunta;
+        return $this->descricao;
     }
 
     /**
-     * @param mixed $pergunta
+     * @param mixed $descricao
      */
-    public function setPergunta($pergunta)
+    public function setDescricao($descricao)
     {
-        $this->pergunta = $pergunta;
+        $this->descricao = $descricao;
     }
 
     /**

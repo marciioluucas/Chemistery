@@ -20,7 +20,7 @@ class Categoria extends Banco
 
     /**
      * Categoria constructor.
-     * @param $data
+     * @internal param $data
      */
     public function __construct()
     {

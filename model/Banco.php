@@ -211,9 +211,12 @@ class Banco
     }
 
     /**
-     * @param $condicao
-     * @example alterar("alunos", "nome=Joao, serie=3 periodo", "id=16");
+     * @param $tabela
+     * @param $campos_eq_valores
+     * @param $id
      * @return int
+     * @internal param $condicao
+     * @example alterar("alunos", "nome=Joao, serie=3 periodo", "id=16");
      */
     public function alterar($tabela, $campos_eq_valores, $id)
     {
@@ -232,6 +235,8 @@ class Banco
     /**
      * @param $tabela
      * @param $colunas_eq_valores
+     * @param $condicao
+     * @return int
      */
     public function delete($tabela, $colunas_eq_valores, $condicao)
     {
@@ -253,8 +258,8 @@ class Banco
 
 
     /**
-     * @param $tabela
-     * @param $colunas
+     * @internal param $tabela
+     * @internal param $colunas
      * @example listar("usuarios", "nome, endereco, cpf");
      */
     public function listar()

@@ -2,16 +2,17 @@
 
 /**
  * Created by PhpStorm.
- * User: marci
+ * User: marcio
  * Date: 24/02/2017
  * Time: 10:56
  */
+
 class Resposta
 {
     private $usuario;
-    private $data;
+    private $datahora;
     private $pergunta;
-    private $resposta;
+    private $descricao;
     private $produto;
 
     /**
@@ -33,33 +34,17 @@ class Resposta
     /**
      * @return mixed
      */
-    public function getData()
+    public function getDatahora()
     {
-        return $this->data;
+        return $this->datahora;
     }
 
     /**
-     * @param mixed $data
+     * @param mixed $datahora
      */
-    public function setData($data)
+    public function setDatahora($datahora)
     {
-        $this->data = $data;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getResposta()
-    {
-        return $this->pergunta;
-    }
-
-    /**
-     * @param mixed $pergunta
-     */
-    public function setResposta($pergunta)
-    {
-        $this->pergunta = $pergunta;
+        $this->datahora = $datahora;
     }
 
     /**
@@ -67,15 +52,31 @@ class Resposta
      */
     public function getPergunta()
     {
-        return $this->resposta;
+        return $this->pergunta;
     }
 
     /**
-     * @param mixed $resposta
+     * @param mixed $pergunta
      */
-    public function setPergunta($resposta)
+    public function setPergunta($pergunta)
     {
-        $this->resposta = $resposta;
+        $this->pergunta = $pergunta;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescricao()
+    {
+        return $this->descricao;
+    }
+
+    /**
+     * @param mixed $descricao
+     */
+    public function setDescricao($descricao)
+    {
+        $this->descricao = $descricao;
     }
 
     /**
@@ -93,7 +94,6 @@ class Resposta
     {
         $this->produto = $produto;
     }
-
 
     public function cadastroResposta() {
 

@@ -28,6 +28,7 @@ class MenuController
 
     /**
      * Construtor da classe MenuController .
+     * @param $permissao
      */
 
 

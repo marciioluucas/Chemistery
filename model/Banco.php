@@ -8,6 +8,7 @@
  */
 class Banco
 {
+    private $conn;
     private $sql;
     public $query;
     public $result;
@@ -140,7 +141,9 @@ class Banco
 
     public function __construct()
     {
-        $this->conexao();
+        if($this->conn) {
+            $this->conexao();
+        }
     }
 
     private function conexao()
@@ -152,7 +155,7 @@ class Banco
         $this->senha = "chemistery";
 
         if (mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco)) {
-
+            $this->conn = true;
             return mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco);
 
         } else {

@@ -178,9 +178,7 @@ if ($_SESSION["tempo"] < time()) {
 
     $(".cor-padrao").colorpicker();
 
-    $(window).resize(function(){
-        $("body").setHeight($(window).height());
-    })
+
 </script>
 </body>
 </html>

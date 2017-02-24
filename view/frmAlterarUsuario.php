@@ -187,9 +187,7 @@ if ($_SESSION["tempo"] < time()) {
 <script src="js/require.min.js"></script>
 
 <script>
-    $(window).resize(function(){
-        $("body").setHeight($(window).height());
-    });
+
     
     function readURL(input) {
         if (input.files && input.files[0]) {

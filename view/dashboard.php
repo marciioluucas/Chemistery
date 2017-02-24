@@ -42,27 +42,28 @@ if ($_SESSION["tempo"] < time()) {
         <div id="dashboard">
 
             <div class="modal fade bs-example-modal-sm" role="dialog" id="preLoaderModal">
-                        <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title" id="myModalLabel">Carregando...</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div id="preloader" style="width: 100%; text-align: center"><img
-                                            src="../sources/imgs/loading.gif" style="width: 80px;"><br>Carregando...
-                                    </div>
-                                </div>
-
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Carregando...</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="preloader" style="width: 100%; text-align: center"><img
+                                        src="../sources/imgs/loading.gif" style="width: 80px;"><br>Carregando...
                             </div>
                         </div>
 
                     </div>
+                </div>
+
+            </div>
 
 
             <!-- Small boxes (Stat box) -->
             <div class="row" style="z-index: 1 !important;">
-                <div class="col-lg-3 col-xs-6">
+                <div class="col-lg-4 col-xs-6">
                     <!-- small box -->
                     <div class="small-box bg-aqua">
                         <div class="inner">
@@ -72,29 +73,26 @@ if ($_SESSION["tempo"] < time()) {
                         <div class="icon">
                             <i class="ion ion-bag" style=""></i>
                         </div>
-                        <a href="../controller/ProdutoController.php?q=listar" target="iframePrincipal"
-                           class="small-box-footer">Mais informações <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div><!-- ./col -->
 
 
-                <div class="col-lg-3 col-xs-6">
+                <div class="col-lg-4 col-xs-6">
                     <!-- small box -->
-                    <div class="small-box bg-yellow">
+                    <div class="small-box bg-green">
                         <div class="inner">
                             <h3><?php echo $usuarioController->retornaNumUsuarios() ?></h3>
-                            <p>Usuários ativos
+                            <p><?php if ($usuarioController->retornaNumUsuarios() > 1) echo "Usuários "; else echo "Usuário"; ?>
+                                online
                                 de <?php echo $usuarioController->retornaNumUsuariosComDesativados() ?></p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="../controller/UsuarioController.php?q=listar" class="small-box-footer">Mais informações
-                            <i
-                                class="fa fa-arrow-circle-right"></i></a>
+
                     </div>
                 </div><!-- ./col -->
-                <div class="col-lg-3 col-xs-6">
+                <div class="col-lg-4 col-xs-6">
                     <!-- small box -->
                     <div class="small-box bg-red">
                         <div class="inner">
@@ -104,9 +102,7 @@ if ($_SESSION["tempo"] < time()) {
                         <div class="icon">
                             <i class="ion ion-pie-graph"></i>
                         </div>
-                        <a href="../controller/CategoriaController.php?q=listar" class="small-box-footer">Mais
-                            informações
-                            <i class="fa fa-arrow-circle-right"></i></a>
+
                     </div>
                 </div><!-- ./col -->
             </div><!-- /.row -->

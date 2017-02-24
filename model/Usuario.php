@@ -172,6 +172,18 @@ class Usuario extends Banco
                 $_SESSION['dataCriacaoUsuario'] = $resultado['datacriacao'];
                 $_SESSION['dataExclusaoUsuario'] = $resultado['dataexclusao'];
                 $_SESSION["tempo"] = time() + 600;
+                if(!isset($_SESSION)){
+                    session_start();
+                }
+                try {
+                    if ($this->alterar("usuario", "logado = 1", $resultado['id'])) {
+
+                        return true;
+                    }
+                } catch (Exception $e) {
+                    return "Exceção capturada: " . $e->getMessage();
+
+                }
 
                 if ($tela == "login" && $_SESSION['nivelUsuario'] > 1) {
                     header('Location: ../view/index.php');
@@ -197,16 +209,18 @@ class Usuario extends Banco
         }
     }
 
-    function deslogar($tela) {
+    function deslogar() {
         session_start();
-        session_destroy();
-        if($tela == "usr"){
+            $campos_eq_valores = "logado = 0";
+            try {
+                if ($this->alterar("usuario", $campos_eq_valores, $_SESSION['idUsuario'])) {
 
+                    session_destroy();
+                }
+            } catch (Exception $e) {
+                return "Exceção capturada: " . $e->getMessage();
+            }
             header('Location: ../view/login.php');
-        }
-        if($tela == "usrComum"){
-            header('Location: ../view/loginUsuarioComum.php');
-        }
         exit;
     }
 
@@ -214,8 +228,9 @@ class Usuario extends Banco
     {
         try {
             $this->tabela = "usuario";
-            $this->campos = array("nome", "email", "login", "senha", "imagem");
-            $this->valores = array($this->getNome(), $this->getEmail(), $this->getLogin(), $this->getSenha(), $this->getImagem());
+            $this->campos = array("nome", "email", "login", "senha", "imagem", "nivel","datacriacao");
+            $this->valores = array($this->getNome(), $this->getEmail(), $this->getLogin(),
+                $this->getSenha(), $this->getImagem(), $this->getNivel(), date("Y-m-d"));
 
             return $this->cadastrar();
         } catch (Exception $e) {
@@ -228,9 +243,9 @@ class Usuario extends Banco
     function alterarUsuario()
     {
         if ($this->imagem != null or $this->imagem != "") {
-            $campos_eq_valores = "nome = '$this->nome', email = '$this->email', login = '$this->login', senha = '$this->senha', imagem = '$this->imagem'";
+            $campos_eq_valores = "nome = '$this->nome', nivel='$this->nivel', email = '$this->email', login = '$this->login', senha = '$this->senha', imagem = '$this->imagem'";
         } else {
-            $campos_eq_valores = "nome = '$this->nome', email = '$this->email', login = '$this->login', senha = '$this->senha'";
+            $campos_eq_valores = "nome = '$this->nome', nivel='$this->nivel', email = '$this->email', login = '$this->login', senha = '$this->senha'";
         }
         try {
             if ($this->alterar("usuario", $campos_eq_valores, $this->id)) {

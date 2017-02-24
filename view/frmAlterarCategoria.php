@@ -231,9 +231,7 @@ if ($_SESSION["tempo"] < time()) {
 
 <script src="../plugins/iCheck/icheck.min.js"></script>
 <script>
-    $(window).resize(function(){
-        $("body").setHeight($(window).height());
-    })
+
 </script>
 <script>
 

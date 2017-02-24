@@ -41,21 +41,21 @@ class UsuarioController
         }
 
         if(isset($_GET['p']) == "deslogar"){
-            $this->usuario->deslogar($_GET['tela']);
+            $this->usuario->deslogar();
         }
 
         if (isset($_POST["entrar"]) && $_POST["entrar"] == "Entrar!") {
             $logar = $this->usuario->logar($_POST["usuarioLogin"], $_POST['usuarioSenha'], $_POST['tela']);
             if (isset($logar) && $_POST['tela'] == "login"){
-                echo "<script>alert('$logar')</script>";
-                echo "<script>window.location.replace('../view/login.php');</script>";
+//                echo "<script>alert('$logar')</script>";
+                echo "<script>window.location.replace('../view/index.php');</script>";
             }
             if (isset($logar) && $_POST['tela'] == "loginC"){
-                echo "<script>alert('$logar')</script>";
+//                echo "<script>alert('$logar')</script>";
                 echo "<script>window.location.replace('../view/loginUsuarioComum.php');</script>";
             }
             if (isset($logar) && $_POST['tela'] == "lockscreen"){
-                echo "<script>alert('$logar')</script>";
+//                echo "<script>alert('$logar')</script>";
                 echo "<script>window.location.replace('../view/lockscreen.php');</script>";
             }
         }
@@ -67,6 +67,7 @@ class UsuarioController
         $this->usuario->setEmail($_POST['usuarioEmail']);
         $this->usuario->setLogin($_POST['usuarioLogin']);
         $this->usuario->setSenha($_POST['usuarioSenha']);
+        $this->usuario->setNivel($_POST['usuarioNivel']);
         $this->imagem->setArquivoNome($_FILES['usuarioImagem']['name']);
         $this->imagem->setArquivoErro($_FILES['usuarioImagem']['error']);
         $this->imagem->setArquivoTemporarioNome($_FILES['usuarioImagem']['tmp_name']);
@@ -109,7 +110,7 @@ class UsuarioController
     }
     
     public function retornaNumUsuarios(){
-        return $this->usuario->retornaNumRegistros("usuario","ativado=1");
+        return $this->usuario->retornaNumRegistros("usuario","logado=1");
     }
 
     public function retornaNumUsuariosComDesativados(){

@@ -339,9 +339,7 @@ $arrayImagens = explode('-', $stringArray);
 <script src="../test/simplegal.js"></script>
 <script src='../plugins/jquery-zoom/jquery.zoom.js'></script>
 <script>
-    $(window).resize(function(){
-        $("body").setHeight($(window).height());
-    });
+
 
     
     $(document).ready(function () {

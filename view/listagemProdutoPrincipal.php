@@ -112,9 +112,7 @@
     </style>
 
     <script>
-        $(window).resize(function () {
-            $("body").setHeight($(window).height());
-        });
+
     </script>
 </head>
 <body>

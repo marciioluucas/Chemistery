@@ -146,9 +146,7 @@ if ($_SESSION["tempo"] < time() && $_GET['tela'] != "usrComum") {
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
 <script>
-    $(window).resize(function () {
-        $("body").setHeight($(window).height());
-    });
+
 </script>
 </body>
 </html>

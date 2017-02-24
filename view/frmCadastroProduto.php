@@ -321,9 +321,7 @@ if ($_SESSION["tempo"] < time()) {
 <script src="../plugins/input-mask/maskmoney.js"></script>
 
 <script>
-    $(window).resize(function(){
-        $("body").setHeight($(window).height());
-    });
+
 
 
     $(document).ready(function(e){

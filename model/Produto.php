@@ -145,10 +145,10 @@ class Produto extends Banco
     {
         try {
             $this->tabela = "produto";
-            $this->campos = array("nome", "descricao", "usuario_id", "imagemprincipal",
+            $this->campos = array("nome", "descricao", "imagemprincipal", "usuario_id",
                 "categoria_id", "datacriacao");
-            $this->valores = array($this->getNome(), $this->getDescricao(), $this->getImagem(),
-                $this->usuarioLogadoId, $this->imagemPrincipal, $this->categoria, date("Y-m-d"));
+            $this->valores = array($this->getNome(), $this->getDescricao(), $this->imagemPrincipal,
+                $this->usuarioLogadoId, $this->categoria, date("Y-m-d"));
             return $this->cadastrar();
         } catch (Exception $e) {
             echo "Exceção capturada: " . $e->getMessage();

@@ -1,120 +1,113 @@
 {
-  "menus":[
+  "menus": [
     {
-      "codigo":"1",
-      "descricao":"Produtos",
-      "icone":"fa-shopping-cart",
-      "imagemIcone":"",
-      "permissao":"1",
-      "menuList":[
+      "codigo": "1",
+      "descricao": "Produtos",
+      "icone": "fa-shopping-cart",
+      "imagemIcone": "",
+      "permissao": "1",
+      "menuList": [
         {
-          "codigo":"3",
-          "descricao":"Cadastro de produtos",
-          "icone":"fa-cart-plus",
-          "url":"frmCadastroProduto.php",
-          "permissao":"1"
+          "codigo": "1.1",
+          "descricao": "Cadastro de produtos",
+          "icone": "fa-cart-plus",
+          "url": "frmCadastroProduto.php",
+          "permissao": "1"
         },
         {
-          "codigo":"3",
-          "descricao":"Lista de produtos",
-          "icone":"fa-list-alt",
-          "url":"../controller/ProdutoController.php?q=listar",
-          "permissao":"1"
+          "codigo": "1.2",
+          "descricao": "Lista de produtos",
+          "icone": "fa-list-alt",
+          "url": "../controller/ProdutoController.php?q=listar",
+          "permissao": "1"
         },
         {
-          "codigo":"4",
-          "descricao":"Categorias",
-          "icone":"fa-bars",
-          "imagemIcone":"",
-          "url":"#",
-          "permissao":"1",
-          "menuList":[
+          "codigo": "1.3",
+          "descricao": "Categorias",
+          "icone": "fa-bars",
+          "imagemIcone": "",
+          "url": "#",
+          "permissao": "1",
+          "menuList": [
             {
-              "codigo":"5",
-              "descricao":"Cadastro de categorias",
-              "icone":"fa-plus-circle",
-              "url":"frmCadastroCategoria.php",
-              "permissao":"1"
+              "codigo": "1.3.1",
+              "descricao": "Cadastro de categorias",
+              "icone": "fa-plus-circle",
+              "url": "frmCadastroCategoria.php",
+              "permissao": "1"
             },
             {
-              "codigo":"6",
-              "descricao":"Lista de categorias",
-              "icone":"fa-list-alt",
-              "url":"../controller/CategoriaController.php?q=listar",
-              "permissao":"1"
+              "codigo": "1.3.2",
+              "descricao": "Lista de categorias",
+              "icone": "fa-list-alt",
+              "url": "../controller/CategoriaController.php?q=listar",
+              "permissao": "1"
             }
           ]
         }
       ]
     },
     {
-      "codigo":"10",
-      "descricao":"Usuários",
-      "icone":"fa-users",
-      "imagemIcone":"",
-      "permissao":"3",
-      "menuList":[
+      "codigo": "2",
+      "descricao": "Usuários",
+      "icone": "fa-users",
+      "imagemIcone": "",
+      "permissao": "3",
+      "menuList": [
         {
-          "codigo":"11",
-          "descricao":"Cadastro de usuários",
-          "icone":"fa-user-plus",
-          "url":"frmCadastroUsuario.php",
-          "permissao":"3"
+          "codigo": "2.1",
+          "descricao": "Cadastro de usuários",
+          "icone": "fa-user-plus",
+          "url": "frmCadastroUsuario.php",
+          "permissao": "3"
         },
         {
-          "codigo":"13",
-          "descricao":"Lista de usuários",
-          "icone":"fa-list-alt",
-          "url":"../controller/UsuarioController.php?q=listar",
-          "permissao":"3"
+          "codigo": "2.2",
+          "descricao": "Lista de usuários",
+          "icone": "fa-list-alt",
+          "url": "../controller/UsuarioController.php?q=listar",
+          "permissao": "3"
         }
       ]
     },
     {
-      "codigo":"13",
-      "descricao":"Empresas MASTER",
-      "icone":"",
-      "imagemIcone":"",
-      "permissao":"6",
-      "menuList":[
+      "codigo": "3",
+      "descricao": "Sistema",
+      "icone": "fa-gear",
+      "imagemIcone": "",
+      "permissao": "3",
+      "menuList": [
         {
-          "codigo":"14",
-          "descricao":"Cadastro de empresa",
-          "icone":"",
-          "url":"",
-          "permissao":"3"
+          "codigo": "3.1",
+          "descricao": "Imagem padrão de produto",
+          "icone": "fa-image",
+          "url": "frmAlterarImagemPadrao.php",
+          "permissao": "3"
         },
         {
-          "codigo":"15",
-          "descricao":"Listar empresas",
-          "icone":"",
-          "url":"",
-          "permissao":"3"
+          "codigo": "3.2",
+          "descricao": "Cor padrão",
+          "icone": "fa-eye",
+          "url": "frmAlterarCorPadrao.php",
+          "permissao": "3"
         }
       ]
     },
     {
-      "codigo":"13",
-      "descricao":"Sistema",
-      "icone":"fa-gear",
-      "imagemIcone":"",
-      "permissao":"3",
+      "codigo": "4",
+      "descricao": "Perguntas",
+      "icone": "fa fa-comments-o",
+      "url": " ",
+      "permissao": "2",
       "menuList":[
-        {
-          "codigo":"14",
-          "descricao":"Imagem padrão de produto",
-          "icone":"fa-image",
-          "url":"frmAlterarImagemPadrao.php",
-          "permissao":"3"
-        },
-        {
-          "codigo":"15",
-          "descricao":"Cor padrão",
-          "icone":"fa-eye",
-          "url":"frmAlterarCorPadrao.php",
-          "permissao":"3"
-        }
-      ]
+      {
+        "codigo": "4.1",
+        "descricao": "Listar Perguntas",
+        "icone": "reply-all",
+        "url": " ",
+        "permissao": "2"
+      }
+    ]
     }
   ]
 }

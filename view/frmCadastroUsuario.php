@@ -149,8 +149,15 @@ if ($_SESSION["tempo"] < time()) {
                     <div class="form-group">
                         <label for="usuarioDescricao">Senha</label>
                         <input type="password" class="form-control" id="usuarioDescricao" name="usuarioSenha" required
-                               placeholder="Coloque aqui a senha"
-                        >
+                               placeholder="Coloque aqui a senha">
+                    </div>
+                    <div class="form-group">
+                        <label for="usuarioNivel">Nível</label>
+                        <select  class="form-control" id="usuarioNivel" name="usuarioNivel" required>
+                            <option value="1">Usuário Comum</option>
+                            <option value="2">Moderador</option>
+                            <option value="3">Administrador</option>
+                        </select>
                     </div>
                 </div>
                 <div class="col-lg-6">

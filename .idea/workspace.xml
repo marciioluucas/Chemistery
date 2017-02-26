@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e68c0b9-9fc4-4492-a1cd-a12fdb199f40" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/frmCadastroPergunta.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/PerguntaController.php" afterPath="$PROJECT_DIR$/controller/PerguntaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Pergunta.php" afterPath="$PROJECT_DIR$/model/Pergunta.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sources/jsons/menu.json" afterPath="$PROJECT_DIR$/sources/jsons/menu.json" />
     </list>
     <ignored path="CataLOG.iws" />
@@ -59,11 +58,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Banco.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Banco.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Banco.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-331">
-              <caret line="500" column="20" selection-start-line="500" selection-start-column="20" selection-end-line="500" selection-end-column="20" />
+            <state relative-caret-position="366">
+              <caret line="358" column="24" selection-start-line="358" selection-start-column="24" selection-end-line="358" selection-end-column="24" />
               <folding>
                 <marker date="1487956796233" expanded="true" signature="4145:4244" ph="INSERT INTO ${$this-&gt;tabela}... " />
                 <marker date="1487956796233" expanded="true" signature="6124:6206" ph="SELECT * FRO... ${$this-&gt;tabela}" />
@@ -123,6 +122,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="frmCadastroProduto.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/frmCadastroProduto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6273">
+              <caret line="383" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="405" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="frmCadastroPergunta.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/frmCadastroPergunta.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="204" column="33" selection-start-line="204" selection-start-column="33" selection-end-line="204" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Pergunta.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Pergunta.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -153,11 +172,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="menu.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sources/jsons/menu.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="106" column="58" selection-start-line="106" selection-start-column="58" selection-end-line="106" selection-end-column="58" />
+            <state relative-caret-position="136">
+              <caret line="8" column="19" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -344,9 +363,10 @@
         <option value="$PROJECT_DIR$/model/Usuario.php" />
         <option value="$PROJECT_DIR$/controller/UsuarioController.php" />
         <option value="$PROJECT_DIR$/view/dashboard.php" />
-        <option value="$PROJECT_DIR$/sources/jsons/menu.json" />
         <option value="$PROJECT_DIR$/controller/PerguntaController.php" />
         <option value="$PROJECT_DIR$/model/Pergunta.php" />
+        <option value="$PROJECT_DIR$/view/frmCadastroPergunta.php" />
+        <option value="$PROJECT_DIR$/sources/jsons/menu.json" />
       </list>
     </option>
   </component>
@@ -508,8 +528,11 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
-  <component name="RunManager" selected="PHP Web Application.Chemistery - HOME">
+  <component name="RunManager" selected="JavaScript Debug.frmCadastroPergunta.php">
     <configuration default="false" name="perguntas.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/Chemistery/view/perguntas.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="frmCadastroPergunta.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/Chemistery/view/frmCadastroPergunta.php">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -570,13 +593,15 @@
     <configuration default="false" name="Chemistery - HOME" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="XAMPP" start_url="/Chemistery/view/login.php">
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="PHP Web Application.Chemistery - HOME" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.perguntas.php" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.frmCadastroPergunta.php" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.perguntas.php" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.frmCadastroPergunta.php" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.perguntas.php" />
       </list>
     </recent_temporary>
   </component>
@@ -599,7 +624,7 @@
       <workItem from="1487458828114" duration="3756000" />
       <workItem from="1487594058702" duration="1357000" />
       <workItem from="1487944522178" duration="17323000" />
-      <workItem from="1488127020491" duration="5613000" />
+      <workItem from="1488127020491" duration="6921000" />
     </task>
     <task id="LOCAL-00001" summary="Retirar da Classe produto:&#10;&#10;Preco&#10;Mostrapreco&#10;&#10;Adicionar:&#10;&#10;Toxidade&#10;&#10;&#10;">
       <created>1474599472635</created>
@@ -741,11 +766,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488129395824</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Listar Perguntas">
+      <created>1488132707218</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1488132707218</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47227000" />
+    <option name="totallyTimeSpent" value="48535000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -812,20 +844,14 @@
     <MESSAGE value="Colocando as classes de controller de Pergunta e Resposta" />
     <MESSAGE value="Arrumando banco" />
     <MESSAGE value="Ajustando Model Pergunta" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustando Model Pergunta" />
+    <MESSAGE value="Listar Perguntas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Listar Perguntas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/lockscreen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
@@ -943,14 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/frmCadastroProduto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="383" column="13" selection-start-line="383" selection-start-column="13" selection-end-line="383" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1256,14 +1274,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/jsons/menu.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="106" column="58" selection-start-line="106" selection-start-column="58" selection-end-line="106" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/PerguntaController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1282,8 +1292,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/Banco.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-331">
-          <caret line="500" column="20" selection-start-line="500" selection-start-column="20" selection-end-line="500" selection-end-column="20" />
+        <state relative-caret-position="366">
+          <caret line="358" column="24" selection-start-line="358" selection-start-column="24" selection-end-line="358" selection-end-column="24" />
           <folding>
             <marker date="1487956796233" expanded="true" signature="4145:4244" ph="INSERT INTO ${$this-&gt;tabela}... " />
             <marker date="1487956796233" expanded="true" signature="6124:6206" ph="SELECT * FRO... ${$this-&gt;tabela}" />
@@ -1339,6 +1349,30 @@
             <marker date="1487956796233" expanded="true" signature="17684:17750" ph="select * fro... ${$tabelaEsq}" />
             <marker date="1487956796233" expanded="true" signature="17998:18064" ph="select * fro... ${$tabelaEsq}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/frmCadastroProduto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6273">
+          <caret line="383" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="405" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/frmCadastroPergunta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="204" column="33" selection-start-line="204" selection-start-column="33" selection-end-line="204" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/jsons/menu.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -5,7 +5,7 @@
       "descricao": "Produtos",
       "icone": "fa-shopping-cart",
       "imagemIcone": "",
-      "permissao": "1",
+      "permissao": "2",
       "menuList": [
         {
           "codigo": "1.1",

@@ -6,7 +6,7 @@
  * Date: 24/02/2017
  * Time: 10:55
  */
-class Pergunta
+class Pergunta extends Banco
 {
     private $usuario;
     private $data;
@@ -25,6 +25,7 @@ class Pergunta
      */
     public function __construct($usuario, $data, $descricao, $produto, $status)
     {
+        parent::__construct();
         $this->usuario = $usuario;
         $this->data = $data;
         $this->descricao = $descricao;
@@ -128,8 +129,14 @@ class Pergunta
 
     public function listagem() {
 
+        $this->tabela = "pergunta";
+        $this->campos = array("id", "nome", "descricao", "categoria_id");
+        $this->condicao = "ativado = 1 ";
+        $this->subQntColunasConsulTabela = 0;
+        $this->listar();
     }
 
 
 
 }
+

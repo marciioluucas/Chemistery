@@ -177,8 +177,6 @@ class Usuario extends Banco
                 }
                 try {
                     if ($this->alterar("usuario", "logado = 1", $resultado['id'])) {
-
-                        return true;
                     }
                 } catch (Exception $e) {
                     return "Exceção capturada: " . $e->getMessage();
@@ -195,10 +193,6 @@ class Usuario extends Banco
                 if ($tela == "lockscreen" && $_SESSION['nivelUsuario'] > 1) {
                     session_name("loginUsuario");
                     header('Location: ../view/dashboard.php');
-                }
-                if($_SESSION['nivelUsuario'] >= 1 && $tela == "loginC"){
-                    session_name('loginUsuarioComum');
-                    header('Location: ../view/indexDashComum.php');
                 }
                 exit();
             } else {

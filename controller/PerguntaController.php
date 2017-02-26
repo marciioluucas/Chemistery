@@ -1,5 +1,5 @@
 <?php
-
+require_once "../model/Pergunta.php";
 /**
  * Created by PhpStorm.
  * User: marci
@@ -9,4 +9,17 @@
 class PerguntaController
 {
 
+    /**
+     * PerguntaController constructor.
+     */
+    public function __construct()
+    {
+        if (isset($_GET['q']) == "listar"){
+            $pergunta = new Pergunta();
+            $pergunta->listagem();
+    }
+    }
+
+
 }
+new PerguntaController();

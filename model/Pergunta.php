@@ -1,5 +1,5 @@
 <?php
-
+require_once "../model/Banco.php";
 /**
  * Created by PhpStorm.
  * User: marci
@@ -15,23 +15,8 @@ class Pergunta extends Banco
     private $status;
     private $respostaList;
 
-    /**
-     * Pergunta constructor.
-     * @param $usuario
-     * @param $data
-     * @param $descricao
-     * @param $produto
-     * @param $status
-     */
-    public function __construct($usuario, $data, $descricao, $produto, $status)
-    {
-        parent::__construct();
-        $this->usuario = $usuario;
-        $this->data = $data;
-        $this->descricao = $descricao;
-        $this->produto = $produto;
-        $this->status = $status;
-    }
+
+
 
 
     /**
@@ -130,7 +115,7 @@ class Pergunta extends Banco
     public function listagem() {
 
         $this->tabela = "pergunta";
-        $this->campos = array("id", "nome", "descricao", "categoria_id");
+        $this->campos = array("id", "produto_id", "status");
         $this->condicao = "ativado = 1 ";
         $this->subQntColunasConsulTabela = 0;
         $this->listar();

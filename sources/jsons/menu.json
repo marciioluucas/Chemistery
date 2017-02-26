@@ -104,7 +104,7 @@
         "codigo": "4.1",
         "descricao": "Listar Perguntas",
         "icone": "reply-all",
-        "url": " ",
+        "url": "../controller/PerguntaController.php?q=listar",
         "permissao": "2"
       }
     ]

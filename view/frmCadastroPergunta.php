@@ -205,65 +205,20 @@ if ($_SESSION["tempo"] < time()) {
         <input type="text" name="idUsuarioLogado" id="idUsuarioLogado" value="<?php echo $idUser ?>"
                hidden="hidden">
         <div class="box-body">
-            <div class="col-lg-6">
-                <div class="form-group">
-                    <label for="produtoNome">Nome</label>
-                    <input type="text" class="form-control" id="produtoNome" name="produtoNome" required
-                           placeholder="Coloque aqui o nome">
-                </div>
+            <div class="col-lg-12">
+                <div class=" row thumbnail">
+                    <img src="../imagens/noimg.png" class="img-bordered col-lg-3">
+                    <div class="caption col-lg-9" >
+                        <h1>Nome Produto</h1>
+                        <hr>
+                        <p>Pergunta:</p>
+                        <textarea class="form-control" rows="9"></textarea>
 
-                <div class="form-group">
-                    <label for="produtoDescricao">Descrição</label>
-                    <textarea class="form-control" id="produtoDescricao" name="produtoDescricao" required
-                              placeholder="Coloque aqui a descrição"
-                              style="resize: none; height: 280px;;"></textarea>
-                </div>
-
-
-
-
-
-                <div class="form-group">
-                    <label for="produtoCategoria2">Categoria</label>
-                    <div class="input-group" style="margin-top: -3px !important;">
-                            <span class="input-group-addon" id="Lupa" style="height: 34px !important;"><i
-                                    class="fa fa-search" aria-hidden="true"></i></span>
-                        <select class="form-control select2"
-                                style="width: 100%; border-radius: 0 !important; display: none"
-                                id="produtoCategoria2" aria-describedby="Lupa" name="produtoCategoria2">
-
-                            <option selected="selected" value="0">Nenhuma</option>
-                            <?php $categoriaController->consultaCategorias() ?>
-                        </select>
                     </div>
-                </div><!-- /.form-group -->
-                <div class="form-group">
-                    <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/comburente.png" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk1" id="item4" value="val1" class="hidden" autocomplete="off"></label></div>
-                    <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/corrosivo.jpg" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk2" id="item4" value="val2" class="hidden" autocomplete="off"></label></div>
-                    <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/explosivo.png" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk3" id="item4" value="val3" class="hidden" autocomplete="off"></label></div>
-                    <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/inflamavel.png" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk4" id="item4" value="val4" class="hidden" autocomplete="off"></label></div>
-                    <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/nocivo-irritante.png" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk5" id="item4" value="val5" class="hidden" autocomplete="off"></label></div>
-                    <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/toxico.png" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk6" id="item4" value="val6" class="hidden" autocomplete="off"></label></div>
+
+
                 </div>
             </div>
-
-
-            <div class="col-lg-6" style="margin-top: 3px;">
-
-
-                <div class="form-group">
-                    <label for="produtoImagem">Imagem Principal</label>
-                    <input type="file" class="form-control" id="produtoImagemPrincipal"
-                           name="produtoImagemPrincipal" accept="image/png, image/jpg, image/jpeg">
-                    <p class="help-block">Para melhor vizualização recomendamos imagens 256 x 256 ou maior e do
-                        formato .jpg
-                        ou .png</p>
-                    <div class="divcontainer" style="width: 190px !important; height: 190px !important;">
-                        <img src="../imagens/noimg.png" id="preview-da-imagemPrincipal"
-                             style="width: auto !important; height: auto !important; max-height: 190px !important;"
-                             class="img"></div>
-                </div>
-
 
 
 

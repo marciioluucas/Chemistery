@@ -148,6 +148,22 @@ if ($_SESSION["tempo"] < time()) {
                                placeholder="Coloque aqui a senha"
                                value="<?php echo $_GET['senha'] ?>">
                     </div>
+
+                    <div class="form-group">
+                        <label for="usuarioNivel1">Nível</label>
+                        <select  class="form-control" id="usuarioNivel1" name="usuarioNivel1" required>
+                            <option value="<?php echo $_GET['nivel'] ?>">
+                                <?php
+                                if( $_GET['nivel'] == 1){echo "Usuário Comum";}
+                                if( $_GET['nivel'] == 2){echo "Moderador";}
+                                if( $_GET['nivel'] == 3){echo "Administrador";}
+                                ?>
+                            </option>
+                            <option value="1">Usuário Comum</option>
+                            <option value="2">Moderador</option>
+                            <option value="3">Administrador</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="col-lg-6">
                     <label for="usuarioimagem1">Imagem</label>

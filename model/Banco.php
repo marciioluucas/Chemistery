@@ -153,7 +153,7 @@ class Banco
         $this->banco = "consu734_chem_test";
         $this->usuario = "root";
         $this->senha = "";
-        $porta = "8090";
+        $porta = "3306";
         if (mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco, $porta)) {
             $this->conn = true;
             return mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco, $porta);

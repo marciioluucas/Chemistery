@@ -149,10 +149,10 @@ class Banco
     private function conexao()
     {
 
-        $this->host = "108.167.188.75";
+        $this->host = "localhost";
         $this->banco = "consu734_chem_test";
-        $this->usuario = "consu734_root";
-        $this->senha = "chemistery";
+        $this->usuario = "root";
+        $this->senha = "";
 
         if (mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco)) {
             $this->conn = true;
@@ -597,9 +597,6 @@ class Banco
         $this->sql = "select * from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao;
         $this->query = $this->query($this->sql);
         $this->result = mysqli_affected_rows($this->conexao());
-
-        
-
     }
 
     public function retornaSQLInnerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao){

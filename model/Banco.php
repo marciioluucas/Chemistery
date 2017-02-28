@@ -141,7 +141,7 @@ class Banco
 
     public function __construct()
     {
-        if($this->conn) {
+        if ($this->conn) {
             $this->conexao();
         }
     }
@@ -149,14 +149,14 @@ class Banco
     private function conexao()
     {
 
-        $this->host = "localhost";
+        $this->host = "179.252.155.23";
         $this->banco = "consu734_chem_test";
         $this->usuario = "root";
         $this->senha = "";
-
-        if (mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco)) {
+        $porta = "8090";
+        if (mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco, $porta)) {
             $this->conn = true;
-            return mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco);
+            return mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco, $porta);
 
         } else {
             echo "Erro na conexao do banco";
@@ -268,8 +268,7 @@ class Banco
     public function listar()
     {
 
-    $this->sql = "SELECT * FROM " . $this->tabela . " WHERE " . $this->condicao . " order by id desc";
-
+        $this->sql = "SELECT * FROM " . $this->tabela . " WHERE " . $this->condicao . " order by id desc";
 
 
 //        $this->sql = "SELECT " . $this->campos . " FROM " . $this->tabela . " WHERE " . $this->condicao;
@@ -302,7 +301,7 @@ class Banco
             while ($r = mysqli_fetch_array($this->query, MYSQLI_ASSOC)) {
                 echo "<tr>";
                 for ($i = 0; $i < count($this->campos) - $this->subQntColunasConsulTabela; $i++) {
-                    echo strtoupper("<td>" . str_replace("_"," ", $r[$this->campos[$i]]) . "</td>");
+                    echo strtoupper("<td>" . str_replace("_", " ", $r[$this->campos[$i]]) . "</td>");
                 }
                 for ($i = 0; $i < $cont; $i++) {
                     if ($i < $cont - 1) {
@@ -583,8 +582,9 @@ class Banco
 
 
     }
-    
-    public function listarUsandoSQL(){
+
+    public function listarUsandoSQL()
+    {
         $this->sql = "SELECT $this->campos FROM " . $this->tabela . " WHERE " . $this->condicao;
         $this->query = mysqli_query($this->conexao(), $this->sql);
         $this->result = mysqli_num_rows($this->query);
@@ -600,11 +600,13 @@ class Banco
 //    $this->result = $this->sql;
     }
 
-    public function retornaSQLInnerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao){
+    public function retornaSQLInnerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao)
+    {
         return "select * from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao;
     }
-    
-    public function retornaSQLInnerJoinSemSelect($tabelaEsq, $tabelaDir, $fk, $pk){
+
+    public function retornaSQLInnerJoinSemSelect($tabelaEsq, $tabelaDir, $fk, $pk)
+    {
         return "$tabelaEsq inner join $tabelaDir on $fk = $pk";
     }
 }

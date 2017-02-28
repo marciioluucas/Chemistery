@@ -596,7 +596,8 @@ class Banco
 
         $this->sql = "select * from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao;
         $this->query = $this->query($this->sql);
-        $this->result = mysqli_affected_rows($this->conexao());
+        $this->result = mysqli_fetch_array($this->query, MYSQLI_ASSOC);
+//    $this->result = $this->sql;
     }
 
     public function retornaSQLInnerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao){

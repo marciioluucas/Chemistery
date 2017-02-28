@@ -1,5 +1,6 @@
 <?php
 require_once "../model/Banco.php";
+
 /**
  * Created by PhpStorm.
  * User: marci
@@ -14,9 +15,6 @@ class Pergunta extends Banco
     private $produto;
     private $status;
     private $respostaList;
-
-
-
 
 
     /**
@@ -100,19 +98,23 @@ class Pergunta extends Banco
     }
 
 
-    public function cadastroPergunta() {
+    public function cadastroPergunta()
+    {
 
     }
 
-    public function alterarPergunta() {
+    public function alterarPergunta()
+    {
 
     }
 
-    public function listarPergunta() {
+    public function listarPergunta()
+    {
 
     }
 
-    public function listagem() {
+    public function listagem()
+    {
 
         $this->tabela = "pergunta";
         $this->campos = array("id", "produto_id", "status");
@@ -121,7 +123,14 @@ class Pergunta extends Banco
         $this->listar();
     }
 
-
-
+    public function consultarPergunta($idProduto, $usuarioId)
+    {
+        $this->tabela = "pergunta";
+        $this->innerJoin("usuario", "pergunta", "usuario_id", "usuario.id",
+            "produto_id = " . $idProduto . " and usuario_id = ".$usuarioId);
+        return $this->result;
+    }
 }
-
+//$p =  new Pergunta();
+//$p->consultarPergunta(301,1);
+//print_r($p->result);

@@ -5,6 +5,10 @@
  * Date: 26/02/2017
  * Time: 16:06
  */
+require_once '../controller/DiscussaoController.php';
+require_once '../view/protecaoPaginas.php';
+$discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['idUsuario']);
+
 ?>
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <!-- Bootstrap 3.3.5 -->
@@ -32,13 +36,13 @@
             <div class='box-header with-border'>
                 <div class='user-block'>
                     <img class='img-circle' src='../dist/img/user1-128x128.jpg' alt='user image'>
-                    <span class='username'><a href="#">{{NOME_USUARIO}}</a></span>
-                    <span class='description'>{{HORARIO}}</span>
+                    <span class='username'><a href="#"><?php echo $discussaoController->pergunta['nome'] ?></a></span>
+                    <span class='description'><?php echo $discussaoController->pergunta['datahora'] ?></span>
                 </div>
             </div>
             <div class='box-body'>
                 <img class="img-responsive pad" src="../dist/img/photo2.png" alt="Photo">
-                <p>{{PERGUNTA}}</p>
+                <p><?php echo $discussaoController->pergunta['descricao'] ?></p>
             </div>
             <div class='box-footer box-comments'>
                 <div class='box-comment'>
@@ -55,7 +59,7 @@
             </div><!-- /.box-footer -->
             <div class="box-footer">
                 <form action="#" method="post">
-                    <img class="img-responsive img-circle img-sm" src="../dist/img/user4-128x128.jpg" alt="alt text">
+                    <img class="img-responsive img-circle img-sm" src="<?php echo $_SESSION['imagemUsuario'] ?>" alt="alt text">
                     <!-- .img-push is used to add margin to elements next to floating images -->
                     <div class="img-push">
                         <input type="text" class="form-control input-sm" placeholder="Escreva seu comentario">

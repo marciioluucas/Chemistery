@@ -1,5 +1,7 @@
 <?php
 require_once '../model/Pergunta.php';
+require_once '../model/Discussao.php';
+
 /**
  * Created by PhpStorm.
  * User: marci
@@ -8,26 +10,24 @@ require_once '../model/Pergunta.php';
  */
 class DiscussaoController
 {
+    public $discussao;
     public $usuario;
     public $pergunta;
+    public $respostas;
     public $idProduto;
+    public $idUsuario;
     public $produto;
 
     /**
      * DiscussaoController constructor.
      * @param $produto
      */
-    public function __construct($idProduto)
+    public function __construct($idProduto, $idUsuario)
     {
-        $this->idProduto = $idProduto;
-        $this->pergunta = new Pergunta();
-
+        $discussao = new Discussao();
+        $discussao->consultarPergunta($idProduto, $idUsuario);
+        $this->pergunta = $discussao->getPergunta();
     }
-
-    /**
-     * DiscussaoController constructor.
-     */
-
 
 
 }

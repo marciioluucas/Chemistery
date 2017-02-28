@@ -9,17 +9,115 @@
 class Discussao
 {
     private $pergunta;
-    private $respostas;
+    private $resposta;
+    private $usuarioPergunta;
+    private $usuarioResposta;
+    private $produto;
+
 
     /**
-     * Discussao constructor.
-     * @param $pergunta
-     * @param $respostas
+     * @return mixed
      */
-    public function __construct($pergunta, $respostas)
+    public function getPergunta()
+    {
+        return $this->pergunta;
+    }
+
+    /**
+     * @param mixed $pergunta
+     */
+    public function setPergunta($pergunta)
     {
         $this->pergunta = $pergunta;
-        $this->respostas[] = $respostas;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getResposta()
+    {
+        return $this->resposta;
+    }
+
+    /**
+     * @param mixed $resposta
+     */
+    public function setResposta($resposta)
+    {
+        $this->resposta = $resposta;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUsuarioPergunta()
+    {
+        return $this->usuarioPergunta;
+    }
+
+    /**
+     * @param mixed $usuarioPergunta
+     */
+    public function setUsuarioPergunta($usuarioPergunta)
+    {
+        $this->usuarioPergunta = $usuarioPergunta;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUsuarioResposta()
+    {
+        return $this->usuarioResposta;
+    }
+
+    /**
+     * @param mixed $usuarioResposta
+     */
+    public function setUsuarioResposta($usuarioResposta)
+    {
+        $this->usuarioResposta = $usuarioResposta;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProduto()
+    {
+        return $this->produto;
+    }
+
+    /**
+     * @param mixed $produto
+     */
+    public function setProduto($produto)
+    {
+        $this->produto = $produto;
+    }
+
+
+
+
+    public function consultarPergunta($idProduto, $idUsuario)
+    {
+        $p = new Pergunta();
+        $this->pergunta = $p->consultarPergunta($idProduto, $idUsuario);
+    }
+
+    public function consultarUsuarioResposta($idUsuario)
+    {
+        $u = new Usuario();
+        $u->condicao = "id = " . $idUsuario;
+        $u->consultar();
+        $this->usuarioResposta = $u->result;
+    }
+
+    public function consultarProduto($idProduto)
+    {
+        $p = new Produto();
+        $p->condicao = "id = $idProduto";
+        $p->consultar();
+        $this->produto = $p->result;
     }
 
 

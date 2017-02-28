@@ -151,12 +151,11 @@ class Banco
 
         $this->host = "179.252.155.23";
         $this->banco = "consu734_chem_test";
-        $this->usuario = "root";
-        $this->senha = "";
-        $porta = "3306";
-        if (mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco, $porta)) {
+        $this->usuario = "chemistery";
+        $this->senha = "chemistery";
+        if (mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco)) {
             $this->conn = true;
-            return mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco, $porta);
+            return mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco);
 
         } else {
             echo "Erro na conexao do banco";

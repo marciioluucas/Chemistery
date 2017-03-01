@@ -46,7 +46,7 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
             </div>
             <div class='box-footer box-comments'>
                 <?php
-                include_once 'respostas.php';
+                include_once 'respostas.php?id-produto='.$_GET['id-produto'];
                  ?>
             </div><!-- /.box-footer -->
             <div class="box-footer">

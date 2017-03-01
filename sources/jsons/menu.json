@@ -71,6 +71,22 @@
       ]
     },
     {
+      "codigo": "4",
+      "descricao": "Perguntas",
+      "icone": "fa fa-comments-o",
+      "url": " ",
+      "permissao": "2",
+      "menuList":[
+        {
+          "codigo": "4.1",
+          "descricao": "Listar Perguntas",
+          "icone": "reply-all",
+          "url": "../controller/PerguntaController.php?q=listar",
+          "permissao": "2"
+        }
+      ]
+    },
+    {
       "codigo": "3",
       "descricao": "Sistema",
       "icone": "fa-gear",
@@ -92,22 +108,6 @@
           "permissao": "3"
         }
       ]
-    },
-    {
-      "codigo": "4",
-      "descricao": "Perguntas",
-      "icone": "fa fa-comments-o",
-      "url": " ",
-      "permissao": "2",
-      "menuList":[
-      {
-        "codigo": "4.1",
-        "descricao": "Listar Perguntas",
-        "icone": "reply-all",
-        "url": "../controller/PerguntaController.php?q=listar",
-        "permissao": "2"
-      }
-    ]
     }
   ]
 }

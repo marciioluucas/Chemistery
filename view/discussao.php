@@ -35,7 +35,7 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
         <div class="box box-widget">
             <div class='box-header with-border'>
                 <div class='user-block'>
-                    <img class='img-circle' src='../dist/img/user1-128x128.jpg' alt='user image'>
+                    <img class='img-circle' src='<?php echo $discussaoController->pergunta['imagem'] ?>' alt='user image'>
                     <span class='username'><a href="#"><?php echo $discussaoController->pergunta['nome'] ?></a></span>
                     <span class='description'><?php echo $discussaoController->pergunta['datahora'] ?></span>
                 </div>
@@ -45,21 +45,14 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
                 <p><?php echo $discussaoController->pergunta['descricao'] ?></p>
             </div>
             <div class='box-footer box-comments'>
-                <div class='box-comment'>
-                    <!-- User image -->
-                    <img class='img-circle img-sm' src='../dist/img/user3-128x128.jpg' alt='user image'>
-                    <div class='comment-text'>
-                      <span class="username">
-                        {{USUARIO_RESPOSTA}}
-                        <span class='text-muted pull-right'>{{HORARIO}}</span>
-                      </span><!-- /.username -->
-                       {{RESPOSTA}}
-                    </div><!-- /.comment-text -->
-                </div><!-- /.box-comment -->
+                <?php
+                include_once 'respostas.php';
+                 ?>
             </div><!-- /.box-footer -->
             <div class="box-footer">
                 <form action="#" method="post">
-                    <img class="img-responsive img-circle img-sm" src="<?php echo $_SESSION['imagemUsuario'] ?>" alt="alt text">
+                    <img class="img-responsive img-circle img-sm" src="<?php echo $_SESSION['imagemUsuario'] ?>"
+                         alt="alt text">
                     <!-- .img-push is used to add margin to elements next to floating images -->
                     <div class="img-push">
                         <input type="text" class="form-control input-sm" placeholder="Escreva seu comentario">
@@ -69,3 +62,16 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
         </div><!-- /.box -->
     </div><!-- /.col -->
 </div>
+<script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<script>
+
+    function atualizar() {
+        $(".box-comments").load("respostas.php?id-produto=<?php echo $_GET['id-produto'] ?>");
+    }
+
+    setInterval("atualizar()", 1000);
+
+    $(function() {
+        atualizar();
+    });
+</script>

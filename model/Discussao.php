@@ -101,15 +101,15 @@ class Discussao
     public function consultarPergunta($idProduto, $idUsuario)
     {
         $p = new Pergunta();
-        $this->pergunta = $p->consultarPergunta($idProduto, $idUsuario);
+
+        return mysqli_fetch_array($p->consultarPergunta($idProduto, $idUsuario), MYSQLI_ASSOC);
     }
 
-    public function consultarUsuarioResposta($idUsuario)
-    {
-        $u = new Usuario();
-        $u->condicao = "id = " . $idUsuario;
-        $u->consultar();
-        $this->usuarioResposta = $u->result;
+    public function consultarResposta($idPergunta) {
+        $r = new Resposta();
+        return $r->consultarResposta($idPergunta);
+
+
     }
 
     public function consultarProduto($idProduto)

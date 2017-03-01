@@ -1,5 +1,6 @@
 <?php
 require_once '../model/Pergunta.php';
+require_once '../model/Resposta.php';
 require_once '../model/Discussao.php';
 
 /**
@@ -17,6 +18,7 @@ class DiscussaoController
     public $idProduto;
     public $idUsuario;
     public $produto;
+    public $q;
 
     /**
      * DiscussaoController constructor.
@@ -25,9 +27,15 @@ class DiscussaoController
     public function __construct($idProduto, $idUsuario)
     {
         $discussao = new Discussao();
-        $discussao->consultarPergunta($idProduto, $idUsuario);
-        $this->pergunta = $discussao->getPergunta();
+
+        $this->pergunta = $discussao->consultarPergunta($idProduto, $idUsuario);
+
+
     }
 
-
+    public function consultarResp()
+    {
+        $d = new Discussao();
+        return $d->consultarResposta($this->pergunta['pergid']);
+    }
 }

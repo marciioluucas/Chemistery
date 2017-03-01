@@ -590,13 +590,21 @@ class Banco
     }
 
 
-    public function innerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao)
+    public function innerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao, $campos)
     {
+        if ($campos == null) {
 
-        $this->sql = "select * from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao;
-        $this->query = $this->query($this->sql);
-        $this->result = mysqli_fetch_array($this->query, MYSQLI_ASSOC);
-//    $this->result = $this->sql;
+            $this->sql = "select * from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao;
+        } else {
+
+            $this->sql = "select " . implode(", ", $campos) . " from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao;
+
+        }
+//        print_r($this->sql);
+        return $this->query($this->sql);
+
+
+//        $this->result = $this->sql;
     }
 
     public function retornaSQLInnerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao)

@@ -1,5 +1,5 @@
 <?php
-
+require_once 'Banco.php';
 /**
  * Created by PhpStorm.
  * User: marcio
@@ -7,7 +7,7 @@
  * Time: 10:56
  */
 
-class Resposta
+class Resposta extends Banco
 {
     private $usuario;
     private $datahora;
@@ -110,4 +110,17 @@ class Resposta
     public function listagem() {
 
     }
+
+    public function consultarResposta($idPergunta) {
+        $this->tabela = "resposta";
+        return $this->innerJoin("usuario", "resposta", "usuario_id", "usuario.id",
+            "pergunta_id=".$idPergunta, ["nome","usuario.id as userId", "imagem", "resposta.id as respid", "descricao", "datahora"]);
+    }
 }
+//$r = new Resposta();
+////
+//$r->consultarResposta(1);
+//$q = $r->query;
+//    while($row = mysqli_fetch_array($q, MYSQLI_ASSOC)){
+//        echo    $row['descricao'] ."\n";
+//    }

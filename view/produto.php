@@ -285,19 +285,9 @@ $arrayImagens = explode('-', $stringArray);
         <div class="col-sm-6" style="padding-left: 50px">
 
 
-            <?php if ($produtoController->retornaAlgoDoProdutoQueEuQueira("mostrapreco", $_GET['id']) and $produtoController->retornaAlgoDoProdutoQueEuQueira("preco", $_GET['id']) != 0) {
-                echo "
-                   <h3>Preço</h3>
-                   <h2 class='text-red'>R$ " . $produtoController->retornaAlgoDoProdutoQueEuQueira("preco", $_GET['id']) . "</h2>
-               ";
-            }
-            if ($produtoController->retornaAlgoDoProdutoQueEuQueira("mostrapreco", $_GET['id']) == 0) {
-                echo "
-                   <h3>Preço</h3>
-                   <h2 class='text-red'>Preço somente nas lojas físicas!</h2>";
-            }
-            ?>
-            <h3>Informações Técnicas</h3>
+            <button type="button" class="btn btn-lg btn-info" ><a href="frmCadastroPergunta.php" class="text-black text-bold">Tirar uma dúvida</a></button>
+
+            <h3>(TODO)Precauções(TODO)</h3>
 
 
             <table style="width: 100%; border-color: #FFFFFF; border: none" border="1">
@@ -309,11 +299,14 @@ $arrayImagens = explode('-', $stringArray);
         </div>
 
 
-        <div class="col-sm-12" style="">
+        <div class="col-sm-12">
+
             <hr>
+            <div class="container" style="text-align: justify">
             <h2>Descrição</h2>
-            <p><?php echo $produtoController->retornaAlgoDoProdutoQueEuQueira("descricao", $_GET['id']) ?></p>
+            <p class="h3"><?php echo $produtoController->retornaAlgoDoProdutoQueEuQueira("descricao", $_GET['id']) ?></p>
             <br><br>
+            </div>
             <hr>
             <br><br>
 

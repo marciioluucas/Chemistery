@@ -310,9 +310,17 @@ class Banco
                         $stringParametros .= $this->campos[$i] . "=" . $r[$this->campos[$i]];
                     }
                 }
-                echo "<td style='width:180px;'><a class='btn btn-flat bg-purple' style='border-color: #5753a0; background-color: #605ca8 !important;' href='../view/frmAlterar" . ucfirst($this->tabela) . ".php?" . $stringParametros . "'>Alterar</a>";
+                echo "<td style='width:180px;'>";
+                if($this->tabela != "pergunta") {
+                    echo "<a class='btn btn-flat bg-purple' style='border-color: #5753a0; background-color: #605ca8 !important;' href='../view/frmAlterar" . ucfirst($this->tabela) . ".php?" . $stringParametros . "'>Alterar</a>";
+                }
                 $stringParametros = "";
-                echo "<a class='btn btn-flat btn-danger' href='../controller/" . ucfirst($this->tabela) . "Controller.php?q=excluir&id=" . $r[$this->campos[0]] . "'>Excluir</a></td>";
+                echo "<a class='btn btn-flat btn-danger' href='../controller/" . ucfirst($this->tabela) . "Controller.php?q=excluir&id=" . $r[$this->campos[0]] . "'>Excluir</a>";
+
+                              if($this->tabela == "pergunta"){
+                    echo "<a class='btn btn-flat btn-info' href='../view/discussao.php&id-produto=" . $r[$this->campos[1]] . "'>Responder</a></td>";
+                }
+
                 echo "</tr>";
             }
             echo "    </tbody>";

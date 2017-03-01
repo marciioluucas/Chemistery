@@ -5,8 +5,8 @@
  * Date: 26/02/2017
  * Time: 16:06
  */
-require_once '../controller/DiscussaoController.php';
 require_once '../view/protecaoPaginas.php';
+require_once '../controller/DiscussaoController.php';
 $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['idUsuario']);
 
 ?>
@@ -35,7 +35,8 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
         <div class="box box-widget">
             <div class='box-header with-border'>
                 <div class='user-block'>
-                    <img class='img-circle' src='<?php echo $discussaoController->pergunta['imagem'] ?>' alt='user image'>
+                    <img class='img-circle' src='<?php echo $discussaoController->pergunta['imagem'] ?>'
+                         alt='user image'>
                     <span class='username'><a href="#"><?php echo $discussaoController->pergunta['nome'] ?></a></span>
                     <span class='description'><?php echo $discussaoController->pergunta['datahora'] ?></span>
                 </div>
@@ -46,18 +47,19 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
             </div>
             <div class='box-footer box-comments'>
                 <?php
-                include_once 'respostas.php?id-produto='.$_GET['id-produto'];
-                 ?>
+                include_once 'respostas.php';
+                ?>
             </div><!-- /.box-footer -->
             <div class="box-footer">
-                <form action="#" method="post">
-                    <img class="img-responsive img-circle img-sm" src="<?php echo $_SESSION['imagemUsuario'] ?>"
-                         alt="alt text">
-                    <!-- .img-push is used to add margin to elements next to floating images -->
-                    <div class="img-push">
-                        <input type="text" class="form-control input-sm" placeholder="Escreva seu comentario">
-                    </div>
-                </form>
+
+                <img class="img-responsive img-circle img-sm" src="<?php echo $_SESSION['imagemUsuario'] ?>"
+                     alt="alt text">
+                <!-- .img-push is used to add margin to elements next to floating images -->
+                <div class="img-push">
+                    <input type="text" class="form-control input-sm send-nudes"
+                           placeholder="Escreva seu comentario">
+                </div>
+
             </div><!-- /.box-footer -->
         </div><!-- /.box -->
     </div><!-- /.col -->
@@ -71,7 +73,23 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
 
     setInterval("atualizar()", 1000);
 
-    $(function() {
+    $(function () {
         atualizar();
+    });
+
+    $(document).ready(function () {
+        $(".send-nudes").on('keypress', function () {
+            if (window.event.keyCode == 13) {
+                $.post("../controller/DiscussaoController.php?q=new-comment",
+                    {
+                        produto_id: <?php echo $_GET['id-produto']?>,
+                        usuario_id: <?php echo $_SESSION['idUsuario']; ?>,
+                        pergunta_id: <?php echo $discussaoController->pergunta['pergid'];?>,
+                        descricao: $('.send-nudes').val()
+                    })
+                    .done(function (data) {
+                        console.log("Sucesso!" + data);
+                    });
+            }})
     });
 </script>

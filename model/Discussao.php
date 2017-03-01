@@ -98,11 +98,11 @@ class Discussao
 
 
 
-    public function consultarPergunta($idProduto, $idUsuario)
+    public function consultarPergunta($idProduto)
     {
         $p = new Pergunta();
 
-        return mysqli_fetch_array($p->consultarPergunta($idProduto, $idUsuario), MYSQLI_ASSOC);
+        return mysqli_fetch_array($p->consultarPergunta($idProduto), MYSQLI_ASSOC);
     }
 
     public function consultarResposta($idPergunta) {

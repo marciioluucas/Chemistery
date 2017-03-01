@@ -202,7 +202,7 @@ class Banco
     {
         $this->gerarQuery(1);
         $this->sql = "INSERT INTO " . $this->tabela . " (" . $this->camposQuery . ") VALUES (" . $this->valoresQuery . ")";
-        echo $this->sql;
+//        echo $this->sql;
         $this->query = mysqli_query($this->conexao(), $this->sql);
         $this->result = mysqli_affected_rows($this->conexao());
         if ($this->query) {
@@ -590,24 +590,34 @@ class Banco
     }
 
 
-    public function innerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao, $campos)
+    public function innerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao, $campos,$orderby)
     {
-        if ($campos == null) {
 
-            $this->sql = "select * from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao;
-        } else {
 
-            $this->sql = "select " . implode(", ", $campos) . " from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao;
 
-        }
+            if ($campos == null) {
+                if($orderby == null) {
+                    $this->sql = "select * from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao;
+                }else{
+                    $this->sql = "select * from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao . " order by $orderby";
+                }
+                } else {
+                if($orderby == null) {
+                    $this->sql = "select " . implode(", ", $campos) . " from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao;
+
+                }else{
+                    $this->sql = "select " . implode(", ", $campos) . " from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao . " order by $orderby";
+                    echo $this->sql;
+                }
+            }
 //        print_r($this->sql);
-        return $this->query($this->sql);
+            return $this->query($this->sql);
 
 
 //        $this->result = $this->sql;
-    }
+        }
 
-    public function retornaSQLInnerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao)
+        public function retornaSQLInnerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao)
     {
         return "select * from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao;
     }

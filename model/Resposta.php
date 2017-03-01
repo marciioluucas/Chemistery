@@ -96,7 +96,16 @@ class Resposta extends Banco
     }
 
     public function cadastroResposta() {
-
+        try {
+            $this->tabela = "resposta";
+            $this->campos = array("usuario_id", "pergunta_id", "descricao", "datahora");
+            $this->valores = array($this->getUsuario(), $this->getPergunta(), $this->getDescricao(),
+                date("Y-m-d H:i:s"));
+            return $this->cadastrar();
+        } catch (Exception $e) {
+            echo "Exceção capturada: " . $e->getMessage();
+            return null;
+        }
     }
 
     public function alterarResposta() {
@@ -114,7 +123,8 @@ class Resposta extends Banco
     public function consultarResposta($idPergunta) {
         $this->tabela = "resposta";
         return $this->innerJoin("usuario", "resposta", "usuario_id", "usuario.id",
-            "pergunta_id=".$idPergunta, ["nome","usuario.id as userId", "imagem", "resposta.id as respid", "descricao", "datahora"]);
+            "pergunta_id=".$idPergunta, ["nome","usuario.id as userId",
+                "imagem", "resposta.id as respid", "descricao", "datahora"],"datahora asc");
     }
 }
 //$r = new Resposta();

@@ -9,6 +9,9 @@ require_once '../model/Discussao.php';
  * Date: 28/02/2017
  * Time: 13:16
  */
+if (isset($_GET['q']) && $_GET['q'] == "new-comment"){
+    new DiscussaoController($_POST['produto_id'],$_POST['usuario_id']);
+}
 class DiscussaoController
 {
     public $discussao;
@@ -28,8 +31,15 @@ class DiscussaoController
     {
         $discussao = new Discussao();
 
-        $this->pergunta = $discussao->consultarPergunta($idProduto, $idUsuario);
+        $this->pergunta = $discussao->consultarPergunta($idProduto);
 
+        if (isset($_GET['q']) && $_GET['q'] == "new-comment") {
+            $r = new Resposta();
+            $r->setDescricao($_POST['descricao']);
+            $r->setUsuario($_POST['usuario_id']);
+            $r->setPergunta($_POST['pergunta_id']);
+            $r->cadastroResposta();
+        }
 
     }
 

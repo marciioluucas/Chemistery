@@ -41,11 +41,31 @@ class DiscussaoController
             $r->cadastroResposta();
         }
 
+        if (isset($_GET['q']) && $_GET['q'] == "view-more-comments") {
+            $this->carregarMaisComentarios();
+        }
+
     }
 
     public function consultarResp()
     {
         $d = new Discussao();
-        return $d->consultarResposta($this->pergunta['pergid']);
+//        echo "PERGUNTA ID : " . $this->pergunta['pergid'];
+        return $d->consultarResposta($this->pergunta['pergid'],isset($_GET['numb-comments']) ? $_GET['numb-comments'] : 8);
+    }
+
+    public function numeroTotalDeRespostas() {
+        $r = new Resposta();
+        return $r->consultarNumeroRespostas($this->pergunta['pergid']);
+    }
+
+    public function numeroAtualDeRespostas() {
+        $r = new Resposta();
+        return $r->consultaNumeroRespostasAtual($this->pergunta['pergid'],isset($_GET['numb-comments']) ? $_GET['numb-comments'] : 8);
+    }
+
+    public function carregarMaisComentarios() {
+        $r = new Resposta();
+        return $r->consultarResposta($this->pergunta['pergid'], isset($_GET['numb-comments']) ? $_GET['numb-comments'] : 8);
     }
 }

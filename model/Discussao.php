@@ -105,11 +105,9 @@ class Discussao
         return mysqli_fetch_array($p->consultarPergunta($idProduto), MYSQLI_ASSOC);
     }
 
-    public function consultarResposta($idPergunta) {
+    public function consultarResposta($idPergunta, $limit) {
         $r = new Resposta();
-        return $r->consultarResposta($idPergunta);
-
-
+        return $r->consultarResposta($idPergunta,$limit);
     }
 
     public function consultarProduto($idProduto)
@@ -119,6 +117,7 @@ class Discussao
         $p->consultar();
         $this->produto = $p->result;
     }
+
 
 
 }

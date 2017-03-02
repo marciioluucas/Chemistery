@@ -11,6 +11,8 @@ if (isset($_GET['id-produto'])) {
 
     $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['idUsuario']);
     $q = $discussaoController->consultarResp();
+    echo "<div class='text-center'><a role='button' class='more-comments' onclick='moreComments()'>" . $discussaoController->numeroAtualDeRespostas() .
+        " comentário(s) de " . $discussaoController->numeroTotalDeRespostas() . "</a></div>";
     while ($r = mysqli_fetch_array($q, MYSQLI_ASSOC)) {
         echo "<div class='box-comment'>";
         echo "<img class='img-circle img-sm' src='" . $r['imagem'] . "' alt='user image'>";
@@ -22,4 +24,5 @@ if (isset($_GET['id-produto'])) {
         echo "</div>";
         echo "</div>";
     }
+
 }

@@ -30,7 +30,6 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 <div class="container content-wrapper">
-
     <div class="row center-block">
         <div class="col-md-3"></div>
         <div class="col-md-6">
@@ -39,7 +38,7 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
                 <div class='box-header with-border'>
                     <div class='user-block'>
                         <img class='img-circle' src='<?php echo $discussaoController->pergunta['imagem'] ?>'
-                             alt='user image'>
+                             alt='user image' />
                         <span class='username'><a
                                     href="#"><?php echo $discussaoController->pergunta['nome'] ?></a></span>
                         <span class='description'><?php echo $discussaoController->pergunta['datahora'] ?></span>
@@ -70,12 +69,17 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
     </div>
     <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <script>
-
+        var isDisabledMoreComments = false;
         function atualizar() {
             $(".box-comments").load("respostas.php?id-produto=<?php echo $_GET['id-produto'] ?>");
         }
 
-        setInterval("atualizar()", 1000);
+        if(!isDisabledMoreComments){
+
+            setInterval("atualizar()", 1000);
+        }else{
+            moreComments();
+        }
 
         $(function () {
             atualizar();
@@ -96,8 +100,21 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
                             $(".send-nudes").val("");
                         });
                 }
-            })
+            });
+
+
         });
+        var conn = 8;
+        function moreComments() {
+
+            alert("deu certo");
+            $.get("../controller/DiscussaoController.php?q=view-more-comments&numb-comments=" + conn)
+                .done(function () {
+                    alert("uhu");
+
+                    conn = conn + 8;
+                });
+        };
     </script>
     <div class="col-lg-offset-3"></div>
 </div>

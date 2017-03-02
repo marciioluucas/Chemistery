@@ -112,19 +112,25 @@ class Resposta extends Banco
 
     }
 
-    public function listarResposta() {
-
-    }
-
-    public function listagem() {
-
-    }
-
-    public function consultarResposta($idPergunta) {
+    public function consultarResposta($idPergunta, $limit) {
         $this->tabela = "resposta";
-        return $this->innerJoin("usuario", "resposta", "usuario_id", "usuario.id",
+        $sqlInnerJoin = $this->innerJoin("usuario", "resposta", "usuario_id", "usuario.id",
             "pergunta_id=".$idPergunta, ["nome","usuario.id as userId",
-                "imagem", "resposta.id as respid", "descricao", "datahora"],"datahora desc",8);
+                "imagem", "resposta.id as respid", "descricao", "datahora"],"datahora desc",$limit,false);
+//        echo $sqlInnerJoin;
+        return $this->consultaComSql("SELECT * FROM (".$sqlInnerJoin.") sub order by datahora asc");
+    }
+
+    public function consultarNumeroRespostas($idPergunta) {
+        return $this->retornaNumRegistros("resposta", "pergunta_id = " . $idPergunta);
+    }
+
+    public function consultaNumeroRespostasAtual($idPergunta,$limit) {
+        $this->tabela = "resposta";
+        $sqlInnerJoin = $this->innerJoin("usuario", "resposta", "usuario_id", "usuario.id",
+            "pergunta_id=".$idPergunta, ["nome","usuario.id as userId",
+                "imagem", "resposta.id as respid", "descricao", "datahora"],"datahora desc",$limit,false);
+        return $this->retornaNumRegistrosDigitandoSQL("SELECT * FROM (".$sqlInnerJoin.") sub order by datahora asc");
     }
 }
 //$r = new Resposta();

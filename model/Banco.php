@@ -598,7 +598,7 @@ class Banco
     }
 
 
-    public function innerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao, $campos, $orderby, $limit)
+    public function innerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao, $campos, $orderby, $limit, $executaQuery)
     {
 
 
@@ -641,8 +641,11 @@ class Banco
 //                    echo $this->sql;
             }
         }
-//        print_r($this->sql);
-        return $this->query($this->sql);
+        if($executaQuery == true){
+            return $this->query($this->sql);
+        }else{
+            return $this->sql;
+        }
 
 
 //        $this->result = $this->sql;
@@ -656,5 +659,9 @@ class Banco
     public function retornaSQLInnerJoinSemSelect($tabelaEsq, $tabelaDir, $fk, $pk)
     {
         return "$tabelaEsq inner join $tabelaDir on $fk = $pk";
+    }
+
+    public function consultaComSql($sql){
+        return $this->query($sql);
     }
 }

@@ -2,33 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e68c0b9-9fc4-4492-a1cd-a12fdb199f40" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap-slider/bootstrap-slider.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap-slider/slider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/chartjs/Chart.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/chartjs/Chart.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/drag-and-crop/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/drag-and-crop/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/drag-and-crop/images/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/drag-and-crop/images/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/drag-and-crop/images/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/drag-and-crop/imagesloaded.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/drag-and-crop/index.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/drag-and-crop/jquery.drag-n-crop.amd.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/drag-and-crop/jquery.drag-n-crop.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/drag-and-crop/jquery.drag-n-crop.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/drag-and-crop/scale.fix.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/jQueryUI/jquery-ui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/jQueryUI/jquery-ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/jvectormap/jquery-jvectormap-1.2.2.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/knob/jquery.knob.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/sparkline/jquery.sparkline.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/sparkline/jquery.sparkline.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/timepicker/bootstrap-timepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/timepicker/bootstrap-timepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/timepicker/bootstrap-timepicker.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/timepicker/bootstrap-timepicker.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/alfabetoFor.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/asdsad.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/emailexample.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/htmltopdf.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/img/2016-06-25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/paginator/css/demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/paginator/css/demo.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/paginator/css/jqpagination.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/paginator/css/jqpagination.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/paginator/css/reset.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/paginator/js/demo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/paginator/js/jquery-1.7.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/paginator/js/jquery.jqpagination.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/paginator/js/jquery.jqpagination.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/paginator/js/scripts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/paging.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/simplegal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/table.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/tags-input.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/template-Email.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/template-email2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test-cookies.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test-listagem-principal.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/testMenu.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/testeEncodejSon.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/testePaginacaoImagens.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/testeRecize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/timetest.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CataLOG.iws" />
@@ -173,8 +175,8 @@
       <file leaf-file-name="Produto.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/Produto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="416" column="32" lean-forward="true" selection-start-line="416" selection-start-column="32" selection-end-line="416" selection-end-column="32" />
+            <state relative-caret-position="239">
+              <caret line="422" column="37" lean-forward="false" selection-start-line="422" selection-start-column="37" selection-end-line="422" selection-end-column="37" />
               <folding>
                 <marker date="1488131169951" expanded="true" signature="4393:4452" ph="SELECT * FRO... ${$this-&gt;tabela}" />
                 <marker date="1488131169951" expanded="true" signature="4888:8701" ph="..." />
@@ -445,20 +447,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chemistery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chemistery" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -609,7 +597,7 @@
       <workItem from="1488320972495" duration="7537000" />
       <workItem from="1488464587281" duration="2482000" />
       <workItem from="1488468813217" duration="30000" />
-      <workItem from="1488468845310" duration="418000" />
+      <workItem from="1488468845310" duration="1162000" />
     </task>
     <task id="LOCAL-00001" summary="Retirar da Classe produto:&#10;&#10;Preco&#10;Mostrapreco&#10;&#10;Adicionar:&#10;&#10;Toxidade&#10;&#10;&#10;">
       <created>1474599472635</created>
@@ -793,11 +781,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488468999693</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Apagando coisas inúteis.">
+      <created>1488469269934</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1488469269934</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79045000" />
+    <option name="totallyTimeSpent" value="79789000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -810,9 +805,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23298033" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23298033" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21558245" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -874,11 +869,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dist/img/avatar5.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/img/photo1.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1320,10 +1310,18 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/template-Email.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/Produto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="416" column="32" lean-forward="true" selection-start-line="416" selection-start-column="32" selection-end-line="416" selection-end-column="32" />
+        <state relative-caret-position="239">
+          <caret line="422" column="37" lean-forward="false" selection-start-line="422" selection-start-column="37" selection-end-line="422" selection-end-column="37" />
           <folding>
             <marker date="1488131169951" expanded="true" signature="4393:4452" ph="SELECT * FRO... ${$this-&gt;tabela}" />
             <marker date="1488131169951" expanded="true" signature="4888:8701" ph="..." />

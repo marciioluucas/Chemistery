@@ -124,7 +124,7 @@ class Resposta extends Banco
         $this->tabela = "resposta";
         return $this->innerJoin("usuario", "resposta", "usuario_id", "usuario.id",
             "pergunta_id=".$idPergunta, ["nome","usuario.id as userId",
-                "imagem", "resposta.id as respid", "descricao", "datahora"],"datahora asc");
+                "imagem", "resposta.id as respid", "descricao", "datahora"],"datahora desc",8);
     }
 }
 //$r = new Resposta();

@@ -311,14 +311,14 @@ class Banco
                     }
                 }
                 echo "<td style='width:180px;'>";
-                if($this->tabela != "pergunta") {
+                if ($this->tabela != "pergunta") {
                     echo "<a class='btn btn-flat bg-purple' style='border-color: #5753a0; background-color: #605ca8 !important;' href='../view/frmAlterar" . ucfirst($this->tabela) . ".php?" . $stringParametros . "'>Alterar</a>";
                 }
                 $stringParametros = "";
                 echo "<a class='btn btn-flat btn-danger' href='../controller/" . ucfirst($this->tabela) . "Controller.php?q=excluir&id=" . $r[$this->campos[0]] . "'>Excluir</a>";
 
-                              if($this->tabela == "pergunta"){
-                    echo "<a class='btn btn-flat btn-info' href='../view/discussao.php&id-produto=" . $r[$this->campos[1]] . "'>Responder</a></td>";
+                if ($this->tabela == "pergunta") {
+                    echo "<a class='btn btn-flat btn-info' href='../view/discussao.php?id-produto=" . $r[$this->campos[1]] . "'>Responder</a></td>";
                 }
 
                 echo "</tr>";
@@ -598,34 +598,57 @@ class Banco
     }
 
 
-    public function innerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao, $campos,$orderby)
+    public function innerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao, $campos, $orderby, $limit)
     {
 
 
-
-            if ($campos == null) {
-                if($orderby == null) {
+        if ($campos == null) {
+            if ($orderby == null) {
+                if ($limit == null) {
                     $this->sql = "select * from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao;
-                }else{
-                    $this->sql = "select * from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao . " order by $orderby";
-                }
                 } else {
-                if($orderby == null) {
-                    $this->sql = "select " . implode(", ", $campos) . " from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao;
-
-                }else{
-                    $this->sql = "select " . implode(", ", $campos) . " from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao . " order by $orderby";
-                    echo $this->sql;
+                    $this->sql = "select * from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao .
+                        " LIMIT $limit";
+                }
+            } else {
+                if ($limit == null) {
+                    $this->sql = "select * from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao
+                        . " order by $orderby";
+                } else {
+                    $this->sql = "select * from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao
+                        . " order by $orderby LIMIT $limit";
                 }
             }
+        } else {
+            if ($orderby == null) {
+                if ($limit == null) {
+                    $this->sql = "select " . implode(", ", $campos) . " from $tabelaEsq inner join $tabelaDir on $fk 
+                    = $pk where " . $condicao;
+                } else {
+                    $this->sql = "select " . implode(", ", $campos) . " from $tabelaEsq inner join $tabelaDir on $fk 
+                    = $pk where " . $condicao . " LIMIT $limit";
+                }
+
+            } else {
+                if($limit == null ){
+                    $this->sql = "select " . implode(", ", $campos) . " from $tabelaEsq inner join $tabelaDir on $fk 
+                    = $pk where " . $condicao . " order by $orderby";
+                }else{
+                    $this->sql = "select " . implode(", ", $campos) . " from $tabelaEsq inner join $tabelaDir on $fk 
+                    = $pk where " . $condicao . " order by $orderby LIMIT $limit";
+                }
+
+//                    echo $this->sql;
+            }
+        }
 //        print_r($this->sql);
-            return $this->query($this->sql);
+        return $this->query($this->sql);
 
 
 //        $this->result = $this->sql;
-        }
+    }
 
-        public function retornaSQLInnerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao)
+    public function retornaSQLInnerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao)
     {
         return "select * from $tabelaEsq inner join $tabelaDir on $fk = $pk where " . $condicao;
     }

@@ -128,7 +128,7 @@ class Pergunta extends Banco
         $this->tabela = "pergunta";
         return $this->innerJoin("usuario", "pergunta", "usuario_id", "usuario.id",
             "produto_id = " . $idProduto,
-            ["usuario.id as userid","nome","datahora","pergunta.id as pergid", "produto_id", "descricao"],null);
+            ["usuario.id as userid","nome","datahora","pergunta.id as pergid", "produto_id", "descricao"],null,null);
 
     }
 }

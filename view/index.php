@@ -58,6 +58,9 @@ $menuController = new MenuController();
             background-color: #ecf0f5;
             height: 110%;
         }
+        .iframe-responsivo {
+            margin-left: 230px;
+        }
 
         body {
             position: fixed;
@@ -277,6 +280,13 @@ $menuController = new MenuController();
         var ano = new Date();
         document.getElementById("dataRodape").innerHTML = ""+ ano.getFullYear();
     }
+
+    $(window).on("resize",(function() {
+        var windowWidth = window.innerWidth;
+        if(windowWidth >= 768){
+            $("#iframePrincipal").addClass("iframe-responsivo")
+        }
+    }));
 
 
 </script>

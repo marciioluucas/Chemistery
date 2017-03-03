@@ -69,17 +69,19 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
     </div>
     <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <script>
-        var isDisabledMoreComments = false;
+        var isDisabledMoreComments = true;
+        var conn = 8;
         function atualizar() {
-            $(".box-comments").load("respostas.php?id-produto=<?php echo $_GET['id-produto'] ?>");
+            if(isDisabledMoreComments){
+                $(".box-comments").load("respostas.php?id-produto=<?php echo $_GET['id-produto'] ?>");
+            }else{
+                $(".box-comments").load("respostas.php?id-produto=<?php echo $_GET['id-produto'] ?>&"+
+                    "q=view-more-comments&numb-comments=" + conn);
+            }
         }
-
-        if(!isDisabledMoreComments){
 
             setInterval("atualizar()", 1000);
-        }else{
-            moreComments();
-        }
+
 
         $(function () {
             atualizar();
@@ -104,17 +106,11 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
 
 
         });
-        var conn = 8;
-        function moreComments() {
 
-            alert("deu certo");
-            $.get("../controller/DiscussaoController.php?q=view-more-comments&numb-comments=" + conn)
-                .done(function () {
-                    alert("uhu");
-
-                    conn = conn + 8;
-                });
-        };
+        function moreComments(){
+            isDisabledMoreComments = false;
+            conn = conn + 8;
+        }
     </script>
     <div class="col-lg-offset-3"></div>
 </div>

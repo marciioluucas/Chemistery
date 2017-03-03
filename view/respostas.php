@@ -10,7 +10,12 @@ require_once '../view/protecaoPaginas.php';
 if (isset($_GET['id-produto'])) {
 
     $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['idUsuario']);
-    $q = $discussaoController->consultarResp();
+
+    if(isset($_GET['q']) and $_GET['q']=="view-more-comments"){
+        $q = $discussaoController->carregarMaisComentarios();
+    }else{
+        $q = $discussaoController->consultarResp();
+    }
     echo "<div class='text-center'><a role='button' class='more-comments' onclick='moreComments()'>" . $discussaoController->numeroAtualDeRespostas() .
         " comentário(s) de " . $discussaoController->numeroTotalDeRespostas() . "</a></div>";
     while ($r = mysqli_fetch_array($q, MYSQLI_ASSOC)) {

@@ -163,7 +163,7 @@ if ($_SESSION["tempo"] < time()) {
     </style>
 </head>
 <body>
-<div class="content-wrapper">
+<div class="container">
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <h1>

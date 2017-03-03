@@ -31,7 +31,7 @@ if(isset($_GET['tela']) == "UsuarioNaoLogado") {
     <link rel="stylesheet" href="../plugins/iCheck/square/blue.css">
     <!-- Icone-->
     <link rel="shortcut icon" href="../favicon.ico"/>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

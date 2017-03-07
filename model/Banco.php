@@ -318,7 +318,7 @@ class Banco
                 echo "<a class='btn btn-flat btn-danger' href='../controller/" . ucfirst($this->tabela) . "Controller.php?q=excluir&id=" . $r[$this->campos[0]] . "'>Excluir</a>";
 
                 if ($this->tabela == "pergunta") {
-                    echo "<a class='btn btn-flat btn-info' href='../view/discussao.php?id-produto=" . $r[$this->campos[1]] . "'>Responder</a></td>";
+                    echo "<a class='btn btn-flat btn-info' href='../view/discussao.php?id-produto=" . $r[$this->campos[1]] . "&from=botao-reponder'>Responder</a></td>";
                 }
 
                 echo "</tr>";
@@ -646,9 +646,6 @@ class Banco
         }else{
             return $this->sql;
         }
-
-
-//        $this->result = $this->sql;
     }
     public function retornaSQLInnerJoin($tabelaEsq, $tabelaDir, $fk, $pk, $condicao)
     {

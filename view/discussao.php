@@ -29,7 +29,7 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-<div class="container content-wrapper">
+<div class="container ">
     <div class="row center-block">
         <div class="col-md-3"></div>
         <div class="col-md-6">
@@ -80,7 +80,7 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
             }
         }
 
-            setInterval("atualizar()", 1000);
+            setInterval("atualizar()", 3500);
 
 
         $(function () {
@@ -105,12 +105,19 @@ $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['i
             });
 
 
+
         });
 
         function moreComments(){
             isDisabledMoreComments = false;
             conn = conn + 8;
         }
+
+        <?php
+        if(isset($_GET['from']) and $_GET['from'] = "botao-responder") {
+            echo "$('.container').addClass('content-wrapper')";
+        }
+        ?>
     </script>
     <div class="col-lg-offset-3"></div>
 </div>

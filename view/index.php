@@ -58,9 +58,7 @@ $menuController = new MenuController();
             background-color: #ecf0f5;
             height: 110%;
         }
-        .iframe-responsivo {
-            margin-left: 230px;
-        }
+
 
         body {
             position: fixed;
@@ -83,6 +81,10 @@ $menuController = new MenuController();
 
             .main-footer {
                 width: 100% !important;
+            }
+
+            .iframe-responsivo {
+                margin-left: 230px;
             }
         }
     </style>
@@ -205,7 +207,7 @@ $menuController = new MenuController();
     </aside>
     <div class="content-wrapper" style="margin-left: 0 !important;">
         <div class="iframe">
-            <iframe src="dashboard.php" id="iframePrincipal" name="iframePrincipal"
+            <iframe src="dashboard.php" id="iframePrincipal" name="iframePrincipal" class="iframe-responsivo"
                     style=" border: none; padding-bottom: 190px !important">
             </iframe>
         </div>
@@ -273,13 +275,13 @@ $menuController = new MenuController();
         var ano = new Date();
         document.getElementById("dataRodape").innerHTML = ""+ ano.getFullYear();
     }
-
-    $(window).on("resize",(function() {
-        var windowWidth = window.innerWidth;
-        if(windowWidth >= 768){
-            $("#iframePrincipal").addClass("iframe-responsivo")
-        }
-    }));
+//
+//    $(window).on("resize",(function() {
+//        var windowWidth = window.innerWidth;
+//        if(windowWidth >= 768){
+//            $("#iframePrincipal").addClass("iframe-responsivo")
+//        }
+//    }));
 
 
 </script>

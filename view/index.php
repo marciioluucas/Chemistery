@@ -229,9 +229,6 @@ $menuController = new MenuController();
 <!-- jQuery 2.1.4 -->
 <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-    $.widget.bridge('uibutton', $.ui.button);
-</script>
 <!-- Bootstrap 3.3.5 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <!--<!-- Morris.js charts -->-->
@@ -258,32 +255,10 @@ $menuController = new MenuController();
 <script src="../dist/js/demo.js"></script>
 
 <script>
-    $(document).ready(function () {
-        var teste = 0;
-        $("#botaoNav").click(function () {
-            if (teste = 0) {
-                document.getElementById("botaoNav").css("margin-top", "-85");
-                teste = 1;
-            }
-            if (teste = 1) {
-                document.getElementById("botaoNav").css("margin-top", "85");
-            }
-        })
-
-    });
     function data() {
         var ano = new Date();
         document.getElementById("dataRodape").innerHTML = ""+ ano.getFullYear();
     }
-//
-//    $(window).on("resize",(function() {
-//        var windowWidth = window.innerWidth;
-//        if(windowWidth >= 768){
-//            $("#iframePrincipal").addClass("iframe-responsivo")
-//        }
-//    }));
-
-
 </script>
 </body>
 </html>

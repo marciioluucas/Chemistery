@@ -45,14 +45,14 @@ if ($_SESSION["tempo"] < time()) {
     <link rel="shortcut icon" href="../favicon.ico"/>
 
     <link rel="stylesheet" href="../plugins/select2/select2.css">
-    <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <!--    <link rel="stylesheet" href="../plugins/ckeditor/samples/css/samples.css">-->
+<!--    <link rel="stylesheet" href="../plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">-->
     <style>
 
 
@@ -212,11 +212,14 @@ if ($_SESSION["tempo"] < time()) {
                            placeholder="Coloque aqui o nome">
                 </div>
 
+                <div class="editor">
+                    <p>laallalal</p>
+                </div>
                 <div class="form-group">
                     <label for="produtoDescricao">Descrição</label>
                             <textarea class="form-control" id="produtoDescricao" name="produtoDescricao" required
-                                      placeholder="Coloque aqui a descrição"
-                                      style="resize: none; height: 280px;;"></textarea>
+                                      placeholder="Coloque aqui a descrição" hidden="hidden"
+                                      style="display: none; resize: none; height: 280px;;"></textarea>
                 </div>
 
 
@@ -281,7 +284,6 @@ if ($_SESSION["tempo"] < time()) {
             <!-- /.box-body -->
 
 
-        </div>
     </form>
 
 
@@ -319,7 +321,8 @@ if ($_SESSION["tempo"] < time()) {
 <script src="../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
 <script src="../plugins/input-mask/jquery.inputmask.extensions.js"></script>
 <script src="../plugins/input-mask/maskmoney.js"></script>
-
+<script src="../plugins/ckeditor/ckeditor.js"></script>
+<script src="../plugins/ckeditor/samples/js/sample.js"></script>
 <script>
 
 
@@ -400,6 +403,11 @@ if ($_SESSION["tempo"] < time()) {
         affixesStay: false
     })
 </script>
-
+<script>
+    editor();
+//    $('.editor').on('change', function(){
+//        $('#produtoDescricao').val(CKEDITOR.instances['editor'].getData())
+//    });
+</script>
 </body>
 </html>

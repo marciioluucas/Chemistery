@@ -1,5 +1,12 @@
 <?php
-require_once 'protecaoPaginas.php'
+require_once 'protecaoPaginas.php';
+require_once '../controller/UsuarioController.php';
+
+
+$usuariocontroller = new UsuarioController();
+$usuariocontroller->deslogar();
+
+
 ?>
 
 <!DOCTYPE html>

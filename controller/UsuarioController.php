@@ -127,6 +127,10 @@ class UsuarioController
         return $this->usuario->retornaNumRegistros("produto","usuario_id = $id_usuario");
     }
 
+    public function deslogar() {
+        $this->usuario->deslogar();
+    }
+
 
 }
 

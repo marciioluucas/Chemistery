@@ -81,10 +81,10 @@ if ($_SESSION["tempo"] < time()) {
                     <!-- small box -->
                     <div class="small-box bg-green">
                         <div class="inner">
-                            <h3><?php echo $usuarioController->retornaNumUsuarios() ?></h3>
+                            <h3><?php echo $usuarioController->retornaNumUsuarios(); ?></h3>
                             <p><?php if ($usuarioController->retornaNumUsuarios() > 1) echo "Usuários "; else echo "Usuário"; ?>
                                 online
-                                de <?php echo $usuarioController->retornaNumUsuariosComDesativados() ?></p>
+                                de <?php echo $usuarioController->retornaNumUsuariosComDesativados(); ?></p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person-add"></i>

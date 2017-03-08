@@ -270,7 +270,7 @@ class Usuario extends Banco
         $this->tabela = "usuario";
         $this->campos = array("id", "nome", "email", "login", "senha", "nivel", "imagem");
         $this->condicao = "ativado = 1";
-        $this->subQntColunasConsulTabela = 1;
+        $this->subQntColunasConsulTabela = 3;
         $this->listar();
     }
 

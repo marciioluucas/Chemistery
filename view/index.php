@@ -11,7 +11,7 @@ $menuController = new MenuController();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CataLOG v1.0 | Dashboard</title>
+    <title>Chemistery v1.0 | Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="theme-color" content="#78ae22">
@@ -85,7 +85,7 @@ $menuController = new MenuController();
             }
 
             .iframe-responsivo {
-                margin-left: 230px;
+                margin-left: 0px;
             }
         }
     </style>
@@ -100,18 +100,7 @@ $menuController = new MenuController();
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini">C<b>hemistery</b></span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg">Che<b>mistery</b><small> v.1.<?php
-                    $ponteiro = fopen("\\xampp\\htdocs\\CataLOG\\catalogv10\\versao", "r");
-
-                    feof($ponteiro);
-
-                    $linha = fgets($ponteiro, 4096);
-                    echo $linha;
-
-
-                    fclose($ponteiro)
-
-                    ?></small></span>
+            <span class="logo-lg">Che<b>mistery</b><small> v.1.0</small></span>
         </a>
 
         <nav class="navbar navbar-static-top" role="navigation">

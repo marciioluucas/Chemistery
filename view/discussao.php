@@ -29,7 +29,7 @@ $discussaoController = new DiscussaoController($_GET['id'], $_SESSION['idUsuario
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-<div class="container content-wrapper">
+<div class="container ">
     <div class="row center-block">
         <div class="col-md-3"></div>
         <div class="col-md-6">
@@ -69,17 +69,19 @@ $discussaoController = new DiscussaoController($_GET['id'], $_SESSION['idUsuario
     </div>
     <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <script>
-        var isDisabledMoreComments = false;
+        var isDisabledMoreComments = true;
+        var conn = 8;
         function atualizar() {
-            $(".box-comments").load("respostas.php?id-produto=<?php echo $_GET['id-produto'] ?>");
+            if(isDisabledMoreComments){
+                $(".box-comments").load("respostas.php?id-produto=<?php echo $_GET['id-produto'] ?>");
+            }else{
+                $(".box-comments").load("respostas.php?id-produto=<?php echo $_GET['id-produto'] ?>&"+
+                    "q=view-more-comments&numb-comments=" + conn);
+            }
         }
 
-        if(!isDisabledMoreComments){
+            setInterval("atualizar()", 3500);
 
-            setInterval("atualizar()", 1000);
-        }else{
-            moreComments();
-        }
 
         $(function () {
             atualizar();
@@ -103,18 +105,19 @@ $discussaoController = new DiscussaoController($_GET['id'], $_SESSION['idUsuario
             });
 
 
+
         });
-        var conn = 8;
-        function moreComments() {
 
-            alert("deu certo");
-            $.get("../controller/DiscussaoController.php?q=view-more-comments&numb-comments=" + conn)
-                .done(function () {
-                    alert("uhu");
+        function moreComments(){
+            isDisabledMoreComments = false;
+            conn = conn + 8;
+        }
 
-                    conn = conn + 8;
-                });
-        };
+        <?php
+        if(isset($_GET['from']) and $_GET['from'] = "botao-responder") {
+            echo "$('.container').addClass('content-wrapper')";
+        }
+        ?>
     </script>
     <div class="col-lg-offset-3"></div>
 </div>

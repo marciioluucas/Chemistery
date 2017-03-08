@@ -45,14 +45,25 @@ if ($_SESSION["tempo"] < time()) {
     <link rel="shortcut icon" href="../favicon.ico"/>
 
     <link rel="stylesheet" href="../plugins/select2/select2.css">
-    <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!--    <link rel="stylesheet" href="../plugins/ckeditor/samples/css/samples.css">-->
+<!--    <link rel="stylesheet" href="../plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">-->
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../plugins/froala-editor/css/froala_editor.css">
+    <link rel="stylesheet" href="../plugins/froala-editor/css/froala_style.css">
+    <link rel="stylesheet" href="../plugins/froala-editor/css/themes/custom-theme.css">
+    <link rel="stylesheet" href="../plugins/froala-editor/css/plugins/code_view.css">
+    <link rel="stylesheet" href="../plugins/froala-editor/css/plugins/image_manager.css">
+    <link rel="stylesheet" href="../plugins/froala-editor/css/plugins/image.css">
+    <link rel="stylesheet" href="../plugins/froala-editor/css/plugins/table.css">
+    <link rel="stylesheet" href="../plugins/froala-editor/css/plugins/video.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
     <style>
 
 
@@ -212,11 +223,12 @@ if ($_SESSION["tempo"] < time()) {
                            placeholder="Coloque aqui o nome">
                 </div>
 
+
                 <div class="form-group">
                     <label for="produtoDescricao">Descrição</label>
                             <textarea class="form-control" id="produtoDescricao" name="produtoDescricao" required
                                       placeholder="Coloque aqui a descrição"
-                                      style="resize: none; height: 280px;;"></textarea>
+                                      style="display: none; resize: none; height: 400px;"></textarea>
                 </div>
 
 
@@ -267,11 +279,11 @@ if ($_SESSION["tempo"] < time()) {
 
 
 
-                </div>
-
                 <div id="parametrosAdicionais">
 
                 </div>
+            </div>
+
                 <div class="col-lg-12 text-right">
                     <a onclick="limparcampos();" class="btn btn-danger">Limpar campos</a>
                     <input type="submit" class="btn btn-primary" name="enviar" id="enviar" value="Cadastrar">
@@ -281,7 +293,6 @@ if ($_SESSION["tempo"] < time()) {
             <!-- /.box-body -->
 
 
-        </div>
     </form>
 
 
@@ -303,7 +314,7 @@ if ($_SESSION["tempo"] < time()) {
 
 <script src="../plugins/select2/select2.full.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../dist/js/app.min.js"></script>
+<!--<script src="../dist/js/app.min.js"></script>-->
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
 
@@ -311,7 +322,7 @@ if ($_SESSION["tempo"] < time()) {
 
 <script src="js/jquery.onofff.min.js"></script>
 
-<script src="js/require.min.js"></script>
+<!--<script src="js/require.min.js"></script>-->
 
 <script src="../plugins/input-mask/maskmoney.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-jcrop/0.9.12/js/jquery.Jcrop.min.js"></script>
@@ -320,6 +331,28 @@ if ($_SESSION["tempo"] < time()) {
 <script src="../plugins/input-mask/jquery.inputmask.extensions.js"></script>
 <script src="../plugins/input-mask/maskmoney.js"></script>
 
+<script type="text/javascript" src="../plugins/froala-editor/js/froala_editor.min.js"></script>
+<script type="text/javascript" src="../plugins/froala-editor/js/plugins/align.min.js"></script>
+<script type="text/javascript" src="../plugins/froala-editor/js/plugins/code_beautifier.min.js"></script>
+<script type="text/javascript" src="../plugins/froala-editor/js/plugins/code_view.min.js"></script>
+<script type="text/javascript" src="../plugins/froala-editor/js/plugins/link.min.js"></script>
+<script type="text/javascript" src="../plugins/froala-editor/js/plugins/lists.min.js"></script>
+<script type="text/javascript" src="../plugins/froala-editor/js/plugins/paragraph_format.min.js"></script>
+<script type="text/javascript" src="../plugins/froala-editor/js/plugins/paragraph_style.min.js"></script>
+<script type="text/javascript" src="../plugins/froala-editor/js/plugins/table.min.js"></script>
+<script type="text/javascript" src="../plugins/froala-editor/js/plugins/url.min.js"></script>
+<script type="text/javascript" src="../plugins/froala-editor/js/plugins/entities.min.js"></script>
+<script>
+    $(function(){
+        $('#produtoDescricao')
+            .on('froalaEditor.initialized')
+            .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
+    });
+
+    $('#produtoDescricao').froalaEditor({
+        height: 400
+    });
+</script>
 <script>
 
 
@@ -400,6 +433,5 @@ if ($_SESSION["tempo"] < time()) {
         affixesStay: false
     })
 </script>
-
 </body>
 </html>

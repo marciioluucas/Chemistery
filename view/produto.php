@@ -4,10 +4,6 @@ require_once "../controller/ConfSistemaController.php";
 $confSistemaController = new ConfSistemaController();
 $produtoController = new ProdutoController();
 $toString = "";
-$qntImagens = $produtoController->retornaNumeroDeImagensNoProduto($_GET['id']);
-$stringArray = $produtoController->retornaAlgoDoProdutoQueEuQueira("imagem", $_GET['id']);;
-
-$arrayImagens = explode('-', $stringArray);
 
 ?>
 <!DOCTYPE html>
@@ -38,10 +34,6 @@ $arrayImagens = explode('-', $stringArray);
     <!-- Daterange picker -->
     <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker-bs3.css">
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-
-    <link rel="stylesheet" href="../test/paginator/css/jqpagination.css">
-    <script type="text/javascript" src="../test/paginator/js/jquery.jqpagination.min.js"></script>
 
     <!--    Icone-->
     <link rel="shortcut icon" href="../favicon.ico"/>
@@ -219,62 +211,6 @@ $arrayImagens = explode('-', $stringArray);
                     alt="Placeholder"
                     class="custom img-responsive img"
                     style="">
-            </div>
-
-            <div class="thumbnails">
-
-                <table style="height: 70px;">
-                    <tr>
-                        <td style="width: 20px" class="previous1">
-                            <button class="previous" data-action="previous"></button>
-
-                        </td>
-                        <?php
-                        echo "<td class='pag1 imgs'>
-                            <div class='div-imagens-secundarias'><a href = '../imagens/" . strtolower($produtoController->retornaAlgoDoProdutoQueEuQueira("imagemprincipal", $_GET['id'])) . "' ><img
-                                        src = '../imagens/" . strtolower($produtoController->retornaAlgoDoProdutoQueEuQueira("imagemprincipal", $_GET['id'])) . "'
-                                        alt = 'Thumbnails' ></a ></div >
-                        </td >";
-                        if (count($arrayImagens) > 1) {
-                            for ($i = 0;
-                                 $i < count($arrayImagens);
-                                 $i++) {
-
-                                if (count($arrayImagens) > 4) {
-                                    if ($i < 4) {
-                                        echo "<td class='pag1 imgs'>
-                            <div><a href = '../imagens/" . $arrayImagens[$i] . "' ><img
-                                        src = '../imagens/" . $arrayImagens[$i] . "'
-                                        alt = 'Thumbnails' ></a ></div >
-                        </td > ";
-                                    } else {
-                                        echo "<td class='pag2 imgs' >
-                            <div><a href = '../imagens/" . $arrayImagens[$i] . "' ><img
-                                        src = '../imagens/" . $arrayImagens[$i] . "'
-                                        alt = 'Thumbnails' ></a ></div >
-                        </td > ";
-
-                                    }
-                                } else {
-                                    echo "<td class='pag1 imgs' >
-                            <div><a href = '../imagens/" . $arrayImagens[$i] . "' ><img
-                                        src = '../imagens/" . $arrayImagens[$i] . "'
-                                        alt = 'Thumbnails' ></a ></div >
-                        </td > ";
-                                }
-                            }
-                            ?>
-                            <?php
-                            if (count($arrayImagens) > 5) {
-                                echo " <td style='width: 20px'>
-                            <button class='next' data-action='next'></button>
-                        </td>";
-                            }
-                        }
-                        ?>
-                    </tr>
-                </table>
-
             </div>
 
         </div>

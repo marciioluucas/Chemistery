@@ -81,7 +81,7 @@
           "codigo": "4.1",
           "descricao": "Listar Perguntas",
           "icone": "reply-all",
-          "url": "../controller/PerguntaController.php?q=listar",
+          "url": "../controller/PerguntaController.php?q=listar&from=menu-lateral",
           "permissao": "2"
         }
       ]

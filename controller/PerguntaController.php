@@ -1,5 +1,6 @@
 <?php
 require_once "../model/Pergunta.php";
+
 /**
  * Created by PhpStorm.
  * User: marci
@@ -9,22 +10,35 @@ require_once "../model/Pergunta.php";
 class PerguntaController
 {
 
-    /**
-     * PerguntaController constructor.
-     */
     public function __construct()
     {
-        if (isset($_GET['q']) == "listar"){
+        if (isset($_GET['q']) == "listar") {
             $pergunta = new Pergunta();
             $pergunta->listagem();
-    }
+        }
     }
 
-    public function consultaPerguntaByIdUsuario($idUsuario) {
+    public function cadastroPergunta()
+    {
+        $p = new Pergunta();
+        $p->setProduto($_POST['perguntaProduto']);
+        $p->setUsuario($_POST['perguntaIdUsuario']);
+        $p->setDescricao($_POST['perguntaDescricao']);
+        $p->cadastroPergunta();
+
+    }
+
+    public function consultaPerguntaByIdUsuario($idUsuario)
+    {
         $pergunta = new Pergunta();
         return $pergunta->consultaPerguntaBy($idUsuario);
     }
 
 
+    /**
+     * PerguntaController constructor.
+     */
+
 }
+
 new PerguntaController();

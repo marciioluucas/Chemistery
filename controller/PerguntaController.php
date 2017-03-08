@@ -12,9 +12,13 @@ class PerguntaController
 
     public function __construct()
     {
-        if (isset($_GET['q']) == "listar") {
+        if (isset($_GET['q']) and $_GET['q'] == "listar") {
             $pergunta = new Pergunta();
             $pergunta->listagem();
+        }
+
+        if (isset($_GET['q']) and $_GET['q'] == "cadastrar") {
+            $this->cadastroPergunta();
         }
     }
 

@@ -24,6 +24,7 @@ if ($_SESSION["tempo"] < time()) {
 } else {
     $_SESSION["tempo"] = time() + 600;
 }
+if(isset($_GET['id'])){
 ?>
 <html>
 <head>
@@ -193,17 +194,19 @@ if ($_SESSION["tempo"] < time()) {
     <div class="box-body">
         <div class="col-lg-12">
             <div class=" row thumbnail">
-                <img src="../imagens/noimg.png" class="img-bordered col-lg-3">
+                <img src="<?php echo $produtoController->retornaAlgoDoProdutoQueEuQueira("imagemprincipal",$_GET['id']) ?>" class="img-bordered col-lg-3">
                 <div class="caption col-lg-9">
-                    <h1>Nome Produto</h1>
+                    <h1><?php echo $produtoController->retornaAlgoDoProdutoQueEuQueira("nome",$_GET['id']) ?></h1>
                     <hr>
 
-                    <form action="../controller/PerguntaController.php?q=cadastrar">
+                    <form action="../controller/PerguntaController.php?q=cadastrar" method="post">
+                        <input type="text" hidden="hidden" name="perguntaProduto" value="<?php echo $_GET['id'];?>">
+                        <input type="text" hidden="hidden" name="perguntaIdUsuario" value="<?php echo $_SESSION['idUsuario'];?>">
                         <label for="pergunta">Pergunta</label>
                         <textarea class="form-control" id="pergunta" name="perguntaDescricao" rows="9"></textarea>
-                        <div class="col-lg-12 text-right">
-                            <a onclick="limparcampos();" class="btn btn-danger">Limpar campos</a>
-                            <input type="submit" class="btn btn-primary" name="enviar" id="enviar" value="Cadastrar">
+                        <div class="col-lg-12 text-right" style="padding-top: 10px;">
+                            <a onclick="limparcampos();" class="btn btn-danger btn-flat">Limpar campos</a>
+                            <input type="submit" class="btn btn-primary btn-flat" name="enviar" id="enviar" value="Cadastrar">
                         </div>
                     </form>
 
@@ -334,3 +337,4 @@ if ($_SESSION["tempo"] < time()) {
 
 </body>
 </html>
+<?php }else{echo "Erro, produto não informado.";}?>

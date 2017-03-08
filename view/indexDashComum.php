@@ -32,7 +32,7 @@ $usuarioController = new UsuarioController();
     <![endif]-->
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
-<body class="hold-transition skin-green layout-top-nav">
+<body class="hold-transition skin-purple layout-top-nav">
 <div class="wrapper">
 
     <header class="main-header">
@@ -50,7 +50,9 @@ $usuarioController = new UsuarioController();
                 <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="#" id="home">Home <span class="sr-only"></span></a></li>
-                        <li><a href="#" id="perguntas">Perguntas</a></li>
+                        <li><a href="#" id="produtos">Produtos</a></li>
+                        <li><a href="#" id="fazer-pergunta">Fazer uma pergunta</a></li>
+                        <li><a href="#" id="perguntas">Perguntas feitas</a></li>
 
                     </ul>
 
@@ -100,6 +102,9 @@ $usuarioController = new UsuarioController();
                                 </li>
 
                             </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
                         </li>
                         <li>
                             <a href="../controller/UsuarioController.php?p=deslogar&tela=usrComum"><i class="fa fa-sign-out"></i></a>
@@ -158,7 +163,10 @@ $usuarioController = new UsuarioController();
     $('#perguntas').click(function(){
         $('#body').load("perguntas.php")
     });
-    
+    $('#fazer-pergunta').click(function(){
+        $('#body').load("frmCadastroPergunta.php")
+    });
+
     $('#home').click(function(){
         $('#body').load("dashComum.php");
     });

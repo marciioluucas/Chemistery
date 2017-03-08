@@ -127,7 +127,16 @@ class Pergunta extends Banco
         $this->tabela = "pergunta";
         return $this->innerJoin("usuario", "pergunta", "usuario_id", "usuario.id",
             "pergunta.id = " . $idPergunta,
-            ["usuario.id as userid","nome","datahora","pergunta.id as pergid", "produto_id", "descricao", "imagem"],null,null, true);
+            ["usuario.id as userid", "nome", "datahora", "pergunta.id as pergid", "produto_id", "descricao", "imagem"], null, null, true);
+
+    }
+
+    public function consultaPerguntaBy($condicoes)
+    {
+        $this->tabela = "pergunta";
+        return $this->innerJoin("usuario", "pergunta", "usuario_id", "usuario.id",
+            $condicoes,
+            ["usuario.id as userid", "nome", "datahora", "pergunta.id as pergid", "produto_id", "descricao", "imagem", "status"], null, null, true);
 
     }
 }

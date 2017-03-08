@@ -163,19 +163,8 @@ if ($_SESSION["tempo"] < time()) {
     </style>
 </head>
 <body>
-<div class="container">
     <!-- Content Header (Page header) -->
-    <div class="content-header">
-        <h1>
-            Fazer
-            <small>uma Pergunta</small>
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li class="">Produtos</li>
-            <li class="active">Cadastro</li>
-        </ol>
-    </div>
+
     <!--    <div id="rootwizard">-->
     <!--        <div class="navbar">-->
     <!--            <div class="navbar-inner">-->
@@ -223,24 +212,14 @@ if ($_SESSION["tempo"] < time()) {
 
 
             </div>
-
-            <div id="parametrosAdicionais">
-
-            </div>
             <div class="col-lg-12 text-right">
                 <a onclick="limparcampos();" class="btn btn-danger">Limpar campos</a>
                 <input type="submit" class="btn btn-primary" name="enviar" id="enviar" value="Cadastrar">
             </div>
-        </div>
 
         <!-- /.box-body -->
+    </form>
 
-
-</div>
-</form>
-
-
-</div>
 
 <!---->
 <!--        </div>-->

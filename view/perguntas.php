@@ -8,8 +8,12 @@
  */
 
 require_once "../view/protecaoPaginas.php";
+require_once "../controller/ProdutoController.php";
 require_once "../controller/UsuarioController.php";
+require_once "../controller/PerguntaController.php";
 $usuarioController = new UsuarioController();
+$produtoController = new ProdutoController();
+
 ?>
 
     <style>
@@ -75,13 +79,25 @@ Listando perguntas!
     <table class="col-md-12 table-bordered table-striped table-condensed cf">
         <thead class="cf">
         <tr>
-            <th style="width: 30px">#</th>
+            <th style="width: 30px">ID</th>
             <th>Produto</th>
             <th style="width: 100px">Pergunta</th>
             <th style="width: 50px">Status</th>
             <th style="width: 50px">Visualizar</th>
         </tr>
         </thead>
+        <?php
+        $perguntaController = new PerguntaController();
+        $q = $perguntaController->consultaPerguntaByIdUsuario('usuario.id = ' .$_SESSION['idUsuario']);
+        while($r = mysqli_fetch_array($q, MYSQLI_ASSOC)){
+            echo "<tr>";
+            echo "<td>".$r['pergid']."</td>";
+            echo "<td style='width: 20%'>".$produtoController->retornaAlgoDoProdutoQueEuQueira('nome',$r['produto_id'])."</td>";
+            echo "<td>".$r['descricao']."</td>";
+            echo "<td>".strtoupper($r['status'])."</td>";
+            echo "<td><a href='discussao.php?id=".$r['pergid']."'><i class='fa fa-eye'></i></a></td>";
+            echo "</tr>";
+        }?>
         <tbody>
         </tbody>
     </table>

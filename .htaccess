@@ -40,9 +40,10 @@
 ##URLs amigáveis
 #RewriteEngine On
 #RewriteRule ^([a-z0-9]+)\/([a-z0-9]+)\/?$ $1/$2.php [NC]
-#RewriteRule ^_=_\/?$ admin/index.php [NC]
+#RewriteRule ^([a-z0-9]+)\/?$ $1.php [NC]
+#RewriteRule ^view\/([a-z0-9]+)?$ view/$1.php [NC]
 #RewriteRule ^produtos\/pagina\/([0-9]+)\/?$ controller/ProdutoController.php?d=listagem&pagina=$1 [NC]
-##Linguagem padrão do site.
+#Linguagem padrão do site.
 #DefaultLanguage pt-br
 #
 ##Redirecionamentos

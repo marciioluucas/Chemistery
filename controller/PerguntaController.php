@@ -20,6 +20,11 @@ class PerguntaController
     }
     }
 
+    public function consultaPerguntaByIdUsuario($idUsuario) {
+        $pergunta = new Pergunta();
+        return $pergunta->consultaPerguntaBy($idUsuario);
+    }
+
 
 }
 new PerguntaController();

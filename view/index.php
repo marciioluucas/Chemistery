@@ -77,6 +77,7 @@ $menuController = new MenuController();
 
             .iframe {
                 padding-bottom: 180px !important;
+                margin-left: 0;
             }
 
             .main-footer {
@@ -116,7 +117,7 @@ $menuController = new MenuController();
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
             <a href="#" class="sidebar-toggle" id="botaoNav" data-toggle="offcanvas" role="button"
-               onclick="diminuiMarginIframe()">
+             >
                 <span class="sr-only">Toggle navigation</span>
             </a>
             <div class="navbar-custom-menu">
@@ -255,6 +256,7 @@ $menuController = new MenuController();
 <script src="../dist/js/demo.js"></script>
 
 <script>
+
     function data() {
         var ano = new Date();
         document.getElementById("dataRodape").innerHTML = ""+ ano.getFullYear();

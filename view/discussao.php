@@ -59,7 +59,7 @@ $discussaoController = new DiscussaoController($_GET['id'], $_SESSION['idUsuario
                          alt="alt text">
                     <!-- .img-push is used to add margin to elements next to floating images -->
                     <div class="img-push">
-                        <input type="text" class="form-control input-sm send-nudes"
+                        <input type="text" class="form-control input-sm send"
                                placeholder="Escreva seu comentario">
                     </div>
 
@@ -73,9 +73,9 @@ $discussaoController = new DiscussaoController($_GET['id'], $_SESSION['idUsuario
         var conn = 8;
         function atualizar() {
             if(isDisabledMoreComments){
-                $(".box-comments").load("respostas.php?id-produto=<?php echo $_GET['id-produto'] ?>");
+                $(".box-comments").load("respostas.php?id=<?php echo $_GET['id'] ?>");
             }else{
-                $(".box-comments").load("respostas.php?id-produto=<?php echo $_GET['id-produto'] ?>&"+
+                $(".box-comments").load("respostas.php?id=<?php echo $_GET['id'] ?>&"+
                     "q=view-more-comments&numb-comments=" + conn);
             }
         }
@@ -88,18 +88,17 @@ $discussaoController = new DiscussaoController($_GET['id'], $_SESSION['idUsuario
         });
 
         $(document).ready(function () {
-            $(".send-nudes").on('keypress', function () {
+            $(".send").on('keypress', function () {
                 if (window.event.keyCode == 13) {
                     $.post("../controller/DiscussaoController.php?q=new-comment",
                         {
-                            produto_id: <?php echo $_GET['id-produto']?>,
                             usuario_id: <?php echo $_SESSION['idUsuario']; ?>,
                             pergunta_id: <?php echo $discussaoController->pergunta['pergid'];?>,
-                            descricao: $('.send-nudes').val()
+                            descricao: $('.send').val()
                         })
                         .done(function (data) {
                             console.log("Sucesso!" + data);
-                            $(".send-nudes").val("");
+                            $(".send").val("");
                         });
                 }
             });

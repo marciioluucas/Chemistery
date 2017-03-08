@@ -284,7 +284,7 @@ class Categoria extends Banco
             $this->gerarHeadPaginas();
 
             echo "
-<body onload='calculaAltura()'>
+<body>
 <div class='content-wrapper'>
 ";
             $this->gerarCabecarioTabelaAdmin("categoria");

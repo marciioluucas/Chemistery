@@ -180,7 +180,6 @@ if ($_SESSION["tempo"] < time()) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>-->
 <script src="../plugins/bootstrap-tag-input/bootstrap-tagsinput.min.js"></script>
-<script src="../plugins/bootstrap-tag-input/bootstrap-tagsinput-angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/rainbow.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/generic.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/html.js"></script>

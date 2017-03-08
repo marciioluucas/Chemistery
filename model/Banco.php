@@ -318,7 +318,7 @@ class Banco
                 echo "<a class='btn btn-flat btn-danger' href='../controller/" . ucfirst($this->tabela) . "Controller.php?q=excluir&id=" . $r[$this->campos[0]] . "'>Excluir</a>";
 
                 if ($this->tabela == "pergunta") {
-                    echo "<a class='btn btn-flat btn-info' href='../view/discussao.php?id=" . $r[$this->campos[0]] . "'>Responder</a></td>";
+                    echo "<a class='btn btn-flat btn-info' href='../view/discussao.php?id=" . $r[$this->campos[0]] . "&from=botao-responder'>Responder</a></td>";
                 }
 
                 echo "</tr>";
@@ -388,14 +388,7 @@ class Banco
 //        });
       });
     </script>
-    <script>
-    
-           $(window).ready(function() {
-                $(window).resize(function(){
-        $(\"body\").setHeight($(window).height());
-    })
-           });
-       </script>
+   
              </body>
               </html>";
 
@@ -514,7 +507,6 @@ class Banco
         <link rel='stylesheet' href='../dist/css/AdminLTE.min.css'>
         <link rel='stylesheet' href='../dist/css/skins/_all-skins.min.css'>
         <link rel='stylesheet' href='../plugins/iCheck/flat/blue.css'>
-        <link rel='stylesheet' href='../plugins/jvectormap/jquery-jvectormap-1.2.2.css'>
         <link rel='stylesheet' href='../plugins/datepicker/datepicker3.css'>
         <link rel='stylesheet' href='../plugins/daterangepicker/daterangepicker-bs3.css'>
         <link rel='stylesheet' href='../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css'>

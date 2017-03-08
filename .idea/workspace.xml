@@ -2,347 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e68c0b9-9fc4-4492-a1cd-a12fdb199f40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/img/photo1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/License.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/froala_editor.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/froala_editor.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/froala_editor.pkgd.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/froala_editor.pkgd.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/froala_style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/froala_style.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/char_counter.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/char_counter.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/code_view.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/code_view.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/colors.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/colors.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/draggable.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/draggable.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/emoticons.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/emoticons.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/file.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/file.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/fullscreen.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/fullscreen.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/help.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/help.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/image.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/image.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/image_manager.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/image_manager.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/line_breaker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/line_breaker.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/quick_insert.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/quick_insert.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/special_characters.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/special_characters.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/table.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/video.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/plugins/video.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/themes/custom-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/themes/dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/themes/dark.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/themes/gray.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/themes/gray.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/themes/red.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/themes/red.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/themes/royal.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/css/themes/royal.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/3rd-party/at.js.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/3rd-party/bootstrap/grid.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/3rd-party/bootstrap/lists.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/3rd-party/bootstrap/modal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/3rd-party/code-mirror.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/3rd-party/jquery/mobile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/3rd-party/jquery/ui_modal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/3rd-party/require_js/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/3rd-party/require_js/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/3rd-party/require_js/js/lib/require.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/api/get_html.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/api/init_destroy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/api/insert_html.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/api/live_code_preview.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/api/live_content_preview.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/api/selection.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/buttons/custom_buttons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/buttons/custom_dropdown.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/buttons/external_button.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/buttons/subscript_superscript.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/events/blur_focus.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/events/content_changed.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/events/drop.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/events/image_removed.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/events/initialized_destroy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/file_s3_upload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/image/custom_button.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/image/default_width.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/image/image_styles.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/image/insert_base64.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/image_s3_upload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/init_inside_iframe/basic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/init_inside_iframe/content.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/init_inside_iframe/inline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/init_on_click/basic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/init_on_click/inline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/init_on_click/two_editors.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/initialization/edit_in_popup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/initialization/init_on_button.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/initialization/init_on_click.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/initialization/init_on_h1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/initialization/init_on_image.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/initialization/init_on_link.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/initialization/initialized_event.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/international/direction_rtl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/international/language.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/international/rtl_ltr_buttons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/link/custom_validation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/link/link_styles.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/link/predefined_links.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/misc/scrollable_container.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/misc/scrollable_container_inline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/paragraph_modes/enter_br.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/paragraph_modes/enter_div.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/paragraph_modes/enter_p.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/paste/attrs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/paste/plain.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/paste/tags.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/plugins/char_counter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/plugins/full_screen.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/plugins/line_breaker.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/plugins/quick_insert.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/popular/disable_edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/popular/disable_paragraphs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/popular/full.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/popular/full_page.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/popular/iframe.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/popular/init_on_click.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/popular/textarea.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/popular/toolbar_buttons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/popular/toolbar_inline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/popular/two_instances.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/popular/z_index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/popups/colors.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/popups/custom.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/popups/emoticons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/styling/adjustable_height.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/styling/font_family.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/styling/height.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/styling/inline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/styling/paragraph.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/styling/placeholder.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/styling/width.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/table/cell_style.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/table/insert_helper.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/table/nested.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/table/resize.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/table/style.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/tests/bottom_offset_scrollable_container.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/tests/bottom_scrollable_container.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/tests/core.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/tests/full_br.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/tests/full_page_bottom.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/tests/image_manager.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/tests/init_on_click/full_page.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/tests/max_height.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/tests/toolbar_inline_two.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/tests/top_offset_scrollable_container.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/tests/top_scrollable_container.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/themes/dark.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/themes/gray.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/themes/red.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/themes/royal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/toolbar/bottom.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/toolbar/bottom_offset.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/toolbar/buttons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/toolbar/external.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/toolbar/external_inline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/toolbar/inline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/toolbar/inline_selection.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/toolbar/offset.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/toolbar/show_selection.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/toolbar/sticky.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/typing/keep_format.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/typing/shortcuts.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/html/typing/tab.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/froala_editor.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/froala_editor.pkgd.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/bs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/en_ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/en_gb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/et.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/me.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/nb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/pt_br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/pt_pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/ro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/sr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/ua.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/zh_cn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/languages/zh_tw.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/align.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/char_counter.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/code_beautifier.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/code_view.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/colors.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/draggable.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/emoticons.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/entities.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/file.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/font_family.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/font_size.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/forms.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/fullscreen.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/help.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/image.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/image_manager.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/inline_style.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/line_breaker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/link.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/lists.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/paragraph_format.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/paragraph_style.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/print.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/quick_insert.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/quote.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/save.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/special_characters.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/table.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/url.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/video.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/js/plugins/word_paste.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/froala-editor/package.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/CHANGES.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/adapters/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/build-config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/ckeditor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/contents.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/lang/en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/lang/pt-br.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/plugins/about/dialogs/about.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/plugins/about/dialogs/logo_ckeditor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/plugins/clipboard/dialogs/paste.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/plugins/dialog/dialogDefinition.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/plugins/icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/plugins/icons_hidpi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/plugins/link/dialogs/anchor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/plugins/link/dialogs/link.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/plugins/link/images/anchor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/plugins/link/images/hidpi/anchor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/plugins/youtube/images/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/css/samples.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/img/github-top.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/img/header-bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/img/header-separator.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/img/navigation-tip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/js/sample.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/js/sf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/ajax.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/api.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/appendto.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/assets/inlineall/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/assets/posteddata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/assets/sample.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/assets/uilanguages/languages.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/datafiltering.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/dialog/assets/my_dialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/dialog/dialog.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/divreplace.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/enterkey/enterkey.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/inlineall.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/inlinebycode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/inlinetextarea.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/jquery.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/readonly.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/replacebyclass.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/replacebycode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/sample.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/sample.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/sample_posteddata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/tabindex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/toolbar/toolbar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/uicolor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/uilanguages.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/wysiwygarea/fullpage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/old/xhtmlstyle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/css/fontello.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/font/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/font/config.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/font/fontello.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/font/fontello.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/font/fontello.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/font/fontello.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/dialog_ie.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/dialog_ie8.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/dialog_iequirks.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/editor.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/editor_gecko.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/editor_ie.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/editor_ie8.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/editor_iequirks.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/icons_hidpi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/images/arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/images/close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/images/hidpi/close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/images/hidpi/lock-open.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/images/hidpi/lock.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/images/hidpi/refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/images/lock-open.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/images/lock.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/images/refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/images/spinner.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/skins/moono-lisa/readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/ckeditor/styles.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Produto.php" afterPath="$PROJECT_DIR$/model/Produto.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/frmAlterarProduto.php" afterPath="$PROJECT_DIR$/view/frmAlterarProduto.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/frmCadastroProduto.php" afterPath="$PROJECT_DIR$/view/frmCadastroProduto.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/produto.php" afterPath="$PROJECT_DIR$/view/produto.php" />
     </list>
     <ignored path="CataLOG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -382,31 +46,141 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/froala-editor/index.html">
+      <file leaf-file-name="DiscussaoController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/DiscussaoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+            <state relative-caret-position="663">
+              <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="textarea.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/froala-editor/html/popular/textarea.html">
+      <file leaf-file-name="frmAlterarProduto.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/frmAlterarProduto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="107" selection-start-line="5" selection-start-column="2" selection-end-line="14" selection-end-column="107" />
+            <state relative-caret-position="153">
+              <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom-theme.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/froala-editor/css/themes/custom-theme.css">
+      <file leaf-file-name="Produto.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/Produto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="268">
+              <caret line="194" column="44" selection-start-line="194" selection-start-column="44" selection-end-line="194" selection-end-column="44" />
+              <folding>
+                <marker date="1488935112723" expanded="true" signature="4393:4452" ph="SELECT * FRO... ${$this-&gt;tabela}" />
+                <marker date="1488935112723" expanded="true" signature="4888:8701" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="4898:8622" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="5373:5494" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="6415:6610" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="6624:8614" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="6639:6984" ph="{...}" />
+                <marker date="1488935112723" expanded="true" signature="6997:7098" ph="{...}" />
+                <marker date="1488935112723" expanded="true" signature="7110:7155" ph="{...}" />
+                <marker date="1488935112723" expanded="true" signature="7177:7304" ph="{...}" />
+                <marker date="1488935112723" expanded="true" signature="7326:7384" ph="{...}" />
+                <marker date="1488935112723" expanded="true" signature="7409:7481" ph="{...}" />
+                <marker date="1488935112723" expanded="true" signature="7506:7568" ph="{...}" />
+                <marker date="1488935112723" expanded="true" signature="7584:7706" ph="{...}" />
+                <marker date="1488935112723" expanded="true" signature="7722:7817" ph="{...}" />
+                <marker date="1488935112723" expanded="true" signature="7837:7875" ph="{...}" />
+                <marker date="1488935112723" expanded="true" signature="7891:7928" ph="{...}" />
+                <marker date="1488935112723" expanded="true" signature="7948:7983" ph="{...}" />
+                <marker date="1488935112723" expanded="true" signature="8009:8044" ph="{...}" />
+                <marker date="1488935112723" expanded="true" signature="8076:8511" ph="{...}" />
+                <marker date="1488935112723" expanded="true" signature="8526:8601" ph="{...}" />
+                <marker date="1488935112723" expanded="true" signature="8629:8701" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="8646:8701" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="8679:8700" ph="..." />
+                <marker date="1488935112723" expanded="false" signature="9040:9062" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="9063:9605" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="9080:9359" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="9101:9353" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="9161:9347" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="9232:9340" ph="..." />
+                <marker date="1488935112723" expanded="false" signature="9372:9412" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="9413:9596" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="9422:9590" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="9436:9580" ph="..." />
+                <marker date="1488935112723" expanded="false" signature="9462:9485" ph="..." />
+                <marker date="1488935112723" expanded="false" signature="9669:9733" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="9734:9829" ph="..." />
+                <marker date="1488935112723" expanded="false" signature="9766:9775" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="9776:9829" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="9786:9829" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="9815:9829" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="10015:10181" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="10103:10176" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="10109:10163" ph="..." />
+                <marker date="1488935112723" expanded="false" signature="10151:10157" ph="←" />
+                <marker date="1488935112723" expanded="true" signature="10213:10378" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="10301:10373" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="10315:10369" ph="..." />
+                <marker date="1488935112723" expanded="false" signature="10357:10363" ph="→" />
+                <marker date="1488935112723" expanded="true" signature="10532:10617" ph="..." />
+                <marker date="1488935112723" expanded="false" signature="10587:10593" ph="←" />
+                <marker date="1488935112723" expanded="true" signature="10649:10814" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="10737:10809" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="10751:10805" ph="..." />
+                <marker date="1488935112723" expanded="false" signature="10793:10799" ph="→" />
+                <marker date="1488935112723" expanded="true" signature="11055:11221" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="11143:11216" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="11149:11203" ph="..." />
+                <marker date="1488935112723" expanded="false" signature="11191:11197" ph="←" />
+                <marker date="1488935112723" expanded="false" signature="11312:11318" ph="→" />
+                <marker date="1488935112723" expanded="true" signature="11473:11561" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="11487:11556" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="11493:11543" ph="..." />
+                <marker date="1488935112723" expanded="false" signature="11531:11537" ph="←" />
+                <marker date="1488935112723" expanded="false" signature="11652:11658" ph="→" />
+                <marker date="1488935112723" expanded="true" signature="12210:12367" ph="select * fro... atributo" />
+                <marker date="1488935112723" expanded="true" signature="12481:12562" ph="SELECT * FRO... atributo" />
+                <marker date="1488935112723" expanded="true" signature="12697:12778" ph="SELECT * FRO... atributo" />
+                <marker date="1488935112723" expanded="true" signature="13057:13490" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="13385:13490" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="15091:15166" ph="select * fro... atributo" />
+                <marker date="1488935112723" expanded="true" signature="15307:15463" ph="insert into valor_atributo... " />
+                <marker date="1488935112723" expanded="true" signature="15631:15803" ph="select * fro... atributo" />
+                <marker date="1488935112723" expanded="true" signature="16806:16962" ph="insert into valor_atributo... " />
+                <marker date="1488935112723" expanded="true" signature="17191:17273" ph="UPDATE valor... " />
+                <marker date="1488935112723" expanded="true" signature="17544:17619" ph="select * fro... atributo" />
+                <marker date="1488935112723" expanded="true" signature="18012:18168" ph="insert into valor_atributo... " />
+                <marker date="1488935112723" expanded="true" signature="18416:18455" ph="SELECT max(i... produto" />
+                <marker date="1488935112723" expanded="true" signature="18673:18821" ph="SELECT * FRO... atributo" />
+                <marker date="1488935112723" expanded="true" signature="18968:19208" ph="..." />
+                <marker date="1488935112723" expanded="false" signature="19001:19039" ph="..." />
+                <marker date="1488935112723" expanded="false" signature="19115:19140" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="19311:19395" ph="SELECT * FRO... produto" />
+                <marker date="1488935112723" expanded="true" signature="19542:19782" ph="..." />
+                <marker date="1488935112723" expanded="false" signature="19575:19613" ph="..." />
+                <marker date="1488935112723" expanded="false" signature="19689:19714" ph="..." />
+                <marker date="1488935112723" expanded="true" signature="19882:19931" ph="select * fro... produto" />
+                <marker date="1488935112723" expanded="true" signature="20159:20279" ph="SELECT DAY(d... " />
+                <marker date="1488935112723" expanded="true" signature="20522:20666" ph="SELECT DAY(d... " />
+                <marker date="1488935112723" expanded="true" signature="20924:21046" ph="SELECT DAY(d... " />
+                <marker date="1488935112723" expanded="true" signature="21289:21435" ph="SELECT DAY(d... " />
+                <marker date="1488935112723" expanded="true" signature="21976:22049" ph="SELECT * FRO... imagem" />
+                <marker date="1488935112723" expanded="true" signature="22194:22230" ph="DELETE FROM " />
+                <marker date="1488935112723" expanded="true" signature="22311:22437" ph="INSERT INTO imagem... " />
+                <marker date="1488935112723" expanded="true" signature="22567:22638" ph="SELECT * FRO... IMAGEM" />
+                <marker date="1488935112723" expanded="true" signature="23006:23044" ph="SELECT * FRO... IMAGEM" />
+                <marker date="1488935112723" expanded="true" signature="23252:23290" ph="SELECT * FRO... IMAGEM" />
+                <marker date="1488935112723" expanded="true" signature="23763:23826" ph="delete from " />
+                <marker date="1488935112723" expanded="true" signature="24036:24078" ph="update produ... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/jsons/menu.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -415,17 +189,10 @@
       <file leaf-file-name="frmCadastroProduto.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/frmCadastroProduto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="227" column="48" selection-start-line="227" selection-start-column="48" selection-end-line="227" selection-end-column="48" />
+            <state relative-caret-position="311">
+              <caret line="284" column="0" selection-start-line="281" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
               <folding>
                 <element signature="e#6#94#0#PHP" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#div#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -484,16 +251,13 @@
         <option value="$PROJECT_DIR$/view/lockscreen.php" />
         <option value="$PROJECT_DIR$/view/frmCadastroUsuario.php" />
         <option value="$PROJECT_DIR$/controller/ProdutoController.php" />
-        <option value="$PROJECT_DIR$/view/frmAlterarProduto.php" />
         <option value="$PROJECT_DIR$/view/indexDashComum.php" />
         <option value="$PROJECT_DIR$/view/perguntas.php" />
         <option value="$PROJECT_DIR$/bootstrap/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/view/frmAlterarCorPadrao.php" />
         <option value="$PROJECT_DIR$/controller/UsuarioController.php" />
         <option value="$PROJECT_DIR$/model/Usuario.php" />
-        <option value="$PROJECT_DIR$/view/produto.php" />
         <option value="$PROJECT_DIR$/dist/css/AdminLTE.css" />
-        <option value="$PROJECT_DIR$/model/Produto.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/609bb86b-8aee-4c3e-ab8e-fa2a5ab716d7/console.sql" />
         <option value="$PROJECT_DIR$/model/Pergunta.php" />
         <option value="$PROJECT_DIR$/model/Resposta.php" />
@@ -511,6 +275,9 @@
         <option value="$PROJECT_DIR$/view/dashboard.php" />
         <option value="$PROJECT_DIR$/view/index.php" />
         <option value="$PROJECT_DIR$/plugins/froala-editor/html/popular/textarea.html" />
+        <option value="$PROJECT_DIR$/view/produto.php" />
+        <option value="$PROJECT_DIR$/view/frmAlterarProduto.php" />
+        <option value="$PROJECT_DIR$/model/Produto.php" />
         <option value="$PROJECT_DIR$/view/frmCadastroProduto.php" />
       </list>
     </option>
@@ -724,7 +491,7 @@
       <workItem from="1488498344009" duration="3289000" />
       <workItem from="1488579275738" duration="2093000" />
       <workItem from="1488842445918" duration="5878000" />
-      <workItem from="1488927294550" duration="3108000" />
+      <workItem from="1488927294550" duration="9572000" />
     </task>
     <task id="LOCAL-00001" summary="Retirar da Classe produto:&#10;&#10;Preco&#10;Mostrapreco&#10;&#10;Adicionar:&#10;&#10;Toxidade&#10;&#10;&#10;">
       <created>1474599472635</created>
@@ -943,11 +710,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488850515211</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Adicionando editor froala">
+      <created>1488933985823</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1488933985823</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102792000" />
+    <option name="totallyTimeSpent" value="109256000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1018,20 +792,14 @@
     <MESSAGE value="XABLAU" />
     <MESSAGE value="Apagando coisas inúteis." />
     <MESSAGE value="Colocando plugin de editor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Colocando plugin de editor" />
+    <MESSAGE value="Adicionando editor froala" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando editor froala" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bd_chemistery.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="259" column="0" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/RespostaController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -1140,13 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/produto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="287" column="124" selection-start-line="287" selection-start-column="124" selection-end-line="287" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imagens/mupload148833685658b637d83ab3b.jpg" />
     <entry file="file://$PROJECT_DIR$/test/template-Email.html" />
     <entry file="dbDummy://dbtable:/b07271c7/609bb86b-8aee-4c3e-ab8e-fa2a5ab716d7/consu734_chem_test.resposta">
@@ -1185,13 +946,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Produto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="425" column="14" selection-start-line="425" selection-start-column="14" selection-end-line="425" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/perguntas.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
@@ -1225,24 +979,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/DiscussaoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/respostas.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/jsons/menu.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="83" column="81" selection-start-line="83" selection-start-column="81" selection-end-line="83" selection-end-column="81" />
         </state>
       </provider>
     </entry>
@@ -1417,14 +1157,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/froala-editor/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://PHP/\Menu">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1457,6 +1189,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/view/produto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/froala-editor/css/themes/custom-theme.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1473,19 +1213,152 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/froala-editor/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/DiscussaoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Produto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="194" column="44" selection-start-line="194" selection-start-column="44" selection-end-line="194" selection-end-column="44" />
+          <folding>
+            <marker date="1488935112723" expanded="true" signature="4393:4452" ph="SELECT * FRO... ${$this-&gt;tabela}" />
+            <marker date="1488935112723" expanded="true" signature="4888:8701" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="4898:8622" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="5373:5494" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="6415:6610" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="6624:8614" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="6639:6984" ph="{...}" />
+            <marker date="1488935112723" expanded="true" signature="6997:7098" ph="{...}" />
+            <marker date="1488935112723" expanded="true" signature="7110:7155" ph="{...}" />
+            <marker date="1488935112723" expanded="true" signature="7177:7304" ph="{...}" />
+            <marker date="1488935112723" expanded="true" signature="7326:7384" ph="{...}" />
+            <marker date="1488935112723" expanded="true" signature="7409:7481" ph="{...}" />
+            <marker date="1488935112723" expanded="true" signature="7506:7568" ph="{...}" />
+            <marker date="1488935112723" expanded="true" signature="7584:7706" ph="{...}" />
+            <marker date="1488935112723" expanded="true" signature="7722:7817" ph="{...}" />
+            <marker date="1488935112723" expanded="true" signature="7837:7875" ph="{...}" />
+            <marker date="1488935112723" expanded="true" signature="7891:7928" ph="{...}" />
+            <marker date="1488935112723" expanded="true" signature="7948:7983" ph="{...}" />
+            <marker date="1488935112723" expanded="true" signature="8009:8044" ph="{...}" />
+            <marker date="1488935112723" expanded="true" signature="8076:8511" ph="{...}" />
+            <marker date="1488935112723" expanded="true" signature="8526:8601" ph="{...}" />
+            <marker date="1488935112723" expanded="true" signature="8629:8701" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="8646:8701" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="8679:8700" ph="..." />
+            <marker date="1488935112723" expanded="false" signature="9040:9062" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="9063:9605" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="9080:9359" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="9101:9353" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="9161:9347" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="9232:9340" ph="..." />
+            <marker date="1488935112723" expanded="false" signature="9372:9412" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="9413:9596" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="9422:9590" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="9436:9580" ph="..." />
+            <marker date="1488935112723" expanded="false" signature="9462:9485" ph="..." />
+            <marker date="1488935112723" expanded="false" signature="9669:9733" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="9734:9829" ph="..." />
+            <marker date="1488935112723" expanded="false" signature="9766:9775" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="9776:9829" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="9786:9829" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="9815:9829" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="10015:10181" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="10103:10176" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="10109:10163" ph="..." />
+            <marker date="1488935112723" expanded="false" signature="10151:10157" ph="←" />
+            <marker date="1488935112723" expanded="true" signature="10213:10378" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="10301:10373" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="10315:10369" ph="..." />
+            <marker date="1488935112723" expanded="false" signature="10357:10363" ph="→" />
+            <marker date="1488935112723" expanded="true" signature="10532:10617" ph="..." />
+            <marker date="1488935112723" expanded="false" signature="10587:10593" ph="←" />
+            <marker date="1488935112723" expanded="true" signature="10649:10814" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="10737:10809" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="10751:10805" ph="..." />
+            <marker date="1488935112723" expanded="false" signature="10793:10799" ph="→" />
+            <marker date="1488935112723" expanded="true" signature="11055:11221" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="11143:11216" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="11149:11203" ph="..." />
+            <marker date="1488935112723" expanded="false" signature="11191:11197" ph="←" />
+            <marker date="1488935112723" expanded="false" signature="11312:11318" ph="→" />
+            <marker date="1488935112723" expanded="true" signature="11473:11561" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="11487:11556" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="11493:11543" ph="..." />
+            <marker date="1488935112723" expanded="false" signature="11531:11537" ph="←" />
+            <marker date="1488935112723" expanded="false" signature="11652:11658" ph="→" />
+            <marker date="1488935112723" expanded="true" signature="12210:12367" ph="select * fro... atributo" />
+            <marker date="1488935112723" expanded="true" signature="12481:12562" ph="SELECT * FRO... atributo" />
+            <marker date="1488935112723" expanded="true" signature="12697:12778" ph="SELECT * FRO... atributo" />
+            <marker date="1488935112723" expanded="true" signature="13057:13490" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="13385:13490" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="15091:15166" ph="select * fro... atributo" />
+            <marker date="1488935112723" expanded="true" signature="15307:15463" ph="insert into valor_atributo... " />
+            <marker date="1488935112723" expanded="true" signature="15631:15803" ph="select * fro... atributo" />
+            <marker date="1488935112723" expanded="true" signature="16806:16962" ph="insert into valor_atributo... " />
+            <marker date="1488935112723" expanded="true" signature="17191:17273" ph="UPDATE valor... " />
+            <marker date="1488935112723" expanded="true" signature="17544:17619" ph="select * fro... atributo" />
+            <marker date="1488935112723" expanded="true" signature="18012:18168" ph="insert into valor_atributo... " />
+            <marker date="1488935112723" expanded="true" signature="18416:18455" ph="SELECT max(i... produto" />
+            <marker date="1488935112723" expanded="true" signature="18673:18821" ph="SELECT * FRO... atributo" />
+            <marker date="1488935112723" expanded="true" signature="18968:19208" ph="..." />
+            <marker date="1488935112723" expanded="false" signature="19001:19039" ph="..." />
+            <marker date="1488935112723" expanded="false" signature="19115:19140" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="19311:19395" ph="SELECT * FRO... produto" />
+            <marker date="1488935112723" expanded="true" signature="19542:19782" ph="..." />
+            <marker date="1488935112723" expanded="false" signature="19575:19613" ph="..." />
+            <marker date="1488935112723" expanded="false" signature="19689:19714" ph="..." />
+            <marker date="1488935112723" expanded="true" signature="19882:19931" ph="select * fro... produto" />
+            <marker date="1488935112723" expanded="true" signature="20159:20279" ph="SELECT DAY(d... " />
+            <marker date="1488935112723" expanded="true" signature="20522:20666" ph="SELECT DAY(d... " />
+            <marker date="1488935112723" expanded="true" signature="20924:21046" ph="SELECT DAY(d... " />
+            <marker date="1488935112723" expanded="true" signature="21289:21435" ph="SELECT DAY(d... " />
+            <marker date="1488935112723" expanded="true" signature="21976:22049" ph="SELECT * FRO... imagem" />
+            <marker date="1488935112723" expanded="true" signature="22194:22230" ph="DELETE FROM " />
+            <marker date="1488935112723" expanded="true" signature="22311:22437" ph="INSERT INTO imagem... " />
+            <marker date="1488935112723" expanded="true" signature="22567:22638" ph="SELECT * FRO... IMAGEM" />
+            <marker date="1488935112723" expanded="true" signature="23006:23044" ph="SELECT * FRO... IMAGEM" />
+            <marker date="1488935112723" expanded="true" signature="23252:23290" ph="SELECT * FRO... IMAGEM" />
+            <marker date="1488935112723" expanded="true" signature="23763:23826" ph="delete from " />
+            <marker date="1488935112723" expanded="true" signature="24036:24078" ph="update produ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/jsons/menu.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/frmAlterarProduto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/view/frmCadastroProduto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="227" column="48" selection-start-line="227" selection-start-column="48" selection-end-line="227" selection-end-column="48" />
+        <state relative-caret-position="311">
+          <caret line="284" column="0" selection-start-line="281" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
           <folding>
             <element signature="e#6#94#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#div#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

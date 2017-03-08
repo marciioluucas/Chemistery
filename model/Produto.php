@@ -192,7 +192,7 @@ class Produto extends Banco
         $this->tabela = "produto";
         $this->campos = array("id", "nome", "descricao", "categoria_id");
         $this->condicao = "ativado = 1 ";
-        $this->subQntColunasConsulTabela = 0;
+        $this->subQntColunasConsulTabela = 2;
         $this->listar();
     }
 

@@ -279,11 +279,11 @@ if ($_SESSION["tempo"] < time()) {
 
 
 
-                </div>
-
                 <div id="parametrosAdicionais">
 
                 </div>
+            </div>
+
                 <div class="col-lg-12 text-right">
                     <a onclick="limparcampos();" class="btn btn-danger">Limpar campos</a>
                     <input type="submit" class="btn btn-primary" name="enviar" id="enviar" value="Cadastrar">

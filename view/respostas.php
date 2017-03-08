@@ -7,9 +7,9 @@
  */
 require_once '../controller/DiscussaoController.php';
 require_once '../view/protecaoPaginas.php';
-if (isset($_GET['id-produto'])) {
+if (isset($_GET['id'])) {
 
-    $discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['idUsuario']);
+    $discussaoController = new DiscussaoController($_GET['id'], $_SESSION['idUsuario']);
     $q = $discussaoController->consultarResp();
     echo "<div class='text-center'><a role='button' class='more-comments' onclick='moreComments()'>" . $discussaoController->numeroAtualDeRespostas() .
         " comentário(s) de " . $discussaoController->numeroTotalDeRespostas() . "</a></div>";

@@ -14,7 +14,6 @@ class Pergunta extends Banco
     private $descricao; //string
     private $produto;
     private $status;
-    private $respostaList;
 
 
     /**
@@ -123,11 +122,11 @@ class Pergunta extends Banco
         $this->listar();
     }
 
-    public function consultarPergunta($idProduto)
+    public function consultarPergunta($idPergunta)
     {
         $this->tabela = "pergunta";
         return $this->innerJoin("usuario", "pergunta", "usuario_id", "usuario.id",
-            "produto_id = " . $idProduto,
+            "pergunta.id = " . $idPergunta,
             ["usuario.id as userid","nome","datahora","pergunta.id as pergid", "produto_id", "descricao", "imagem"],null,null, true);
 
     }
@@ -135,4 +134,4 @@ class Pergunta extends Banco
 //
 //$p =  new Pergunta();
 //
-//print_r($p->consultarPergunta(301,1));
+//print_r($p->consultarPergunta(1));

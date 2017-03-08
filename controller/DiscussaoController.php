@@ -10,7 +10,7 @@ require_once '../model/Discussao.php';
  * Time: 13:16
  */
 if (isset($_GET['q']) && $_GET['q'] == "new-comment"){
-    new DiscussaoController($_POST['produto_id'],$_POST['usuario_id']);
+    new DiscussaoController($_POST['id'],$_POST['usuario_id']);
 }
 class DiscussaoController
 {
@@ -27,11 +27,11 @@ class DiscussaoController
      * DiscussaoController constructor.
      * @param $produto
      */
-    public function __construct($idProduto, $idUsuario)
+    public function __construct($idPergunta, $idUsuario)
     {
         $discussao = new Discussao();
 
-        $this->pergunta = $discussao->consultarPergunta($idProduto);
+        $this->pergunta = $discussao->consultarPergunta($idPergunta);
 
         if (isset($_GET['q']) && $_GET['q'] == "new-comment") {
             $r = new Resposta();

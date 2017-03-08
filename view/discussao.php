@@ -7,7 +7,7 @@
  */
 require_once '../view/protecaoPaginas.php';
 require_once '../controller/DiscussaoController.php';
-$discussaoController = new DiscussaoController($_GET['id-produto'], $_SESSION['idUsuario']);
+$discussaoController = new DiscussaoController($_GET['id'], $_SESSION['idUsuario']);
 
 ?>
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">

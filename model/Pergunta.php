@@ -99,7 +99,7 @@ class Pergunta extends Banco
 
     public function cadastroPergunta()
     {
-        $this->tabela = "categoria";
+        $this->tabela = "pergunta";
         $this->campos = array("produto_id", "usuario_id", "descricao", "datahora");
         $this->valores = array($this->produto, $this->usuario, $this->descricao, date("Y-m-d H:i:s"));
         if ($this->cadastrar()) {

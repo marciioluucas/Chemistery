@@ -17,8 +17,12 @@ class PerguntaController
             $pergunta->listagem();
         }
 
-        if (isset($_GET['q']) and $_GET['q'] == "cadastrar") {
-            $this->cadastroPergunta();
+        if (isset($_GET['b']) and $_GET['b'] == "cadastrar") {
+            if($this->cadastroPergunta()) {
+                echo"<script>alert('Pergunta enviada com sucesso!')</script>";
+            }else{
+                echo"<script>alert('Pergunta não enviada, erro!')</script>";
+            }
         }
     }
 
@@ -28,7 +32,7 @@ class PerguntaController
         $p->setProduto($_POST['perguntaProduto']);
         $p->setUsuario($_POST['perguntaIdUsuario']);
         $p->setDescricao($_POST['perguntaDescricao']);
-        $p->cadastroPergunta();
+       return $p->cadastroPergunta();
 
     }
 

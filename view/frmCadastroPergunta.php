@@ -19,12 +19,12 @@ if ($categoriaController->retornaNumeroDeCategoriasCadastradas() == 0) {
 }
 
 
-
 if ($_SESSION["tempo"] < time()) {
     echo "<script>window.location.replace('lockscreen.php')</script>";
-}else{
+} else {
     $_SESSION["tempo"] = time() + 600;
 }
+if(isset($_GET['id'])){
 ?>
 <html>
 <head>
@@ -132,13 +132,11 @@ if ($_SESSION["tempo"] < time()) {
             transition: all 0.3s ease-in 0s;
         }
 
-        .check
-        {
-            opacity:0.5;
-            color:violet;
+        .check {
+            opacity: 0.5;
+            color: violet;
 
         }
-
 
         .onoffswitch-checkbox:checked + .onoffswitch-label {
             background-color: #3588CC;
@@ -152,73 +150,78 @@ if ($_SESSION["tempo"] < time()) {
             right: 0px;
         }
 
-        .select2-selection{
+        .select2-selection {
             border-color: #d2d6de !important;
         }
 
-        .select2-selection--single{
+        .select2-selection--single {
             border-color: #d2d6de !important;
         }
 
     </style>
 </head>
 <body>
-    <!-- Content Header (Page header) -->
+<!-- Content Header (Page header) -->
 
-    <!--    <div id="rootwizard">-->
-    <!--        <div class="navbar">-->
-    <!--            <div class="navbar-inner">-->
-    <!--                <div class="container">-->
-    <!--                    <ul class="nav nav-pills">-->
-    <!--                        <li><a href="#tab1" data-toggle="tab" role="presentation">Primeiro passo</a></li>-->
-    <!--                        <li><a href="#tab2" data-toggle="tab" role="presentation">Segundo passo</a></li>-->
-    <!--                        <li><a href="#tab3" data-toggle="tab" role="presentation">Terceiro passo</a></li>-->
-    <!---->
-    <!--                    </ul>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--        <div class="tab-content">-->
-    <!--            <div class="tab-pane" id="tab1">-->
-    <!--                1-->
-    <!--            </div>-->
-    <!--            <div class="tab-pane" id="tab2">-->
-    <!--                2-->
-    <!--            </div>-->
-    <!--            <div class="tab-pane" id="tab3">-->
+<!--    <div id="rootwizard">-->
+<!--        <div class="navbar">-->
+<!--            <div class="navbar-inner">-->
+<!--                <div class="container">-->
+<!--                    <ul class="nav nav-pills">-->
+<!--                        <li><a href="#tab1" data-toggle="tab" role="presentation">Primeiro passo</a></li>-->
+<!--                        <li><a href="#tab2" data-toggle="tab" role="presentation">Segundo passo</a></li>-->
+<!--                        <li><a href="#tab3" data-toggle="tab" role="presentation">Terceiro passo</a></li>-->
+<!---->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="tab-content">-->
+<!--            <div class="tab-pane" id="tab1">-->
+<!--                1-->
+<!--            </div>-->
+<!--            <div class="tab-pane" id="tab2">-->
+<!--                2-->
+<!--            </div>-->
+<!--            <div class="tab-pane" id="tab3">-->
 
-    <!--                <h3>Cadastrando produto</h3>-->
-    <form action="../controller/PerguntaController.php?b=cadastrar" method="post" enctype="multipart/form-data"
-          id="frmCadastroPergunta">
-        <input type="text" name="b" id="b" value="cadastrar" hidden="hidden">
-        <input type="text" name="idUsuarioLogado" id="idUsuarioLogado" value="<?php echo $idUser ?>"
-               hidden="hidden">
-        <div class="box-body">
-            <div class="col-lg-12">
-                <div class=" row thumbnail">
-                    <img src="../imagens/noimg.png" class="img-bordered col-lg-3">
-                    <div class="caption col-lg-9" >
-                        <h1>Nome Produto</h1>
-                        <hr>
-                        <p>Pergunta:</p>
-                        <textarea class="form-control" rows="9"></textarea>
+<!--                <h3>Cadastrando produto</h3>-->
+<form action="../controller/PerguntaController.php?b=cadastrar" method="post" enctype="multipart/form-data"
+      id="frmCadastroPergunta">
+    <input type="text" name="b" id="b" value="cadastrar" hidden="hidden">
+    <input type="text" name="idUsuarioLogado" id="idUsuarioLogado" value="<?php echo $idUser ?>"
+           hidden="hidden">
+    <div class="box-body">
+        <div class="col-lg-12">
+            <div class=" row thumbnail">
+                <img src="<?php echo $produtoController->retornaAlgoDoProdutoQueEuQueira("imagemprincipal",$_GET['id']) ?>" class="img-bordered col-lg-3">
+                <div class="caption col-lg-9">
+                    <h1><?php echo $produtoController->retornaAlgoDoProdutoQueEuQueira("nome",$_GET['id']) ?></h1>
+                    <hr>
 
-                    </div>
-
+                    <form action="../controller/PerguntaController.php?q=cadastrar" method="post">
+                        <input type="text" hidden="hidden" name="perguntaProduto" value="<?php echo $_GET['id'];?>">
+                        <input type="text" hidden="hidden" name="perguntaIdUsuario" value="<?php echo $_SESSION['idUsuario'];?>">
+                        <label for="pergunta">Pergunta</label>
+                        <textarea class="form-control" id="pergunta" name="perguntaDescricao" rows="9"></textarea>
+                        <div class="col-lg-12 text-right" style="padding-top: 10px;">
+                            <a onclick="limparcampos();" class="btn btn-danger btn-flat">Limpar campos</a>
+                            <input type="submit" class="btn btn-primary btn-flat" name="enviar" id="enviar" value="Cadastrar">
+                        </div>
+                    </form>
 
                 </div>
-            </div>
-
 
 
             </div>
-            <div class="col-lg-12 text-right">
-                <a onclick="limparcampos();" class="btn btn-danger">Limpar campos</a>
-                <input type="submit" class="btn btn-primary" name="enviar" id="enviar" value="Cadastrar">
-            </div>
+        </div>
 
-        <!-- /.box-body -->
-    </form>
+
+    </div>
+
+
+    <!-- /.box-body -->
+</form>
 
 
 <!---->
@@ -257,9 +260,8 @@ if ($_SESSION["tempo"] < time()) {
 <script>
 
 
-
-    $(document).ready(function(e){
-        $(".img-check").click(function(){
+    $(document).ready(function (e) {
+        $(".img-check").click(function () {
             $(this).toggleClass("check");
         });
     });
@@ -283,8 +285,6 @@ if ($_SESSION["tempo"] < time()) {
     $("#produtoImagemPrincipal").change(function () {
         readURL2(this);
     });
-
-
 
 
     function limparcampos() {
@@ -337,3 +337,4 @@ if ($_SESSION["tempo"] < time()) {
 
 </body>
 </html>
+<?php }else{echo "Erro, produto não informado.";}?>

@@ -131,7 +131,6 @@ class Categoria extends Banco
             $this->tabela = "categoria";
             $this->campos = array("nome", "datacriacao");
             $this->valores = array($this->nome, date("Y-m-d"));
-            echo $this->getSql();
             if (!$this->cadastrar()) {
                 return false;
             }

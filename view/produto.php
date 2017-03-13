@@ -221,7 +221,7 @@ $toString = "";
         <div class="col-sm-6" style="padding-left: 50px">
 
 
-            <button type="button" class="btn btn-lg btn-info" ><a href="frmCadastroPergunta.php" class="text-black text-bold">Tirar uma dúvida</a></button>
+            <button type="button" class="btn btn-lg btn-info" ><a href="frmCadastroPergunta.php?id=<?php echo $_GET['id']; ?>" class="text-black text-bold">Tirar uma dúvida</a></button>
 
             <h3>(TODO)Precauções(TODO)</h3>
 

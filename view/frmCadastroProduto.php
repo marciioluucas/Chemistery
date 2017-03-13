@@ -19,10 +19,9 @@ if ($categoriaController->retornaNumeroDeCategoriasCadastradas() == 0) {
 }
 
 
-
 if ($_SESSION["tempo"] < time()) {
     echo "<script>window.location.replace('lockscreen.php')</script>";
-}else{
+} else {
     $_SESSION["tempo"] = time() + 600;
 }
 ?>
@@ -52,7 +51,7 @@ if ($_SESSION["tempo"] < time()) {
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!--    <link rel="stylesheet" href="../plugins/ckeditor/samples/css/samples.css">-->
-<!--    <link rel="stylesheet" href="../plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">-->
+    <!--    <link rel="stylesheet" href="../plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">-->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../plugins/froala-editor/css/froala_editor.css">
@@ -143,13 +142,11 @@ if ($_SESSION["tempo"] < time()) {
             transition: all 0.3s ease-in 0s;
         }
 
-        .check
-        {
-            opacity:0.5;
-            color:violet;
+        .check {
+            opacity: 0.5;
+            color: violet;
 
         }
-
 
         .onoffswitch-checkbox:checked + .onoffswitch-label {
             background-color: #3588CC;
@@ -163,11 +160,11 @@ if ($_SESSION["tempo"] < time()) {
             right: 0px;
         }
 
-        .select2-selection{
+        .select2-selection {
             border-color: #d2d6de !important;
         }
 
-        .select2-selection--single{
+        .select2-selection--single {
             border-color: #d2d6de !important;
         }
 
@@ -226,20 +223,17 @@ if ($_SESSION["tempo"] < time()) {
 
                 <div class="form-group">
                     <label for="produtoDescricao">Descrição</label>
-                            <textarea class="form-control" id="produtoDescricao" name="produtoDescricao" required
-                                      placeholder="Coloque aqui a descrição"
-                                      style="display: none; resize: none; height: 400px;"></textarea>
+                    <textarea class="form-control" id="produtoDescricao" name="produtoDescricao" required
+                              placeholder="Coloque aqui a descrição"
+                              style="display: none; resize: none; height: 400px;"></textarea>
                 </div>
-
-
-
 
 
                 <div class="form-group">
                     <label for="produtoCategoria2">Categoria</label>
                     <div class="input-group" style="margin-top: -3px !important;">
                             <span class="input-group-addon" id="Lupa" style="height: 34px !important;"><i
-                                    class="fa fa-search" aria-hidden="true"></i></span>
+                                        class="fa fa-search" aria-hidden="true"></i></span>
                         <select class="form-control select2"
                                 style="width: 100%; border-radius: 0 !important; display: none"
                                 id="produtoCategoria2" aria-describedby="Lupa" name="produtoCategoria2">
@@ -249,13 +243,43 @@ if ($_SESSION["tempo"] < time()) {
                         </select>
                     </div>
                 </div><!-- /.form-group -->
+                <label>Precauções</label>
                 <div class="form-group">
-                    <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/comburente.png" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk1" id="item4" value="val1" class="hidden" autocomplete="off"></label></div>
-                    <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/corrosivo.jpg" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk2" id="item4" value="val2" class="hidden" autocomplete="off"></label></div>
-                    <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/explosivo.png" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk3" id="item4" value="val3" class="hidden" autocomplete="off"></label></div>
-                    <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/inflamavel.png" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk4" id="item4" value="val4" class="hidden" autocomplete="off"></label></div>
-                    <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/nocivo-irritante.png" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk5" id="item4" value="val5" class="hidden" autocomplete="off"></label></div>
-                    <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/toxico.png" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="chk6" id="item4" value="val6" class="hidden" autocomplete="off"></label></div>
+                    <div class="row">
+                        <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/comburente.png"
+                                                                                alt="..."
+                                                                                class="img-thumbnail img-check"><input
+                                        type="checkbox" name="chk1" id="item4" value="val1" class="hidden"
+                                        autocomplete="off"></label></div>
+                        <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/corrosivo.jpg"
+                                                                                alt="..."
+                                                                                class="img-thumbnail img-check"><input
+                                        type="checkbox" name="chk2" id="item4" value="val2" class="hidden"
+                                        autocomplete="off"></label></div>
+                        <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/explosivo.png"
+                                                                                alt="..."
+                                                                                class="img-thumbnail img-check"><input
+                                        type="checkbox" name="chk3" id="item4" value="val3" class="hidden"
+                                        autocomplete="off"></label></div>
+                        <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/inflamavel.png"
+                                                                                alt="..."
+                                                                                class="img-thumbnail img-check"><input
+                                        type="checkbox" name="chk4" id="item4" value="val4" class="hidden"
+                                        autocomplete="off"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"><label class="btn bg-purple"><img
+                                        src="../sources/imgs/nocivo-irritante.png"
+                                        alt="..."
+                                        class="img-thumbnail img-check"><input
+                                        type="checkbox" name="chk5" id="item4" value="val5" class="hidden"
+                                        autocomplete="off"></label></div>
+                        <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/toxico.png"
+                                                                                alt="..."
+                                                                                class="img-thumbnail img-check"><input
+                                        type="checkbox" name="chk6" id="item4" value="val6" class="hidden"
+                                        autocomplete="off"></label></div>
+                    </div>
                 </div>
             </div>
 
@@ -277,20 +301,18 @@ if ($_SESSION["tempo"] < time()) {
                 </div>
 
 
-
-
                 <div id="parametrosAdicionais">
 
                 </div>
             </div>
 
-                <div class="col-lg-12 text-right">
-                    <a onclick="limparcampos();" class="btn btn-danger">Limpar campos</a>
-                    <input type="submit" class="btn btn-primary" name="enviar" id="enviar" value="Cadastrar">
-                </div>
+            <div class="col-lg-12 text-right">
+                <a onclick="limparcampos();" class="btn btn-danger">Limpar campos</a>
+                <input type="submit" class="btn btn-primary" name="enviar" id="enviar" value="Cadastrar">
             </div>
+        </div>
 
-            <!-- /.box-body -->
+        <!-- /.box-body -->
 
 
     </form>
@@ -343,7 +365,7 @@ if ($_SESSION["tempo"] < time()) {
 <script type="text/javascript" src="../plugins/froala-editor/js/plugins/url.min.js"></script>
 <script type="text/javascript" src="../plugins/froala-editor/js/plugins/entities.min.js"></script>
 <script>
-    $(function(){
+    $(function () {
         $('#produtoDescricao')
             .on('froalaEditor.initialized')
             .froalaEditor({enter: $.FroalaEditor.ENTER_P, placeholderText: null})
@@ -356,9 +378,8 @@ if ($_SESSION["tempo"] < time()) {
 <script>
 
 
-
-    $(document).ready(function(e){
-        $(".img-check").click(function(){
+    $(document).ready(function (e) {
+        $(".img-check").click(function () {
             $(this).toggleClass("check");
         });
     });
@@ -384,8 +405,6 @@ if ($_SESSION["tempo"] < time()) {
     });
 
 
-
-
     function limparcampos() {
         $('#frmCadastroProdutos').each(function () {
             this.reset();
@@ -393,7 +412,6 @@ if ($_SESSION["tempo"] < time()) {
     }
 
     $(function () {
-        //Initialize Select2 Elements
         $(".select2").select2();
     });
 
@@ -404,22 +422,7 @@ if ($_SESSION["tempo"] < time()) {
 
 </script>
 <script language="Javascript">
-    $(function () {
-        $('#ImagemCrop').Jcrop({
-            aspectRatio: 1,
-            onSelect: UpdateCrop,
-            setSelect: [0, 0, 200, 200]
-        });
 
-    });
-    function UpdateCrop(c) {
-        $('#x').val(c.x);
-        $('#y').val(c.y);
-        $('#w').val(c.w);
-        $('#h').val(c.h);
-        $("#altura").html("Altura:" + c.h);
-        $("#largura").html("Largura:" + c.w);
-    }
 
     $(".atributo-data").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
 

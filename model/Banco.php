@@ -150,7 +150,7 @@ class Banco
     {
 
         $this->host = "localhost";
-        $this->banco = "consu734_chem_test";
+        $this->banco = "bd_chemistery";
         $this->usuario = "root";
         $this->senha = "";
         if (mysqli_connect($this->host, $this->usuario, $this->senha, $this->banco)) {

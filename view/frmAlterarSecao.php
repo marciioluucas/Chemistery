@@ -44,6 +44,7 @@ if ($_SESSION["tempo"] < time()) {
 
         body {
             background-color: #ecf0f5;
+            
         }
 
         .onoffswitch {

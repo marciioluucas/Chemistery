@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.1
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 06-Set-2016 às 21:26
--- Versão do servidor: 10.1.13-MariaDB
--- PHP Version: 7.0.5
+-- Generation Time: 20-Mar-2017 às 18:36
+-- Versão do servidor: 10.1.19-MariaDB
+-- PHP Version: 7.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -34,6 +34,11 @@ CREATE TABLE `arquivo` (
   `ativado` tinyint(1) DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `atributo`
+--
 
 CREATE TABLE `atributo` (
   `id` int(11) NOT NULL,
@@ -42,6 +47,19 @@ CREATE TABLE `atributo` (
   `tipo` varchar(180) DEFAULT NULL,
   `ativado` tinyint(1) DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `atributo`
+--
+
+INSERT INTO `atributo` (`id`, `categoria_id`, `nome`, `tipo`, `ativado`) VALUES
+(36, 10, 'testeatr', 'texto', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `categoria`
+--
 
 CREATE TABLE `categoria` (
   `id` int(11) NOT NULL,
@@ -52,17 +70,18 @@ CREATE TABLE `categoria` (
   `dataultimaalteracao` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-# CREATE TABLE `cliente` (
-#   `id` int(11) NOT NULL,
-#   `nome` varchar(180) DEFAULT NULL,
-#   `descricao` text,
-#   `tipo` varchar(20) NOT NULL,
-#   `cpf_ou_cnpj` varchar(30) DEFAULT NULL,
-#   `datacriacao` date DEFAULT NULL,
-#   `dataultimaalteracao` date DEFAULT NULL,
-#   `dataexclusao` date DEFAULT NULL,
-#   `ativado` tinyint(1) DEFAULT '1'
-# ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+--
+-- Extraindo dados da tabela `categoria`
+--
+
+INSERT INTO `categoria` (`id`, `nome`, `datacriacao`, `dataexclusao`, `ativado`, `dataultimaalteracao`) VALUES
+(10, 'Teste', '2017-03-20', NULL, 1, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cor`
+--
 
 CREATE TABLE `cor` (
   `id` int(11) NOT NULL,
@@ -89,6 +108,11 @@ CREATE TABLE `imagem` (
   `posicao` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `produto`
+--
 
 CREATE TABLE `produto` (
   `id` int(11) NOT NULL,
@@ -112,6 +136,21 @@ CREATE TABLE `produto` (
 -- Extraindo dados da tabela `produto`
 --
 
+INSERT INTO `produto` (`id`, `nome`, `descricao`, `imagem`, `preco`, `toxidade`, `ativado`, `imagemprincipal`, `mostrapreco`, `categoria_id`, `secao_id`, `datacriacao`, `dataexclusao`, `dataultimaalteracao`, `usuario_id`) VALUES
+(301, 'RoxÃ©rio', '<p><strong>this rox&eacute;rio is very impressive waw</strong></p>', '', 0.00, 0, 1, '../imagens/mupload149002704058d00220083de.jpg', 0, 10, 0, '2017-03-20', NULL, NULL, 1),
+(302, 'XANAINA', '<p>OWW OW AOWWW</p>', '', 0.00, 0, 1, '../imagens/mupload149002729858d0032288fad.jpg', 0, 10, 0, '2017-03-20', NULL, NULL, 1),
+(303, 'XANAINA', '<p>OWW OW AOWWW</p>', '', 0.00, 0, 1, '../imagens/mupload149002759258d004484f335.jpg', 0, 10, 0, '2017-03-20', NULL, NULL, 1),
+(304, 'Xubiraci', '<p>JABIRACA GOSTOSA N&Eacute;? TOMO NELA</p>', '', 0.00, 0, 1, '../imagens/mupload149002764058d0047851f90.jpg', 0, 10, 0, '2017-03-20', NULL, NULL, 1),
+(305, 'Corote pesado', '<p>CANYNHA DA ROSSA</p>', '', 0.00, 0, 1, '../imagens/mupload149002767158d00497a2b47.jpg', 0, 10, 0, '2017-03-20', NULL, NULL, 1),
+(306, 'Ronnie', '<p>EU SEI QUE SIM</p>', '', 0.00, 0, 1, '../imagens/mupload149003110958d0120512308.jpg', 0, 10, 0, '2017-03-20', NULL, '2017-03-20', 1),
+(307, 'FÃ CRY', '<p>XORA NENE</p>', '', 0.00, 0, 1, '../imagens/mupload149002774758d004e3ccf0d.jpg', 0, 10, 0, '2017-03-20', NULL, NULL, 1),
+(308, 'OnÃ§a CAVALETE', '<p>AAAAAAAAAAAAAAAAAAAAAAAAA(GRITOS DE DOR)</p>', '', 0.00, 0, 1, '../imagens/mupload149002778258d00506af332.jpg', 0, 10, 0, '2017-03-20', NULL, NULL, 1),
+(309, 'Mandioca mÃ¡gica enjoada', '<p>vomito de deusa</p>', '', 0.00, 0, 1, '../imagens/mupload149002874158d008c50442b.jpg', 0, 10, 0, '2017-03-20', NULL, NULL, 1),
+(310, 'Very happy doggo', '<p>at very fast hapiness</p>', '', 0.00, 0, 1, '../imagens/mupload149003088858d011282c492.jpg', 0, 10, 0, '2017-03-20', NULL, NULL, 1),
+(311, 'Maybeeeeee', '<p>Saves meeeeeeee</p>', '', 0.00, 0, 1, '../imagens/mupload149003094158d0115d6ab14.jpg', 0, 10, 0, '2017-03-20', NULL, NULL, 1),
+(312, 'Drogas? me vÃª 5', '<p>cinquin &nbsp;de bagui</p>', '', 0.00, 0, 1, '../imagens/mupload149003098958d0118d3b96f.jpg', 0, 10, 0, '2017-03-20', NULL, NULL, 1),
+(313, 'specular doggo', '<p>suspect</p>', '', 0.00, 0, 1, '../imagens/mupload149003103758d011bde7895.jpg', 0, 10, 0, '2017-03-20', NULL, NULL, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -127,7 +166,6 @@ CREATE TABLE `secao` (
   `ativado` tinyint(1) DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
 -- --------------------------------------------------------
 
 --
@@ -141,10 +179,11 @@ CREATE TABLE `uploads` (
   `ativado` tinyint(1) DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Extraindo dados da tabela `uploads`
---
+-- --------------------------------------------------------
 
+--
+-- Estrutura da tabela `usuario`
+--
 
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
@@ -163,8 +202,11 @@ CREATE TABLE `usuario` (
 --
 -- Extraindo dados da tabela `usuario`
 --
-insert into usuario (id,nome, email, login,senha,nivel,ativado,imagem,datacriacao)
-VALUES (1,'Admin','admin@chemistery.com','admin','admin',5,1,'../imagens/default-user-img.jpg','2017-02-16') ;
+
+INSERT INTO `usuario` (`id`, `nome`, `email`, `login`, `senha`, `nivel`, `ativado`, `imagem`, `datacriacao`, `dataexclusao`, `dataultimaalteracao`) VALUES
+(1, 'Admin', 'admin@chemistery.com', 'admin', 'admin', 5, 1, '../imagens/default-user-img.jpg', '2017-02-16', NULL, NULL),
+(9, 'usero', 'usero@user.com', 'usero', 'usero', 1, 1, '', '2017-03-20', NULL, NULL),
+(10, 'modero', 'modero@mod.com', 'modero', 'modero', 1, 1, '', '2017-03-20', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -183,6 +225,21 @@ CREATE TABLE `valor_atributo` (
 --
 -- Extraindo dados da tabela `valor_atributo`
 --
+
+INSERT INTO `valor_atributo` (`id`, `valor`, `produto_id`, `atributo_id`, `atributo_categoria_id`) VALUES
+(143, 'ROXÃ‰RIo!', 301, 36, 10),
+(144, 'senta o boga na linguica', 302, 36, 10),
+(145, 'senta o boga na linguica', 303, 36, 10),
+(146, 'TOMO NELA', 304, 36, 10),
+(147, 'ARCO CARAI', 305, 36, 10),
+(148, 'ROnnu', 306, 36, 10),
+(149, 'BUA', 307, 36, 10),
+(150, 'dor.', 308, 36, 10),
+(151, 'ew eco nasty nojuento', 309, 36, 10),
+(152, 'bork ', 310, 36, 10),
+(153, 'UONDÃŠ UÃ“', 311, 36, 10),
+(154, '5', 312, 36, 10),
+(155, 'wa', 313, 36, 10);
 
 --
 -- Indexes for dumped tables
@@ -206,8 +263,6 @@ ALTER TABLE `atributo`
 --
 ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id`);
-
-
 
 --
 -- Indexes for table `cor`
@@ -271,13 +326,12 @@ ALTER TABLE `arquivo`
 -- AUTO_INCREMENT for table `atributo`
 --
 ALTER TABLE `atributo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT for table `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `cor`
 --
@@ -292,7 +346,7 @@ ALTER TABLE `imagem`
 -- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=301;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=314;
 --
 -- AUTO_INCREMENT for table `secao`
 --
@@ -307,12 +361,12 @@ ALTER TABLE `uploads`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `valor_atributo`
 --
 ALTER TABLE `valor_atributo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
 --
 -- Constraints for dumped tables
 --

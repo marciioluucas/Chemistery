@@ -160,6 +160,10 @@ $usuarioController = new UsuarioController();
 <script src="../dist/js/demo.js"></script>
 
 <script>
+    $(document).ready(function(){
+       $('#body').load("dashComum.php");
+    });
+
     $('#perguntas').click(function(){
         $('#body').load("perguntas.php")
     });

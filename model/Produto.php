@@ -180,7 +180,7 @@ class Produto extends Banco
     function excluirProduto($id)
     {
         try {
-            return $this->delete("produto", "ativado = 0, dataexcusao=" . date('Y-m-d'), "id=$id");
+            return $this->delete("produto", "ativado = 0, dataexclusao=" . date('Y-m-d'), "id=$id");
         } catch (Exception $e) {
             echo "Exceção capturada: " . $e->getMessage();
             return null;
@@ -221,8 +221,6 @@ class Produto extends Banco
 
         $sql .= " LIMIT $limite OFFSET $offset";
         $this->query = $this->query($sql);
-//        echo "Offset: " . $offset . "\n";
-//        echo "Limite: " . $limite . "\n";
         if (!$this->query) {
             echo "Erro na query SQL";
             die();
@@ -248,8 +246,6 @@ class Produto extends Banco
     <link rel=\"stylesheet\" href=\"../plugins/iCheck/flat/blue.css\">
     <!-- Morris chart -->
     <link rel=\"stylesheet\" href=\"../plugins/morris/morris.css\">
-    <!-- jvectormap -->
-    <link rel=\"stylesheet\" href=\"../plugins/jvectormap/jquery-jvectormap-1.2.2.css\">
     <!-- Date Picker -->
     <link rel=\"stylesheet\" href=\"../plugins/datepicker/datepicker3.css\">
     <!-- Daterange picker -->
@@ -372,8 +368,6 @@ class Produto extends Banco
 
     <div class=\"row\" style='margin-bottom: 150px;'>";
             while ($r = mysqli_fetch_array($this->query, MYSQLI_ASSOC)) {
-                $imagensString = strtolower($r['imagem']);
-                $imagens = explode('-', $imagensString);
                 echo
                 "
     
@@ -407,7 +401,7 @@ class Produto extends Banco
             }
 
             echo "
-<div style='bottom: 0 !important; position: absolute !important; width: 100%'>
+<div style='bottom: 0 !important;'>
 <div class='col-sm-12 container' style='bottom: 0'>
     <nav>
         <ul class=\"pager\">

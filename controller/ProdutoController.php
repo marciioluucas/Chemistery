@@ -81,6 +81,7 @@ class ProdutoController
         $this->produto->setDescricao($_POST['produtoDescricao']);
         $this->produto->setUsuarioLogadoId($_POST['idUsuarioLogado']);
         $this->produto->setCategoria($_POST['produtoCategoria2']);
+        $this->produto->setPericulosidade($_POST['periculosidade']);
         $this->imagem->setArquivoNome($_FILES['produtoImagemPrincipal']['name']);
         $this->imagem->setArquivoErro($_FILES['produtoImagemPrincipal']['error']);
         $this->imagem->setArquivoTemporarioNome($_FILES['produtoImagemPrincipal']['tmp_name']);
@@ -108,6 +109,7 @@ class ProdutoController
         if (isset($_POST['id1'])) $this->produto->setId($_POST['id1']);
         if (isset($_POST['produtoNome1']) || $_POST['produtoNome1'] != "") $this->produto->setNome($_POST['produtoNome1']);
         if (isset($_POST['produtoDescricao1'])) $this->produto->setDescricao($_POST['produtoDescricao1']);
+        if (isset($_POST['periculosidade'])) $this->produto->setPericulosidade($_POST['periculosidade']);
         $this->produto->setCategoria($_POST['produtoCategoria1']);
 
 

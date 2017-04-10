@@ -249,22 +249,22 @@ if ($_SESSION["tempo"] < time()) {
                         <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/comburente.png"
                                                                                 alt="..."
                                                                                 class="img-thumbnail img-check"><input
-                                        type="radio" name="chk1" id="item4" value="val1" class="hidden"
+                                        type="radio" name="periculosidade" id="periculosidade1" value="val1" class="hidden"
                                         autocomplete="off"></label></div>
                         <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/corrosivo.jpg"
                                                                                 alt="..."
                                                                                 class="img-thumbnail img-check"><input
-                                        type="radio" name="chk2" id="item4" value="val2" class="hidden"
+                                        type="radio" name="periculosidade" id="periculosidade2" value="val2" class="hidden"
                                         autocomplete="off"></label></div>
                         <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/explosivo.png"
                                                                                 alt="..."
                                                                                 class="img-thumbnail img-check"><input
-                                        type="radio" name="chk3" id="item4" value="val3" class="hidden"
+                                        type="radio" name="periculosidade" id="periculosidade3" value="val3" class="hidden"
                                         autocomplete="off"></label></div>
                         <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/inflamavel.png"
                                                                                 alt="..."
                                                                                 class="img-thumbnail img-check"><input
-                                        type="radio" name="chk4" id="item4" value="val4" class="hidden"
+                                        type="radio" name="periculosidade" id="periculosidade4" value="val4" class="hidden"
                                         autocomplete="off"></label></div>
                     </div>
                     <div class="row">
@@ -272,12 +272,12 @@ if ($_SESSION["tempo"] < time()) {
                                         src="../sources/imgs/nocivo-irritante.png"
                                         alt="..."
                                         class="img-thumbnail img-check"><input
-                                        type="radio" name="chk5" id="item4" value="val5" class="hidden"
+                                        type="radio" name="chk5" id="periculosidade" value="val5" class="hidden"
                                         autocomplete="off"></label></div>
                         <div class="col-md-3"><label class="btn bg-purple"><img src="../sources/imgs/toxico.png"
                                                                                 alt="..."
                                                                                 class="img-thumbnail img-check"><input
-                                        type="radio" name="chk6" id="item4" value="val6" class="hidden"
+                                        type="radio" name="chk6" id="periculosidade" value="val6" class="hidden"
                                         autocomplete="off"></label></div>
                     </div>
                 </div>

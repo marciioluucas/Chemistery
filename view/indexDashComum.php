@@ -1,5 +1,5 @@
 <?php
-require_once "../view/protecaoPaginas.php";
+include_once "../view/protecaoPaginas.php";
 require_once "../controller/UsuarioController.php";
 $usuarioController = new UsuarioController();
 ?>

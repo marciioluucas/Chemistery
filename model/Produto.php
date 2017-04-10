@@ -399,23 +399,27 @@ class Produto extends Banco
         <table style='width:100% !important;'>
             <tr>
                 <td>
-                    <div class=\"main-image divcontainer\">
-                    <a href='../view/produto.php?id=" . $r['id'] . "'>
-                    <img src='" . $r['imagemprincipal'] . "'  alt=\"Placeholder\" class=\"custom img\"></a>
+                    <div class=\"main-image divcontainer produto".$r['id']."\">
+                  
+                    <img src='" . $r['imagemprincipal'] . "'  alt=\"Placeholder\" class=\"custom img\">
 </div>
 </td>
 </tr>
 <tr style='height: 150px; vertical-align: baseline;'>
     <td>
         <div>
-         <h4 style=\"width: 150px !important\"><a href='../view/produto.php?id=" . $r['id'] . "'>" . $r['nome'] . "</a></h4>
+         <h4 style=\"width: 150px !important\"><a href='#' class='produto".$r['id']."'>" . $r['nome'] . "</a></h4>
 
         </div>
     </td>
 </tr>
 </table>
 </div>
-
+<script>
+$('.produto".$r['id']."').click(function(){
+    $('#body').load('../view/produto.php?id=" . $r['id'] . "')
+});
+</script>
 ";
 
 

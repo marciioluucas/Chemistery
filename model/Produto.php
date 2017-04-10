@@ -17,6 +17,23 @@ class Produto extends Banco
     private $usuarioLogadoId;
     private $imagemPrincipal;
     private $categoria;
+    private $periculosidade;
+
+    /**
+     * @return mixed
+     */
+    public function getPericulosidade()
+    {
+        return $this->periculosidade;
+    }
+
+    /**
+     * @param mixed $periculosidade
+     */
+    public function setPericulosidade($periculosidade)
+    {
+        $this->periculosidade = $periculosidade;
+    }
 
     /**
      * Produto constructor.
@@ -145,10 +162,10 @@ class Produto extends Banco
     {
         try {
             $this->tabela = "produto";
-            $this->campos = array("nome", "descricao", "imagemprincipal", "usuario_id",
+            $this->campos = array("nome", "descricao", "imagemprincipal", "usuario_id", "periculosidade",
                 "categoria_id", "datacriacao");
             $this->valores = array($this->getNome(), $this->getDescricao(), $this->imagemPrincipal,
-                $this->usuarioLogadoId, $this->categoria, date("Y-m-d"));
+                $this->usuarioLogadoId, $this->periculosidade, $this->categoria, date("Y-m-d"));
             return $this->cadastrar();
         } catch (Exception $e) {
             echo "Exceção capturada: " . $e->getMessage();
@@ -167,7 +184,11 @@ class Produto extends Banco
         if ($this->imagemPrincipal != "") {
             $campos_eq_valores .= "imagemprincipal = '$this->imagemPrincipal', ";
         }
+        $campos_eq_valores .= "periculosidade ='$this->periculosidade',";
+
         $campos_eq_valores .= "categoria_id = '$this->categoria', dataultimaalteracao = '" . date("Y-m-d") . "'";
+
+
 
         try {
             return $this->alterar("produto", $campos_eq_valores, $this->id);
@@ -190,7 +211,7 @@ class Produto extends Banco
     function listarProduto()
     {
         $this->tabela = "produto";
-        $this->campos = array("id", "nome", "descricao", "categoria_id");
+        $this->campos = array("id", "nome", "descricao", "categoria_id", "periculosidade");
         $this->condicao = "ativado = 1 ";
         $this->subQntColunasConsulTabela = 2;
         $this->listar();

@@ -367,6 +367,7 @@ class Produto extends Banco
     </style>
 </head>
 <body>
+<div class='container'>
 <div class=\"\">
 
     <div class=\"row\" style='margin-bottom: 150px;'>";
@@ -392,7 +393,7 @@ class Produto extends Banco
 <tr style='height: 150px; vertical-align: baseline;'>
     <td>
         <div>
-            <h4 style=\"width: 150px !important\"><a href='../view/produto.php?id=" . $r['id'] . "'>" . $r['nome'] . "</a></h4>
+         <h4 style=\"width: 150px !important\"><a href='../view/produto.php?id=" . $r['id'] . "'>" . $r['nome'] . "</a></h4>
 
         </div>
     </td>
@@ -406,8 +407,8 @@ class Produto extends Banco
             }
 
             echo "
-<footer style='bottom: 0 !important; position: absolute !important; width: 100%'>
-<div class='col-sm-12' style='bottom: 0'>
+<div style='bottom: 0 !important; position: absolute !important; width: 100%'>
+<div class='col-sm-12 container' style='bottom: 0'>
     <nav>
         <ul class=\"pager\">
 
@@ -456,7 +457,8 @@ class Produto extends Banco
         </ul>
     </nav>
 </div>
-</footer>
+</div>
+</div>
 </div>
 </div>";
 

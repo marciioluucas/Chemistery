@@ -25,23 +25,11 @@ $toString = "";
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
     <!-- iCheck -->
     <link rel="stylesheet" href="../plugins/iCheck/flat/blue.css">
-    <!-- Morris chart -->
-    <link rel="stylesheet" href="../plugins/morris/morris.css">
-    <!-- jvectormap -->
-    <link rel="stylesheet" href="../plugins/jvectormap/jquery-jvectormap-1.2.2.css">
-    <!-- Date Picker -->
-    <link rel="stylesheet" href="../plugins/datepicker/datepicker3.css">
-    <!-- Daterange picker -->
-    <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker-bs3.css">
     <!-- bootstrap wysihtml5 - text editor -->
 
     <!--    Icone-->
     <link rel="shortcut icon" href="../favicon.ico"/>
-    <script>
-        $(document).ready(function () {
-            $("#imagemPrincipal").zoom();
-        });
-    </script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -92,110 +80,11 @@ $toString = "";
             margin-bottom: 1.5em;
         }
 
-        .thumbnails {
-            width: 450px;
-            height: 70px;
-            list-style: none;
-            /*margin-bottom: 1.5em;*/
-        }
 
         .main-image {
             margin-bottom: 0.75em;
         }
-
-        .thumbnails li {
-            display: inline;
-            margin: 0 10px 0 0;
-        }
-
-        .thumbnails img {
-            max-width: 70px;
-            max-height: 70px;
-
-        }
-
-        .pag2 {
-
-            width: 490px;
-            height: 70px;
-            list-style: none;
-            display: none;
-            border: 1px solid #CDCDCD;
-            margin-right: 1px;
-
-        }
-
-        .pag1 {
-            width: 490px;
-            height: 70px;
-            list-style: none;
-            border: 1px solid #CDCDCD;
-            margin-right: 1px;
-
-        }
-
-        .previous {
-            display: none;
-            height: 38px;
-            width: 19px;
-            background-image: url('../sources/imgs/btn_seta_direita_cinza_left.png');
-            border: none;
-            background-color: transparent;
-        }
-
-        .next {
-            height: 38px;
-            width: 19px;
-            background-image: url('../sources/imgs/btn_seta_direita_cinza_right.png');
-            border: none;
-            background-color: transparent;
-        }
-
-        .imgs {
-            width: 70px;
-            height: 70px;
-            text-align: center;
-        }
-
-        td {
-            padding: 2px;
-        }
-        
-
-        /* styles unrelated to zoom */
-
-        /* these styles are for the demo, but are not required for the plugin */
-        .zoom {
-            display: inline-block;
-            position: relative;
-        }
-
-        /* magnifying glass icon */
-        .zoom:after {
-            content: '';
-            display: block;
-            width: 33px;
-            height: 33px;
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-
-        .zoom img {
-            display: block;
-        }
-
-        .zoom img::selection {
-            background-color: transparent;
-        }
     </style>
-    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
-    <script src='../plugins/jquery-zoom/jquery.zoom.js'></script>
-    <script>
-        $(document).ready(function () {
-            $('#imgPrincipal').zoom();
-        });
-    </script>
 </head>
 <body>
 <div class="" style="">
@@ -207,10 +96,10 @@ $toString = "";
             <div class="main-image divcontainer" id="imgPrincipal">
 
                 <img
-                    src="../imagens/<?php echo strtolower($produtoController->retornaAlgoDoProdutoQueEuQueira("imagemprincipal", $_GET['id'])); ?>"
-                    alt="Placeholder"
-                    class="custom img-responsive img"
-                    style="">
+                        src="../imagens/<?php echo strtolower($produtoController->retornaAlgoDoProdutoQueEuQueira("imagemprincipal", $_GET['id'])); ?>"
+                        alt="Placeholder"
+                        class="custom img-responsive img"
+                        style="">
             </div>
 
         </div>
@@ -221,7 +110,7 @@ $toString = "";
         <div class="col-sm-6" style="padding-left: 50px">
 
 
-            <button type="button" class="btn btn-lg btn-info" ><a href="frmCadastroPergunta.php?id=<?php echo $_GET['id']; ?>" class="text-black text-bold">Tirar uma dúvida</a></button>
+            <button type="button" class="btn btn-lg btn-info btnAbreModalPergunta">Tirar uma dúvida</button>
 
             <h3>(TODO)Precauções(TODO)</h3>
 
@@ -239,9 +128,9 @@ $toString = "";
 
             <hr>
             <div class="container" style="text-align: justify">
-            <h2>Descrição</h2>
-            <p class="h3"><?php echo $produtoController->retornaAlgoDoProdutoQueEuQueira("descricao", $_GET['id']) ?></p>
-            <br><br>
+                <h2>Descrição</h2>
+                <p class="h3"><?php echo $produtoController->retornaAlgoDoProdutoQueEuQueira("descricao", $_GET['id']) ?></p>
+                <br><br>
             </div>
             <hr>
             <br><br>
@@ -249,56 +138,32 @@ $toString = "";
         </div>
     </div>
 </div>
-<!-- jQuery 2.1.4 -->
-<script src='../plugins/jQuery/jQuery-2.1.4.min.js'></script>
-<!-- Bootstrap 3.3.5 -->
-<script src='../bootstrap/js/bootstrap.min.js'></script>
-<!-- DataTables -->
-<script src='../plugins/datatables/jquery.dataTables.min.js'></script>
-<script src='../plugins/datatables/dataTables.bootstrap.min.js'></script>
-<!-- SlimScroll -->
-<script src='../plugins/slimScroll/jquery.slimscroll.min.js'></script>
-<!-- FastClick -->
-<script src='../plugins/fastclick/fastclick.min.js'></script>
-<!-- AdminLTE App -->
-<script src='../dist/js/app.min.js'></script>
-<!-- AdminLTE for demo purposes -->
-<script src='../dist/js/demo.js'></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="../test/simplegal.js"></script>
-<script src='../plugins/jquery-zoom/jquery.zoom.js'></script>
+<div id="modalPergunta" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Fazer uma pergunta</h4>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
 <script>
 
-
-    
-    $(document).ready(function () {
-        $('.thumbnails').simpleGal({
-            mainImage: '.custom'
-        });
-
-    });
-
-    $(document).ready(function () {
-
-        $('.previous').click(function () {
-            $('.pag1').show();
-            $('.pag2').hide();
-            $('.previous').hide();
-//            $('.previous1').hide();
-            $('.next').show();
-//            $('.thumbnails').css('height', '70px');
-        });
-
-
-        $('.next').click(function () {
-            $('.pag1').hide();
-            $('.pag2').show();
-            $('.next').hide();
-            $('.previous').show();
-//            $('.previous1').show();
-//            $('.thumbnails').css('height', '70px');
-        })
-
+    $('.btnAbreModalPergunta').click(function () {
+        $('#modalPergunta').modal();
+        $('.modal-body').load('frmCadastroPergunta.php?id=<?php echo $_GET['id']; ?>');
     });
 
 

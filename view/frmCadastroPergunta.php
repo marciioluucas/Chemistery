@@ -24,317 +24,77 @@ if ($_SESSION["tempo"] < time()) {
 } else {
     $_SESSION["tempo"] = time() + 600;
 }
-if(isset($_GET['id'])){
-?>
-<html>
-<head>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-    <!-- Icone-->
-    <link rel="shortcut icon" href="../favicon.ico"/>
-
-    <link rel="stylesheet" href="../plugins/select2/select2.css">
-    <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <style>
+if (isset($_GET['id'])) {
+    ?>
+    <html>
+    <head>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+             folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+        <!-- Icone-->
+        <link rel="shortcut icon" href="../favicon.ico"/>
 
 
-        body {
-            background-color: #ecf0f5;
-        }
+        <![endif]-->
 
-        .divcontainer {
-            height: 100px;
-            width: 100px;
-            display: flex;
-            display: -webkit-flex; /* Garante compatibilidade com navegador Safari. */
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #CDCDCD;
-            padding: 10px;
-            margin-left: 20px;
-            background-color: #fff;
-            margin-bottom: 20px;
-        }
+        <style>
 
-        .img {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            max-width: 100%;
-            /*padding: 10px;*/
-            /*border: 1px solid #ccc;*/
-            background: #fff;
-            /*box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);*/
-            height: auto;
-            width: auto;
-            max-height: 100px;
 
-            /*width: 374px;*/
-            /*height: 367px;*/
+            body {
+                background-color: #ecf0f5;
+            }
 
-        }
 
-        .onoffswitch {
-            position: relative;
-            width: 90px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-        }
+        </style>
+    </head>
+    <body>
+    <form action="../controller/PerguntaController.php?b=cadastrar" method="post" enctype="multipart/form-data"
+          id="frmCadastroPergunta">
+        <input type="text" name="b" id="b" value="cadastrar" hidden="hidden">
+        <input type="text" name="idUsuarioLogado" id="idUsuarioLogado" value="<?php echo $idUser ?>"
+               hidden="hidden">
+        <div class="box-body">
+            <div class="col-lg-12">
+                <div class=" row thumbnail">
+                    <img src="<?php echo $produtoController->retornaAlgoDoProdutoQueEuQueira("imagemprincipal", $_GET['id']) ?>"
+                         class="img-bordered col-lg-3">
+                    <div class="caption col-lg-9">
+                        <h1><?php echo $produtoController->retornaAlgoDoProdutoQueEuQueira("nome", $_GET['id']) ?></h1>
+                        <hr>
 
-        .onoffswitch-checkbox {
-            display: none;
-        }
-
-        .onoffswitch-label {
-            display: block;
-            overflow: hidden;
-            cursor: pointer;
-            height: 30px;
-            padding: 0;
-            line-height: 30px;
-            border: 2px solid #999999;
-            border-radius: 30px;
-            background-color: #EEEEEE;
-            transition: background-color 0.3s ease-in;
-        }
-
-        .onoffswitch-label:before {
-            content: "";
-            display: block;
-            width: 30px;
-            margin: 0px;
-            background: #FFFFFF;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 58px;
-            border: 2px solid #999999;
-            border-radius: 30px;
-            transition: all 0.3s ease-in 0s;
-        }
-
-        .check {
-            opacity: 0.5;
-            color: violet;
-
-        }
-
-        .onoffswitch-checkbox:checked + .onoffswitch-label {
-            background-color: #3588CC;
-        }
-
-        .onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
-            border-color: #3588CC;
-        }
-
-        .onoffswitch-checkbox:checked + .onoffswitch-label:before {
-            right: 0px;
-        }
-
-        .select2-selection {
-            border-color: #d2d6de !important;
-        }
-
-        .select2-selection--single {
-            border-color: #d2d6de !important;
-        }
-
-    </style>
-</head>
-<body>
-<!-- Content Header (Page header) -->
-
-<!--    <div id="rootwizard">-->
-<!--        <div class="navbar">-->
-<!--            <div class="navbar-inner">-->
-<!--                <div class="container">-->
-<!--                    <ul class="nav nav-pills">-->
-<!--                        <li><a href="#tab1" data-toggle="tab" role="presentation">Primeiro passo</a></li>-->
-<!--                        <li><a href="#tab2" data-toggle="tab" role="presentation">Segundo passo</a></li>-->
-<!--                        <li><a href="#tab3" data-toggle="tab" role="presentation">Terceiro passo</a></li>-->
-<!---->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="tab-content">-->
-<!--            <div class="tab-pane" id="tab1">-->
-<!--                1-->
-<!--            </div>-->
-<!--            <div class="tab-pane" id="tab2">-->
-<!--                2-->
-<!--            </div>-->
-<!--            <div class="tab-pane" id="tab3">-->
-
-<!--                <h3>Cadastrando produto</h3>-->
-<form action="../controller/PerguntaController.php?b=cadastrar" method="post" enctype="multipart/form-data"
-      id="frmCadastroPergunta">
-    <input type="text" name="b" id="b" value="cadastrar" hidden="hidden">
-    <input type="text" name="idUsuarioLogado" id="idUsuarioLogado" value="<?php echo $idUser ?>"
-           hidden="hidden">
-    <div class="box-body">
-        <div class="col-lg-12">
-            <div class=" row thumbnail">
-                <img src="<?php echo $produtoController->retornaAlgoDoProdutoQueEuQueira("imagemprincipal",$_GET['id']) ?>" class="img-bordered col-lg-3">
-                <div class="caption col-lg-9">
-                    <h1><?php echo $produtoController->retornaAlgoDoProdutoQueEuQueira("nome",$_GET['id']) ?></h1>
-                    <hr>
-
-                    <form action="../controller/PerguntaController.php?q=cadastrar" method="post">
-                        <input type="text" hidden="hidden" name="perguntaProduto" value="<?php echo $_GET['id'];?>">
-                        <input type="text" hidden="hidden" name="perguntaIdUsuario" value="<?php echo $_SESSION['idUsuario'];?>">
-                        <label for="pergunta">Pergunta</label>
-                        <textarea class="form-control" id="pergunta" name="perguntaDescricao" rows="9"></textarea>
-                        <div class="col-lg-12 text-right" style="padding-top: 10px;">
-                            <a onclick="limparcampos();" class="btn btn-danger btn-flat">Limpar campos</a>
-                            <input type="submit" class="btn btn-primary btn-flat" name="enviar" id="enviar" value="Cadastrar">
-                        </div>
-                    </form>
-
+                        <form action="../controller/PerguntaController.php?q=cadastrar" method="post">
+                            <input type="text" hidden="hidden" name="perguntaProduto"
+                                   value="<?php echo $_GET['id']; ?>"/>
+                            <input type="text" hidden="hidden" name="perguntaIdUsuario"
+                                   value="<?php echo $_SESSION['idUsuario']; ?>"/>
+                            <label for="pergunta">Pergunta</label>
+                            <textarea class="form-control" id="pergunta" name="perguntaDescricao" rows="9"></textarea>
+                            <div class="col-lg-12 text-right" style="padding-top: 10px;">
+                                <a onclick="limparcampos();" class="btn btn-danger btn-flat">Limpar campos</a>
+                                <input type="submit" class="btn btn-primary btn-flat" name="enviar" id="enviar"
+                                       value="Cadastrar">
+                            </div>
+                        </form>
+                    </div>
                 </div>
-
-
             </div>
         </div>
+    </form>
+    <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
 
-
-    </div>
-
-
-    <!-- /.box-body -->
-</form>
-
-
-<!---->
-<!--        </div>-->
-<!--    </div>-->
-<!--   -->
-<!---->
-<!--</div>-->
-<!-- jQuery 2.1.4 -->
-<script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
-<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-<!-- Bootstrap 3.3.5 -->
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-<!-- FastClick -->
-<script src="../plugins/fastclick/fastclick.min.js"></script>
-
-<script src="../plugins/select2/select2.full.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../dist/js/app.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../dist/js/demo.js"></script>
-
-<script src="js/jquery.wallform.min.js"></script>
-
-<script src="js/jquery.onofff.min.js"></script>
-
-<script src="js/require.min.js"></script>
-
-<script src="../plugins/input-mask/maskmoney.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-jcrop/0.9.12/js/jquery.Jcrop.min.js"></script>
-<script src="../plugins/input-mask/jquery.inputmask.js"></script>
-<script src="../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-<script src="../plugins/input-mask/jquery.inputmask.extensions.js"></script>
-<script src="../plugins/input-mask/maskmoney.js"></script>
-
-<script>
-
-
-    $(document).ready(function (e) {
-        $(".img-check").click(function () {
-            $(this).toggleClass("check");
-        });
-    });
-
-
-    $("#produtoimagem").change(function () {
-        readURL(this);
-    });
-
-    function readURL2(input) {
-        if (input.files && input.files[0]) {
-            var reader1 = new FileReader();
-            reader1.onload = function (e) {
-                $('#preview-da-imagemPrincipal').attr('src', e.target.result);
-            };
-            reader1.readAsDataURL(input.files[0]);
-
-        }
-    }
-
-    $("#produtoImagemPrincipal").change(function () {
-        readURL2(this);
-    });
-
-
-    function limparcampos() {
-        $('#frmCadastroProdutos').each(function () {
-            this.reset();
-        });
-    }
-
-    $(function () {
-        //Initialize Select2 Elements
-        $(".select2").select2();
-    });
-
-    $("#produtoCategoria2").change(function () {
-        var parametroHttp = this.value;
-        $('#parametrosAdicionais').load("../controller/ProdutoController.php?produtoCategoria2=" + parametroHttp);
-    });
-
-</script>
-<script language="Javascript">
-    $(function () {
-        $('#ImagemCrop').Jcrop({
-            aspectRatio: 1,
-            onSelect: UpdateCrop,
-            setSelect: [0, 0, 200, 200]
-        });
-
-    });
-    function UpdateCrop(c) {
-        $('#x').val(c.x);
-        $('#y').val(c.y);
-        $('#w').val(c.w);
-        $('#h').val(c.h);
-        $("#altura").html("Altura:" + c.h);
-        $("#largura").html("Largura:" + c.w);
-    }
-
-    $(".atributo-data").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
-
-    $(".atributo-numero").inputmask("(99) 9999-9999", {"placeholder": "(xx) xxxx-xxxx"});
-
-    $(".atributo-dinheiro").maskMoney({
-        prefix: 'R$ ',
-        allowNegative: true,
-        thousands: '.',
-        decimal: ',',
-        affixesStay: false
-    })
-</script>
-
-</body>
-</html>
-<?php }else{echo "Erro, produto não informado.";}?>
+    </body>
+    </html>
+<?php } else {
+    echo "Erro, produto não informado.";
+} ?>

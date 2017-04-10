@@ -51,7 +51,7 @@ $usuarioController = new UsuarioController();
                     <ul class="nav navbar-nav">
                         <li><a href="#" id="home">Home <span class="sr-only"></span></a></li>
                         <li><a href="#" id="produtos">Produtos</a></li>
-                        <li><a href="#" id="fazer-pergunta">Fazer uma pergunta</a></li>
+
                         <li><a href="#" id="perguntas">Perguntas feitas</a></li>
 
                     </ul>
@@ -164,9 +164,6 @@ $usuarioController = new UsuarioController();
         $('#body').load("perguntas.php")
     });
 
-    $('#fazer-pergunta').click(function(){
-        $('#body').load("frmCadastroPergunta.php")
-    });
 
     $('#home').click(function(){
         $('#body').load("dashComum.php");

@@ -255,7 +255,7 @@ class Usuario extends Banco
     function excluirUsuario($id)
     {
         try {
-            return $this->delete("usuario", "ativado = 0", "id=$id");
+            return $this->delete("usuario", "ativado = 0, dataexclusao=". date('Y-m-d'), "id=$id");
         } catch (Exception $e) {
             echo "Exceção capturada: " . $e->getMessage();
             return null;

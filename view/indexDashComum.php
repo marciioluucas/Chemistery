@@ -163,6 +163,7 @@ $usuarioController = new UsuarioController();
     $('#perguntas').click(function(){
         $('#body').load("perguntas.php")
     });
+
     $('#fazer-pergunta').click(function(){
         $('#body').load("frmCadastroPergunta.php")
     });
@@ -171,8 +172,8 @@ $usuarioController = new UsuarioController();
         $('#body').load("dashComum.php");
     });
 
-    $(function(){
-        $('#body').load("dashComum.php");
+    $('#produtos').click(function(){
+        $('#body').load("../controller/ProdutoController.php?d=listagem");
     });
 
     $("#perfil").click(function(){

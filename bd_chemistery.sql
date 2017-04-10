@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 10-Abr-2017 às 18:06
--- Versão do servidor: 10.1.19-MariaDB
+-- Generation Time: 10-Abr-2017 Ã s 22:23
+-- VersÃ£o do servidor: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `consu734_chem_test`
+-- Database: `bd_chemistery`
 --
 
 -- --------------------------------------------------------
@@ -56,7 +56,8 @@ INSERT INTO `atributo` (`id`, `categoria_id`, `nome`, `tipo`, `ativado`) VALUES
   (36, 10, 'lote', 'numero', 0),
   (37, 10, 'validade', 'data', 0),
   (38, 11, 'asdas', 'data', 1),
-  (39, 11, 'dasdasd', 'data', 1);
+  (39, 11, 'dasdasd', 'data', 1),
+  (40, 12, 'teste', 'texto', 1);
 
 -- --------------------------------------------------------
 
@@ -78,8 +79,9 @@ CREATE TABLE `categoria` (
 --
 
 INSERT INTO `categoria` (`id`, `nome`, `datacriacao`, `dataexclusao`, `ativado`, `dataultimaalteracao`) VALUES
-  (10, 'Alimentício', '2017-02-24', NULL, 1, NULL),
-  (11, 'dsadas', '2017-03-08', '2017-03-08', 0, NULL);
+  (10, 'AlimentÃ­cio', '2017-02-24', '2017-04-10', 0, NULL),
+  (11, 'dsadas', '2017-03-08', '2017-03-08', 0, NULL),
+  (12, 'teste1', '2017-04-10', NULL, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -133,7 +135,8 @@ CREATE TABLE `pergunta` (
 --
 
 INSERT INTO `pergunta` (`id`, `produto_id`, `usuario_id`, `descricao`, `status`, `datahora`, `ativado`) VALUES
-  (1, 301, 1, 'Qual é a cor do céu?', 'aberta', '2012-02-26 09:34:00', 1);
+  (1, 301, 1, 'Qual Ã© a cor do cÃ©u?', 'aberta', '2012-02-26 09:34:00', 1),
+  (2, 305, 12, 'isso ÃƒÂ©  uma melancia?', '', '2017-04-10 19:02:23', 1);
 
 -- --------------------------------------------------------
 
@@ -146,24 +149,27 @@ CREATE TABLE `produto` (
   `nome` varchar(148) NOT NULL,
   `descricao` text NOT NULL,
   `preco` float(10,2) NOT NULL DEFAULT '0.00',
-  `toxidade` int(11) NOT NULL DEFAULT '0',
   `ativado` tinyint(1) NOT NULL DEFAULT '1',
   `imagemprincipal` varchar(100) DEFAULT '../imagens/noimg.png',
   `categoria_id` int(11) NOT NULL,
   `datacriacao` date DEFAULT NULL,
   `dataexclusao` date DEFAULT NULL,
   `dataultimaalteracao` date DEFAULT NULL,
-  `usuario_id` int(11) NOT NULL
+  `usuario_id` int(11) NOT NULL,
+  `periculosidade` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `produto`
 --
 
-INSERT INTO `produto` (`id`, `nome`, `descricao`, `preco`, `toxidade`, `ativado`, `imagemprincipal`, `categoria_id`, `datacriacao`, `dataexclusao`, `dataultimaalteracao`, `usuario_id`) VALUES
-  (301, 'Arroz', 'dasuidhasuiasdh', 0.00, 0, 1, '../imagens/mupload148795597758b068090718a.jpg', 10, '2017-02-24', NULL, NULL, 1),
-  (302, 'Colosso FC 30', 'Colosso PulverizaÃ§Ã£o Ã© um produto eficaz no combate de carrapatos, bernes, moscas, sarnas e piolhos.\r\n 	DETALHES DO PRODUTO	\r\n\r\nFÃ³rmula:\r\nCada 100 ml contÃ©m:\r\nCipermetrina......................................................... 15,0 g\r\nClorpirifÃ³s............................................................. 25,0 g\r\nCitronelal .............................................................. 1,0 g\r\nVeÃ­culo q.s.p. .................................................... 100,0 ml\r\n\r\nIndicaÃ§Ãµes:\r\nColosso PulverizaÃ§Ã£o Ã© um produto indicado para uso em pulverizaÃ§Ãµes ou banho de imersÃ£o, no combate aos seguintes ectoparasitas que acometem:\r\n\r\nBovinos:\r\nCarrapatos dos gÃªneros Boophilus microplus - adultos e imaturos.\r\nBernes, ou larvas de Dermatobia hominis.\r\nMoscas dos gÃªneros Stomoxys calcitrans, Musca domestica, Haematobia irritans - adultos. \r\nDermatobia hominis - adultos e larva.\r\nPiolhos dos gÃªneros Linognathus vituli, Haematopinus eurysternus, Damalina bovis, Solenopotes capillatus - adultos.\r\n\r\nSuÃ­nos:\r\nSarna do gÃªnero Sarcoptes scabiei var. suis - adultos.\r\nMoscas dos gÃªneros Stomoxys calcitrans, Musca domestica, Haematobia irritans - adultos. \r\nDermatobia hominis - adultos e larva.\r\n\r\nAviÃ¡rios: \r\nCascudinho Alphitobius diaperinus - adultos. \r\nPiolhos dos gÃªneros Columbicola spp, Cuclotogaster spp, Goniocotes spp, Goniodes spp, Holomenopon spp, Lipeurus spp, Menacanthus spp, Menopon spp - adultos.', 0.00, 0, 1, '', 0, '2017-02-28', NULL, NULL, 11),
-  (303, 'Pimenta de fogo', 'Teste', 0.00, 0, 1, '../imagens/mupload148833685658b637d83ab3b.jpg', 0, '2017-03-01', NULL, NULL, 10);
+INSERT INTO `produto` (`id`, `nome`, `descricao`, `preco`, `ativado`, `imagemprincipal`, `categoria_id`, `datacriacao`, `dataexclusao`, `dataultimaalteracao`, `usuario_id`, `periculosidade`) VALUES
+  (301, 'Arroz', 'dasuidhasuiasdh', 0.00, 1, '../imagens/mupload148795597758b068090718a.jpg', 10, '2017-02-24', NULL, NULL, 1, 0),
+  (302, 'Colosso FC 30', 'Colosso PulverizaÃƒÂ§ÃƒÂ£o ÃƒÂ© um produto eficaz no combate de carrapatos, bernes, moscas, sarnas e piolhos.\r\n 	DETALHES DO PRODUTO	\r\n\r\nFÃƒÂ³rmula:\r\nCada 100 ml contÃƒÂ©m:\r\nCipermetrina......................................................... 15,0 g\r\nClorpirifÃƒÂ³s............................................................. 25,0 g\r\nCitronelal .............................................................. 1,0 g\r\nVeÃƒÂ­culo q.s.p. .................................................... 100,0 ml\r\n\r\nIndicaÃƒÂ§ÃƒÂµes:\r\nColosso PulverizaÃƒÂ§ÃƒÂ£o ÃƒÂ© um produto indicado para uso em pulverizaÃƒÂ§ÃƒÂµes ou banho de imersÃƒÂ£o, no combate aos seguintes ectoparasitas que acometem:\r\n\r\nBovinos:\r\nCarrapatos dos gÃƒÂªneros Boophilus microplus - adultos e imaturos.\r\nBernes, ou larvas de Dermatobia hominis.\r\nMoscas dos gÃƒÂªneros Stomoxys calcitrans, Musca domestica, Haematobia irritans - adultos. \r\nDermatobia hominis - adultos e larva.\r\nPiolhos dos gÃƒÂªneros Linognathus vituli, Haematopinus eurysternus, Damalina bovis, Solenopotes capillatus - adultos.\r\n\r\nSuÃƒÂ­nos:\r\nSarna do gÃƒÂªnero Sarcoptes scabiei var. suis - adultos.\r\nMoscas dos gÃƒÂªneros Stomoxys calcitrans, Musca domestica, Haematobia irritans - adultos. \r\nDermatobia hominis - adultos e larva.\r\n\r\nAviÃƒÂ¡rios: \r\nCascudinho Alphitobius diaperinus - adultos. \r\nPiolhos dos gÃƒÂªneros Columbicola spp, Cuclotogaster spp, Goniocotes spp, Goniodes spp, Holomenopon spp, Lipeurus spp, Menacanthus spp, Menopon spp - adultos.', 0.00, 1, '', 0, '2017-02-28', NULL, NULL, 11, 0),
+  (303, 'Pimenta de fogo', 'Teste', 0.00, 1, '../imagens/mupload148833685658b637d83ab3b.jpg', 0, '2017-03-01', NULL, NULL, 10, 0),
+  (304, 'TESTE', '<p>teste</p>', 0.00, 1, '../imagens/mupload149184082858ebaf3c43ac9.jpg', 10, '2017-04-10', NULL, NULL, 1, 0),
+  (305, 'Toxics', '<p>teste</p>', 0.00, 1, '../imagens/mupload149184087958ebaf6f8e097.jpg', 12, '2017-04-10', NULL, NULL, 1, 0),
+  (306, 'TestePer', '<p>periculosso</p>', 0.00, 1, '', 12, '2017-04-10', NULL, NULL, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -210,9 +216,9 @@ INSERT INTO `resposta` (`id`, `pergunta_id`, `descricao`, `datahora`, `usuario_i
   (26, 1, 'Pra que fb?', '2017-03-02 15:44:38', 1),
   (27, 1, 'temos Chemisterios', '2017-03-02 15:44:42', 1),
   (28, 1, 'Que misterioso', '2017-03-02 15:53:57', 9),
-  (29, 1, 'TchÃŠ', '2017-03-02 15:54:00', 9),
-  (30, 1, 'vamo fazer uma versÃ£o pro sul desse sistema', '2017-03-02 15:54:13', 9),
-  (31, 1, 'TchÃª misterios', '2017-03-02 15:54:19', 9),
+  (29, 1, 'TchÃƒÅ ', '2017-03-02 15:54:00', 9),
+  (30, 1, 'vamo fazer uma versÃƒÂ£o pro sul desse sistema', '2017-03-02 15:54:13', 9),
+  (31, 1, 'TchÃƒÂª misterios', '2017-03-02 15:54:19', 9),
   (32, 1, 'PSOKPODKAPSO', '2017-03-02 16:06:47', 1),
   (33, 1, 'Ola mundo', '2017-03-02 19:42:58', 1),
   (34, 1, 'c', '2017-03-02 19:47:04', 1),
@@ -221,7 +227,7 @@ INSERT INTO `resposta` (`id`, `pergunta_id`, `descricao`, `datahora`, `usuario_i
   (37, 1, 'dasdasdsad', '2017-03-08 16:45:01', 1),
   (38, 1, 'wqeqweqwe', '2017-03-08 16:45:43', 1),
   (39, 1, 'AZULLL ', '2017-03-14 01:07:15', 1),
-  (40, 1, 'NÃ£o nÃ£o sei', '2017-03-14 01:10:36', 10);
+  (40, 1, 'NÃƒÂ£o nÃƒÂ£o sei', '2017-03-14 01:10:36', 10);
 
 -- --------------------------------------------------------
 
@@ -277,11 +283,12 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `nome`, `email`, `login`, `senha`, `nivel`, `ativado`, `imagem`, `datacriacao`, `dataexclusao`, `dataultimaalteracao`, `logado`) VALUES
-  (1, 'Admin', 'admin@chemistery.com', 'admin', 'admin', 3, 1, '../imagens/default-user-img.jpg', '2017-02-16', NULL, NULL, 0),
+  (1, 'Admin', 'admin@chemistery.com', 'admin', 'admin', 3, 1, '../imagens/default-user-img.jpg', '2017-02-16', NULL, NULL, 1),
   (9, 'Juanes Adriano', 'juaneshtk50@gmail.com', 'juca', 'juca', 3, 1, '', NULL, NULL, NULL, 0),
   (10, 'Rodrigo Elias', 'rodrigoefr@gmail.com', 'rodrigo', 'rodrigo', 2, 1, '', '2017-02-25', NULL, NULL, 0),
   (11, 'Cinthia Falicio', 'cinthia.felicio@ifgoiano.edu.br', 'cinthia', 'cinthia', 2, 1, '', '2017-02-28', NULL, NULL, 0),
-  (12, 'usero', 'usero@user.com', 'usero', 'usero', 1, 1, '../imagens/mupload148832677758b61079c1a1f.jpg', '2017-03-01', NULL, NULL, 0);
+  (12, 'usero', 'usero@user.com', 'usero', 'usero', 1, 1, '../imagens/mupload148832677758b61079c1a1f.jpg', '2017-03-01', NULL, NULL, 0),
+  (13, 'usero', 'usero@usero.com', 'usero', 'usero', 1, 1, '../imagens/mupload149184079858ebaf1e9c26c.jpg', '2017-04-10', NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -296,6 +303,14 @@ CREATE TABLE `valor_atributo` (
   `atributo_id` int(11) NOT NULL,
   `atributo_categoria_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `valor_atributo`
+--
+
+INSERT INTO `valor_atributo` (`id`, `valor`, `produto_id`, `atributo_id`, `atributo_categoria_id`) VALUES
+  (1, 'teste', 305, 40, 12),
+  (2, 'prerigo', 306, 40, 12);
 
 --
 -- Indexes for dumped tables
@@ -397,12 +412,12 @@ ALTER TABLE `arquivo`
 -- AUTO_INCREMENT for table `atributo`
 --
 ALTER TABLE `atributo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT for table `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `cor`
 --
@@ -417,12 +432,12 @@ ALTER TABLE `imagem`
 -- AUTO_INCREMENT for table `pergunta`
 --
 ALTER TABLE `pergunta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=304;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=307;
 --
 -- AUTO_INCREMENT for table `resposta`
 --
@@ -442,12 +457,12 @@ ALTER TABLE `uploads`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `valor_atributo`
 --
 ALTER TABLE `valor_atributo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Constraints for dumped tables
 --

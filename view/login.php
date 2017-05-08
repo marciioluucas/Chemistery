@@ -5,7 +5,7 @@ $files1 = scandir($dir);
 $bg = $files1;
 $i = rand(2, count($bg) - 1);
 $selectedBg = "$bg[$i]";
-if(isset($_GET['tela']) == "UsuarioNaoLogado") {
+if (isset($_GET['tela']) == "UsuarioNaoLogado") {
     echo "<script>alert('Você foi redirecionado pois não está logado!')</script>";
 }
 ?>
@@ -62,9 +62,7 @@ if(isset($_GET['tela']) == "UsuarioNaoLogado") {
             height: auto;
             top: 0;
 
-
         }
-
 
         .login-box {
             display: none;
@@ -112,54 +110,106 @@ if(isset($_GET['tela']) == "UsuarioNaoLogado") {
                     </div>
                 </div><!-- /.col -->
                 <div class="col-xs-4" style="margin-top: 60px">
-                    <input type="submit" value="Entrar!" class="btn btn-primary btn-block btn-flat bg-purple" style="border: #464382;" name="entrar">
+                    <input type="submit" value="Entrar!" class="btn btn-primary btn-block btn-flat bg-purple"
+                           style="border: #464382;" name="entrar">
                 </div><!-- /.col -->
             </div>
         </form>
 
-<!--        <div class="social-auth-links text-center">-->
-<!--            <p>- OU -</p>-->
-<!--            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat" disabled=""><i-->
-<!--                    class="fa fa-facebook"></i> Entre usando seu Facebook</a>-->
-<!--            <a href="#" class="btn btn-block btn-social btn-google btn-flat" disabled=""><i-->
-<!--                    class="fa fa-google-plus"></i> Entre usando seu Google+</a>-->
-<!--        </div><!-- /.social-auth-links -->
+        <!--        <div class="social-auth-links text-center">-->
+        <!--            <p>- OU -</p>-->
+        <!--            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat" disabled=""><i-->
+        <!--                    class="fa fa-facebook"></i> Entre usando seu Facebook</a>-->
+        <!--            <a href="#" class="btn btn-block btn-social btn-google btn-flat" disabled=""><i-->
+        <!--                    class="fa fa-google-plus"></i> Entre usando seu Google+</a>-->
+        <!--        </div><!-- /.social-auth-links -->
 
         <a href="#" id="linkEsqueciSenha">Esqueci minha senha</a><br>
+        <a href="#" id="linkCadastrar">Cadastrar-se</a><br>
 
     </div><!-- /.login-box-body -->
 </div>
-    <div class="login-box" id="esqueciSenha">
+<div class="login-box" id="esqueciSenha">
 
-        <div class="login-box-body" >
-            <div class="login-logo" style="margin-bottom: 74px">
-                <a href="#">Che<b>mistery</b></a>
-            </div><!-- /.login-logo -->
-            <p class="login-box-msg">Enviaremos sua senha para o email cadastrado</p>
-            <form action="../controller/UsuarioController.php" method="post">
-                <div class="form-group has-feedback">
-                    <input type="text" class="form-control" placeholder="E-mail" name="usuarioLogin" id="usuarioEmailRestauracao">
-                    <input style="display: none;" type="text" name="tela" value="esqueciSenha">
+    <div class="login-box-body">
+        <div class="login-logo" style="margin-bottom: 74px">
+            <a href="#">Che<b>mistery</b></a>
+        </div><!-- /.login-logo -->
+        <p class="login-box-msg">Enviaremos sua senha para o email cadastrado</p>
+        <form action="../controller/UsuarioController.php" method="post">
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="E-mail" name="usuarioLogin"
+                       id="usuarioEmailRestauracao">
+                <input style="display: none;" type="text" name="tela" value="esqueciSenha">
 
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 text-right" style="margin-top: 70px; margin-bottom: 10px">
-                        <input type="submit" value="Restaurar!" class="btn btn-primary btn-block btn-flat bg-purple" style="border: #464382;" name="restaurar">
-                        <a href="#" id="linkVoltar" class="btn btn-primary btn-block btn-flat" style="" name="restaurar">Voltar</a>
-                    </div><!-- /.col -->
-                </div>
-            </form>
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-right" style="margin-top: 70px; margin-bottom: 10px">
+                    <input type="submit" value="Restaurar!" class="btn btn-primary btn-block btn-flat bg-purple"
+                           style="border: #464382;" name="restaurar">
+                    <a href="#" id="linkVoltar" class="btn btn-primary btn-block btn-flat" style="" name="restaurar">Voltar</a>
+                </div><!-- /.col -->
+            </div>
 
-            <!--        <div class="social-auth-links text-center">-->
-            <!--            <p>- OU -</p>-->
-            <!--            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat" disabled=""><i-->
-            <!--                    class="fa fa-facebook"></i> Entre usando seu Facebook</a>-->
-            <!--            <a href="#" class="btn btn-block btn-social btn-google btn-flat" disabled=""><i-->
-            <!--                    class="fa fa-google-plus"></i> Entre usando seu Google+</a>-->
-            <!--        </div><!-- /.social-auth-links -->
+        </form>
 
-        </div><!-- /.login-box-body -->
+        <!--        <div class="social-auth-links text-center">-->
+        <!--            <p>- OU -</p>-->
+        <!--            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat" disabled=""><i-->
+        <!--                    class="fa fa-facebook"></i> Entre usando seu Facebook</a>-->
+        <!--            <a href="#" class="btn btn-block btn-social btn-google btn-flat" disabled=""><i-->
+        <!--                    class="fa fa-google-plus"></i> Entre usando seu Google+</a>-->
+        <!--        </div><!-- /.social-auth-links -->
+
+    </div><!-- /.login-box-body -->
+</div>
+
+<div class="login-box" id="cadastrar">
+
+    <div class="login-box-body">
+        <div class="login-logo" style="margin-bottom: 74px">
+            <a href="#">Che<b>mistery</b></a>
+        </div><!-- /.login-logo -->
+        <p class="login-box-msg">Criando uma conta!</p>
+        <form action="../controller/UsuarioController.php" method="post">
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="Nome" name="usuarioNome" id="usuarioNome">
+                <input style="display: none;" type="text" name="tela" value="cadastroUsuarioComum">
+                <input style="display: none;" type="text" name="b" value="cadastrar">
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="E-mail" name="usuarioEmail" id="usuarioEmail">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="Login" name="usuarioLogin" id="usuarioLogin">
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+
+
+            <div class="form-group has-feedback">
+                <input type="password" class="form-control" placeholder="Senha" name="usuarioSenha">
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+
+            <div class="form-group has-feedback">
+                <input type="submit" value="Cadastrar!" class="btn btn-primary btn-block btn-flat bg-purple"
+                       style="border: #464382;">
+            </div><!-- /.col -->
+        </form>
+
+        <!--        <div class="social-auth-links text-center">-->
+        <!--            <p>- OU -</p>-->
+        <!--            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat" disabled=""><i-->
+        <!--                    class="fa fa-facebook"></i> Entre usando seu Facebook</a>-->
+        <!--            <a href="#" class="btn btn-block btn-social btn-google btn-flat" disabled=""><i-->
+        <!--                    class="fa fa-google-plus"></i> Entre usando seu Google+</a>-->
+        <!--        </div><!-- /.social-auth-links -->
+
+    </div><!-- /.login-box-body -->
 </div>
 <!-- jQuery 2.1.4 -->
 <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
@@ -169,9 +219,9 @@ if(isset($_GET['tela']) == "UsuarioNaoLogado") {
 <script src="../plugins/iCheck/icheck.min.js"></script>
 <script>
 
-    
-    $(document).ready(function(){
-       $("#usuarioLogin").focus();
+
+    $(document).ready(function () {
+        $("#usuarioLogin").focus();
     });
     $(function () {
         $('input').iCheck({
@@ -182,13 +232,19 @@ if(isset($_GET['tela']) == "UsuarioNaoLogado") {
     });
 
 
-    $("#linkEsqueciSenha").click(function(){
+    $("#linkCadastrar").click(function () {
+        $("#login").hide();
+        $("#cadastrar").fadeIn('fast');
+//        $("#usuarioEmailRestauracao").focus();
+    });
+
+    $("#linkEsqueciSenha").click(function () {
         $("#login").hide();
         $("#esqueciSenha").fadeIn('fast');
         $("#usuarioEmailRestauracao").focus();
-    })
+    });
 
-    $("#linkVoltar").click(function(){
+    $("#linkVoltar").click(function () {
         $("#esqueciSenha").hide();
         $("#login").fadeIn('fast');
     })

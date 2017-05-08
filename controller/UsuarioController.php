@@ -40,21 +40,21 @@ class UsuarioController
             $this->excluir();
         }
 
-        if(isset($_GET['p']) == "deslogar"){
+        if (isset($_GET['p']) == "deslogar") {
             $this->usuario->deslogar();
         }
 
         if (isset($_POST["entrar"]) && $_POST["entrar"] == "Entrar!") {
             $logar = $this->usuario->logar($_POST["usuarioLogin"], $_POST['usuarioSenha'], $_POST['tela']);
-            if (isset($logar) && $_POST['tela'] == "login"){
+            if (isset($logar) && $_POST['tela'] == "login") {
 //                echo "<script>alert('$logar')</script>";
                 echo "<script>window.location.replace('../view/index.php');</script>";
             }
-            if (isset($logar) && $_POST['tela'] == "loginC"){
+            if (isset($logar) && $_POST['tela'] == "loginC") {
 //                echo "<script>alert('$logar')</script>";
                 echo "<script>window.location.replace('../view/loginUsuarioComum.php');</script>";
             }
-            if (isset($logar) && $_POST['tela'] == "lockscreen"){
+            if (isset($logar) && $_POST['tela'] == "lockscreen") {
 //                echo "<script>alert('$logar')</script>";
                 echo "<script>window.location.replace('../view/lockscreen.php');</script>";
             }
@@ -67,15 +67,25 @@ class UsuarioController
         $this->usuario->setEmail($_POST['usuarioEmail']);
         $this->usuario->setLogin($_POST['usuarioLogin']);
         $this->usuario->setSenha($_POST['usuarioSenha']);
-        $this->usuario->setNivel($_POST['usuarioNivel']);
-        $this->imagem->setArquivoNome($_FILES['usuarioImagem']['name']);
-        $this->imagem->setArquivoErro($_FILES['usuarioImagem']['error']);
-        $this->imagem->setArquivoTemporarioNome($_FILES['usuarioImagem']['tmp_name']);
-        $this->imagem->setArquivoExtensao($_FILES['usuarioImagem']['type']);
-        $this->usuario->setImagem($this->imagem->upload());
-        echo ($this->usuario->cadastrarUsuario())? "<script>alert('Cadastro de usuario efetuado com sucesso!')</script> "
+        if (isset($_POST['usuarioNivel'])) {
+            $this->usuario->setNivel($_POST['usuarioNivel']);
+        }
+        if (isset($_FILES['usuarioImagem'])) {
+            $this->imagem->setArquivoNome($_FILES['usuarioImagem']['name']);
+            $this->imagem->setArquivoErro($_FILES['usuarioImagem']['error']);
+            $this->imagem->setArquivoTemporarioNome($_FILES['usuarioImagem']['tmp_name']);
+            $this->imagem->setArquivoExtensao($_FILES['usuarioImagem']['type']);
+            $this->usuario->setImagem($this->imagem->upload());
+
+        }
+        echo ($this->usuario->cadastrarUsuario()) ? "<script>alert('Cadastro de usuario efetuado com sucesso!')</script> "
             : "<script>alert('Cadastro de usuario não efetuado!')</script>";
-        echo "<script>window.location.replace('../view/frmCadastroUsuario.php');</script>";
+        if ($_POST['tela'] != "cadastroUsuarioComum") {
+            echo "<script>window.location.replace('../view/frmCadastroUsuario.php');</script>";
+        }
+        if ($_POST['tela'] == "cadastroUsuarioComum") {
+            echo "<script>window.location.replace('../view/login.php');</script>";
+        }
     }
 
     private function alterar()
@@ -87,7 +97,7 @@ class UsuarioController
         $this->usuario->setLogin($_POST['usuarioLogin1']);
         $this->usuario->setSenha($_POST['usuarioSenha1']);
         $this->usuario->setNivel($_POST['usuarioNivel1']);
-        if(isset($_FILES['usuarioImagem1']['name'])) {
+        if (isset($_FILES['usuarioImagem1']['name'])) {
             $this->imagem->setArquivoNome($_FILES['usuarioImagem1']['name']);
             $this->imagem->setArquivoErro($_FILES['usuarioImagem1']['error']);
             $this->imagem->setArquivoTemporarioNome($_FILES['usuarioImagem1']['tmp_name']);
@@ -95,7 +105,7 @@ class UsuarioController
             $this->usuario->setImagem($this->imagem->upload());
         }
         echo $this->usuario->alterarUsuario() ? "<script>alert('Alteração de usuario feita com sucesso!'); window.location.replace('UsuarioController.php?q=listar');</script>" :
-        "<script>alert('Erro na alteração de produto'); window.location.replace('UsuarioController.php?q=listar');</script>";
+            "<script>alert('Erro na alteração de produto'); window.location.replace('UsuarioController.php?q=listar');</script>";
 
     }
 
@@ -109,25 +119,30 @@ class UsuarioController
         $this->usuario->excluirUsuario($_GET['id']);
         echo "<script>window.location.replace('UsuarioController.php');</script>";
     }
-    
-    public function retornaNumUsuarios(){
-        return $this->usuario->retornaNumRegistros("usuario","logado=1");
+
+    public function retornaNumUsuarios()
+    {
+        return $this->usuario->retornaNumRegistros("usuario", "logado=1");
     }
 
-    public function retornaNumUsuariosComDesativados(){
-        return $this->usuario->retornaNumRegistros("usuario","1=1");
+    public function retornaNumUsuariosComDesativados()
+    {
+        return $this->usuario->retornaNumRegistros("usuario", "1=1");
 
     }
-    
-    public function retornaAlgoUsuario($campo_sql, $id_usuario){
-        return $this->usuario->retornaAlgoUsuario($campo_sql,$id_usuario);
-    }
-    
-    public function consultaQuantosProdutosCadastradosPeloUsuario($id_usuario){
-        return $this->usuario->retornaNumRegistros("produto","usuario_id = $id_usuario");
+
+    public function retornaAlgoUsuario($campo_sql, $id_usuario)
+    {
+        return $this->usuario->retornaAlgoUsuario($campo_sql, $id_usuario);
     }
 
-    public function deslogar() {
+    public function consultaQuantosProdutosCadastradosPeloUsuario($id_usuario)
+    {
+        return $this->usuario->retornaNumRegistros("produto", "usuario_id = $id_usuario");
+    }
+
+    public function deslogar()
+    {
         $this->usuario->deslogar();
     }
 

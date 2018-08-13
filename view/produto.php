@@ -107,21 +107,26 @@ $toString = "";
                 <b><?php echo $produtoController->retornaAlgoDoProdutoQueEuQueira("nome", $_GET['id']) ?></b></h2>
             <hr>
         </div>
-        <div class="col-sm-6" style="padding-left: 50px">
-
-
+        <div class="col-sm-3" style="padding-left: 50px">
             <button type="button" class="btn btn-lg btn-info btnAbreModalPergunta">Tirar uma dúvida</button>
-
-            <h3>(TODO)Precauções(TODO)</h3>
-
-
+<!--            <h3>(TODO)Precauções(TODO)</h3>-->
             <table style="width: 100%; border-color: #FFFFFF; border: none" border="1">
                 <?php
-
                 $produtoController->retornaAtributoDosProdutos($_GET['id'], $produtoController->retornaAlgoDoProdutoQueEuQueira("categoria_id", $_GET['id']));
                 ?>
             </table>
         </div>
+
+        <div class="col-sm-3" style="padding-left: 50px">
+            <button type="button" id="btnVoltaCatalogo" class="btn btn-lg btn-warning ">Voltar ao Catálogo</button>
+            <table style="width: 100%; border-color: #FFFFFF; border: none" border="1">
+                <?php
+                $produtoController->retornaAtributoDosProdutos($_GET['id'], $produtoController->retornaAlgoDoProdutoQueEuQueira("categoria_id", $_GET['id']));
+                ?>
+            </table>
+        </div>
+
+
 
 
         <div class="col-sm-12">
@@ -129,7 +134,9 @@ $toString = "";
             <hr>
             <div class="container" style="text-align: justify">
                 <h2>Descrição</h2>
-                <p class="h3"><?php echo $produtoController->retornaAlgoDoProdutoQueEuQueira("descricao", $_GET['id']) ?></p>
+                <p class="h3">
+                    <?php echo $produtoController->retornaAlgoDoProdutoQueEuQueira("descricao", $_GET['id']) ?>
+                </p>
                 <br><br>
             </div>
             <hr>
@@ -164,6 +171,10 @@ $toString = "";
     $('.btnAbreModalPergunta').click(function () {
         $('#modalPergunta').modal();
         $('.modal-body').load('frmCadastroPergunta.php?id=<?php echo $_GET['id']; ?>');
+    });
+
+    $('#btnVoltaCatalogo').click(function(){
+        $('#body').load("../controller/ProdutoController.php?d=listagem");
     });
 
 
